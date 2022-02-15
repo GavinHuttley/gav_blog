@@ -33,3 +33,5 @@ junit-*.xml
 doc/draw*
 dist/*
 working/*
+.nox/*
+.doctrees/*
