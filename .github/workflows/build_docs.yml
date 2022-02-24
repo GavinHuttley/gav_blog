@@ -1,0 +1,43 @@
+on:
+  push:
+    branches:
+    - master
+
+jobs:
+  doc-build:
+    name: Build Blog
+    runs-on: 'ubuntu-latest'
+    steps:
+      - name: Install graphviz
+        run: |
+         sudo apt-get update -y
+         sudo apt-get install -y graphviz
+
+      - uses: actions/checkout@v2
+        with:
+           path: gav_blog
+
+      - uses: "actions/setup-python@v2"
+        with:
+            python-version: "3.10"
+
+      - name: Create virtual env
+        working-directory: gav_blog
+        run: |
+          python3 -m venv ~/gav_blog
+          source ~/gav_blog/bin/activate
+          python3 -m pip install -r requirements.txt
+
+      - name: Build docs
+        shell: bash -l {0}
+        working-directory: gav_blog
+        run: |
+          source ~/gav_blog/bin/activate
+          ablog build
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: gav_blog/_website
+          publish_branch: gh-pages
