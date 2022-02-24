@@ -1,4 +1,4 @@
-.. post:: Feb 15, 2022
+.. post:: 25 Feb 2022
    :tags: research, tips, newbs
    :category: computational science
 
