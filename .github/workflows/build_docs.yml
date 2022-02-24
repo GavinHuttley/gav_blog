@@ -35,10 +35,11 @@ jobs:
           source ~/gav_blog/bin/activate
           ablog build
           touch _website/.nojekyll
+          mv _website docs
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: gav_blog/_website
+          publish_dir: gav_blog/docs
           publish_branch: gh-pages
