@@ -34,6 +34,7 @@ jobs:
         run: |
           source ~/gav_blog/bin/activate
           ablog build
+          touch _website/.nojekyll
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
