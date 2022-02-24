@@ -35,3 +35,6 @@ dist/*
 working/*
 .nox/*
 .doctrees/*
+_website*
+jupyter_execute*
+plot_directive*
