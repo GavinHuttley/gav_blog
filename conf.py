@@ -284,7 +284,6 @@ htmlhelp_basename = "GavBlogdoc"
 
 # options for extensions
 def setup(app):
-    # app.add_js_file("require.min.js")
     app.add_js_file("plotly-latest.min.js")
 
 
