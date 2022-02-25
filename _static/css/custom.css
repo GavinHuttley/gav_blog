@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@1,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:700');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
+
+@import "alabaster.css";
+
+div.tip {
+background-color: "#FCC";
+}
+
+blockquote.epigraph {
+	font-size: 1.125rem;
+	font-weight: 300;
+	font-style: oblique;
+}
+
+blockquote.epigraph p.attribution {
+	font-size: 0.75rem;
+	font-weight: 400;
+	font-style: normal;
+}
