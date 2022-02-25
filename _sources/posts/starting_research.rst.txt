@@ -85,7 +85,9 @@ Its value
 
 Your answer here should reflect the significance you have attributed to the shortcomings of existing approaches and your argument of the benefit to the target audience.
 
-But that thinking is contingent upon the successful completion of the project. The value of a project also comes from what can be learned *if it fails*. You must prepare yourself for possibility that your proposal will not deliver on this promised value. So here's a crucial reality-check -- is a negative answer still interesting?
+But that thinking is contingent upon the successful completion of the project. The value of a project also comes from what can be learned *if it fails*. You must prepare yourself for the possibility that your proposal will not deliver on this promised value. 
+
+Here's a crucial reality-check -- is a negative answer still interesting?
 
 At the very least, you do not want the project to fail because you did not ensure the :ref:`correctness <correctness>` of your implementation or execution.
 
@@ -137,14 +139,14 @@ Measure performance
 Identify milestones
 ^^^^^^^^^^^^^^^^^^^
 
-- Stages towards completion
-- Define termination condition(s)
+- Stages towards project completion
+- Define termination project condition(s)
 
 Principles of Pragmatic Project Execution
 -----------------------------------------
 
-Plan, do, repeat -- a structured approach
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Plan, do, repeat
+^^^^^^^^^^^^^^^^
 
 .. warning:: Your time is your most valuable currency, spend it wisely.
 
@@ -187,9 +189,11 @@ You will learn a lot from this process, including the types of tests you will ne
 Iterate the flow baby!
 ^^^^^^^^^^^^^^^^^^^^^^
 
-Repeat this process!
+.. epigraph::
 
-Highlight the things you don't understand and discuss it with your supervisor and/or colleagues. (Don't worry, at the beginning you won't understand most things.)
+    Repeat the above steps!
+
+Highlight the things you don't understand and discuss it with your supervisor and/or colleagues. At the beginning there may be many things you don't understand. Don't worry, your knowledge grows!
 
 What if your approach is impossible?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -218,9 +222,9 @@ Don't isolate!
 
     How often, and with who, will you discuss your project?
 
-Too often, junior researchers / engineers think they need to solve the entirety of a project by themselves. Nope!
+Too often, junior researchers / engineers think they need to solve the entirety of a project by themselves ... in one massive go. Nope!
 
-Science and engineering deliver consistently better results when multiple brains are involved. Discussions with others help you develop your understanding and also provide crucial perspective that can help you decide when you may be wasting your time pursuing an approach that cannot work or when a superior approach is possible. Your supervisor provides a crucial point of contact for such discussions. In my view, however, they should not be the only person you discuss things with.
+Science and engineering deliver consistently better results when multiple brains are involved. Discussions with others help you develop your understanding and also provide crucial perspective that can help you decide when you may be wasting your time pursuing an approach that cannot work, or when a superior approach is possible. Your supervisor provides a crucial point of contact for such discussions. In my view, however, they should not be the only person you discuss things with.
 
 Tackling the inevitable problems
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -233,7 +237,7 @@ A key skill is knowing what *you* don't know and being able to identify someone 
 
 #. Have you seriously tried?
 #. What steps have you taken which you can show to the person you're about to ask?
-#. What's in it for them? In other words, why should they spend their time helping you solve your problem?
+#. What's in it for them? In other words, why should they spend their time helping you solve **your** problem?
 
 Often, just discussing the problem with someone else is sufficient for you to identify the solution.
 
