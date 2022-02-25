@@ -145,7 +145,7 @@ source_suffix = ".rst"
 master_doc = "index"
 
 # General information about the project.
-project = "BLOG"
+project = "Gav's Blog"
 copyright = "2022, Gavin Huttley"
 author = "Gavin Huttley"
 
