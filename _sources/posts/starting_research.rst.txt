@@ -68,7 +68,7 @@ Your proposition
 
 .. epigraph::
 
-    What is the problem being solved? Try and express this as succinctly as possible. This statement may need to be updated as your knowledge of the domain increases [#]_. Critically, the statement must be something you can actually solve!
+    What is the problem being solved? Try and express this as succinctly as possible. This statement may need to be updated as your knowledge of the domain increases [#]_. Critically, the statement must be something you can actually solve.
 
 This is the nitty-gritty and why you're reading this. It is your statement of what YOU will achieve and stems from the careful consideration described above. The framing of "what" problem you will solve can benefit from identifying both its inputs and outputs. Meaning, what is the input data (including where the data will, or can, come from)?. What is the output you will produce?
 
@@ -180,7 +180,7 @@ Fast prototyping
 
     --- Gavin
 
-Once you have a project sketch, you should aim to prototype the entire workflow [#]_ as fast as possible, including getting to the point of quantifying performance. "Fast" refers to both implementation time (crude code is the goal!) AND computation time with the latter often achieved by using a minimal amount of data.
+Once you have a project sketch, you should aim to prototype the entire workflow [#]_ as fast as possible, including getting to the point of quantifying performance. "Fast" refers to both implementation time (crude code is the goal) AND computation time with the latter often achieved by using a minimal amount of data.
 
 You will learn a lot from this process, including the types of tests you will need to write to ensure :ref:`correctness <correctness>`.
 
@@ -189,7 +189,7 @@ Iterate the flow, baby!
 
 .. epigraph::
 
-    Repeat the above steps!
+    Repeat the above steps.
 
 In the beginning, there may be many things you don't understand. Highlight the things you don't understand and discuss them with your supervisor and/or colleagues.
 
@@ -200,7 +200,7 @@ What if your approach is impossible?
 
     How will you decide if the project is infeasible? What is your backup plan?
 
-Make sure your project can produce something! The form this might take will differ between a science and an engineering project. Discuss with your supervisor for specifics.
+Make sure your project can produce something. The form this might take will differ between a science and an engineering project. Discuss with your supervisor for specifics.
 
 How will you decide when you're done?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -213,14 +213,14 @@ What if your work does not "outperform" competitors? Is knowing this still valua
 
 If it does "outperform" competitors, happy days! You still have to avoid excessive polishing. The relevant saying here is "great is the enemy of good", i.e. don't be a perfectionist.
 
-Don't isolate!
-^^^^^^^^^^^^^^
+Don't isolate yourself
+^^^^^^^^^^^^^^^^^^^^^^
 
 .. epigraph::
 
     How often and with who will you discuss your project?
 
-Too often, junior researchers / engineers think they need to solve the entirety of a project by themselves ... in one massive go. Nope!
+Too often, junior researchers / engineers think they need to solve the entirety of a project by themselves ... in one massive go. Don't do that!
 
 Science and engineering deliver consistently better results when multiple brains are involved. Discussions with others help you develop your understanding and provide a crucial perspective that can help you decide when you may be wasting your time pursuing an approach that cannot work or when a superior approach is possible. Your supervisor provides a crucial point of contact for such discussions. In my view, however, they should not be the only person you discuss things with.
 
@@ -241,8 +241,8 @@ Often, just discussing the problem with someone else is sufficient for you to id
 
 .. tip:: Give yourself a break from working on a hard problem. Do something else for a while so that you stop thinking about it. A fresh mind solves more problems than a tired one.
 
-Don't forget to enjoy yourself!
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Don't forget to enjoy yourself
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. epigraph::
 
@@ -265,7 +265,7 @@ So give yourself the best chance to enjoy the journey. Over to Carl for a remind
 
 .. [#] If you aren't prepared to accept that, you should probably do something else.
 .. [#] Properties that are problematic now may not have been evident before; hence "the problem" is new.
-.. [#] Bearing in mind you must avoid restating it to a question to which you already know the answer from examining your data -- avoid *a posteori* questions!
+.. [#] Bearing in mind you must avoid restating it to a question to which you already know the answer from examining your data -- avoid *a posteori* questions.
 .. [#] In science, we frame the value of work as its "significance".
 .. [#] For challenging algorithmic problems, substitute a competitor in place for where *your* work will fit.
-.. [#] In a well designed and executed project, a "failure" will be useful since it reveals some fundamental property that was previously not appreciated. Getting value from a failure requires you to be able to :ref:`avoid uninteresting answers <correctness>`. You need to ensure that failure is not due to an error on your part. If you cannot establish failure as interesting, you likely have a very high-risk project indeed, and you should probably change your project goals!
+.. [#] In a well designed and executed project, a "failure" will be useful since it reveals some fundamental property that was previously not appreciated. Getting value from a failure requires you to be able to :ref:`avoid uninteresting answers <correctness>`. You need to ensure that failure is not due to an error on your part. If you cannot establish failure as interesting, you likely have a very high-risk project indeed, and you should probably change your project goals.
