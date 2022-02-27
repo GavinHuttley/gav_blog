@@ -1,5 +1,5 @@
 .. post:: 25 Feb 2022
-   :tags: research, tips, newbs
+   :tags: research, tips, newbs, education
    :category: computational science
 
 So you're starting a research project, where do you begin?
