@@ -3,7 +3,7 @@ import nox
 nox.options.reuse_existing_virtualenvs = True
 
 
-@nox.session
+@nox.session(name="clean")
 def clean(session):
     session.run(*"ablog clean -D".split(), external=True)
 

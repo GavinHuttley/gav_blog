@@ -37,7 +37,7 @@ The Why
 
     Why does the problem even exist? Why is it a problem worthy of your attention? Why hasn't it already been solved? Answering all these is your justification for doing the work and, at the very least, should make you comfortable you may be doing something worthwhile.
 
-This is the big picture part of the project and should proceed everything else. Identifying the existence of a problem requires you have a solid understanding of the domain. At this stage in your career, it's quite likely that you have been "given" the problem. But once you take it, it becomes **your** problem [#]_. Ultimately, this requires reading about what others have done.
+This is the big picture part of the project and should proceed everything else. Identifying the existence of a problem requires you have a solid understanding of the domain. At this stage in your career, it's quite likely that you have been "given" the problem. But once you take it, it becomes **your** problem [#]_. In other words, the onus is on you to understand the background material that led to defining the problem. Ultimately, this requires reading about what others have done.
 
 What are the existing solutions, and why are those inadequate?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -52,7 +52,7 @@ Establishing :ref:`the_why` almost always requires in-depth of consideration of 
 
     Criticising the work of others is a "core business" in science and engineering. That said, consider these three crucial qualifiers when you frame that criticism.
 
-    #. What is **the evidence** the solutions are inadequate? (That evidence can be measurement, or a theoretical property.)
+    #. What is the **evidence** the solutions are inadequate? (That evidence can be measurement, or a theoretical property.)
     #. The prior work was likely developed against different technological inputs [#]_.
     #. Much of the information available to us now may not have been known to the authors of the original work.
 
@@ -152,7 +152,7 @@ Newbies are very tempted to jump straight into the "doing" part of a new project
 
 .. tip:: Plan first, then do.
 
-Here's your process. Go over the list of issues above, then draft a flowchart. The flow chart nodes are "processes" in your research project (e.g. data sampling). The flow chart will be a dynamic figure, meaning that you will update and refine it as you go. It is also a figure that you will likely employ when you explain the project to an audience, either in a conference presentation or a research / technical paper.
+Your project plan begins by addressing the issues listed above. Convert those responses into a flowchart where the nodes are "processes" in your research project (e.g. data sampling). This flow chart will be a dynamic figure, meaning that you will update and refine it as you go. It is also a figure that you will likely employ when you explain the project to an audience, either in a conference presentation or a research / technical paper.
 
 Optimise for the minimal project duration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -180,7 +180,7 @@ Fast prototyping
 
     --- Gavin
 
-Once you have a project sketch, you should aim to prototype the entire workflow [#]_ as fast as possible, including getting to the point of quantifying performance. "Fast" refers to both implementation time (crude code is the goal!) AND computation time with the latter is often easily achieved by using a minimal amount of data.
+Once you have a project sketch, you should aim to prototype the entire workflow [#]_ as fast as possible, including getting to the point of quantifying performance. "Fast" refers to both implementation time (crude code is the goal!) AND computation time with the latter often achieved by using a minimal amount of data.
 
 You will learn a lot from this process, including the types of tests you will need to write to ensure :ref:`correctness <correctness>`.
 
@@ -209,7 +209,7 @@ How will you decide when you're done?
 
     Is there a clear end-point? How will you avoid the infinite loop of tweaking?
 
-What if your work does not "outperform" competitors? Is knowing this still valuable [#]_? There's a strong urge to try "just one more thing" in this situation. In a well designed and executed project, the futility of such tweaking should be apparent. But it requires strength of character to call it quits. You don't want to waste time polishing |:poop:|.
+What if your work does not "outperform" competitors? Is knowing this still valuable [#]_? There's a strong urge to try "just one more thing" in this situation. In a well designed and executed project, the futility of such tweaking should be apparent. But it requires strength of character to call it quits. You don't want to waste time polishing a |:poop:|.
 
 If it does "outperform" competitors, happy days! You still have to avoid excessive polishing. The relevant saying here is "great is the enemy of good", i.e. don't be a perfectionist.
 
@@ -231,7 +231,7 @@ Tackling the inevitable problems
 
     Troubleshoot! If the process of identifying the minimal example of a problem does not expose the solution, then find someone to discuss it with.
 
-An essential skill is knowing what *you* don't know and being able to identify someone else with the necessary knowledge. That said, another critical skill is trying to solve a problem yourself before you ask someone else for help. If you find yourself in the position of wanting to get help, ask yourself the following questions:
+An essential skill is knowing what *you* don't know and being able to identify someone else with the necessary knowledge. That said, another critical skill is trying to solve a problem yourself before you ask someone else for help. Prior to asking someone else for help, answer the following questions:
 
 #. Have you seriously tried?
 #. What steps have you taken that you can show to the person you're about to ask?
