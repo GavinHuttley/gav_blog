@@ -15,6 +15,12 @@ def docs(session):
     session.log("open ./_website/index.html")
 
 
+@nox.session
+def linkcheck(session):
+    session.install("-r", "requirements.txt")
+    session.run(*"sphinx-build -b linkcheck . _website".split())
+
+
 @nox.session(name="docs-live")
 def docs_live(session):
     session.install("-r", "requirements.txt")
