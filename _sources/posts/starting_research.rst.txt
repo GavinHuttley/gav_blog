@@ -26,7 +26,9 @@ I break the process into three questions you must answer: *Why*, *What* and *How
 - *What* is the problem?
 - *How*  will you solve it?
 
-But before we delve into those, you need to answer two other questions. What form does your final output need to be? When is that due??? If you perform research and make a brilliant discovery but don't write a systematic description of how you made that discovery, it is the same as not doing anything. Establish what form your **final** output should be in (talk to your supervisor). Your project plan should be something that directly references that and makes delivering it easy.
+But before we delve into those, you need to answer two other questions. What form does your final output need to be? When is that due??? If you perform research and make a brilliant discovery but don't write a systematic description of how you made that discovery, it is the same as not doing anything.
+
+Establish what form your **final** output should be in (talk to your supervisor). Your project plan should be something that directly references that and makes delivering it easy.
 
 .. _the_why:
 
