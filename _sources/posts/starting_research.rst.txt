@@ -89,7 +89,7 @@ Your answer should reflect the significance you have attributed to the shortcomi
 
 But that thinking is contingent upon the successful completion of the project. The value of a project also comes from what can be learned *if it fails*. Prepare yourself for the possibility that your proposal will not deliver on this promised value. 
 
-Here's a crucial reality-check -- is a negative answer still interesting?
+Here's a crucial reality-check -- is a negative answer still interesting [#]_?
 
 At the very least, you do not want the project to fail because you did not ensure the :ref:`correctness <correctness>` of your implementation or execution.
 
@@ -211,7 +211,7 @@ How will you decide when you're done?
 
     Is there a clear end-point? How will you avoid the infinite loop of tweaking?
 
-What if your work does not "outperform" competitors? Is knowing this still valuable [#]_? There's a strong urge to try "just one more thing" in this situation. In a well designed and executed project, the futility of such tweaking should be apparent. But it requires strength of character to call it quits. You don't want to waste time polishing a |:poop:|.
+What if your work does not "outperform" competitors? Is knowing this still valuable? There's a strong urge to try "just one more thing" in this situation. In a well designed and executed project, the futility of such tweaking should be apparent. But it requires strength of character to call it quits. You don't want to waste time polishing a |:poop:|.
 
 If it does "outperform" competitors, happy days! You still have to avoid excessive polishing. The relevant saying here is "great is the enemy of good", i.e. don't be a perfectionist.
 
@@ -269,5 +269,5 @@ So give yourself the best chance to enjoy the journey. Over to Carl for a remind
 .. [#] Properties that are problematic now may not have been evident before; hence "the problem" is new.
 .. [#] Bearing in mind you must avoid restating it to a question to which you already know the answer from examining your data -- avoid *a posteori* questions.
 .. [#] In science, we frame the value of work as its "significance".
-.. [#] For challenging algorithmic problems, substitute a competitor in place for where *your* work will fit.
 .. [#] In a well designed and executed project, a "failure" will be useful since it reveals some fundamental property that was previously not appreciated. Getting value from a failure requires you to be able to :ref:`avoid uninteresting answers <correctness>`. You need to ensure that failure is not due to an error on your part. If you cannot establish failure as interesting, you likely have a very high-risk project indeed, and you should probably change your project goals.
+.. [#] For challenging algorithmic problems, substitute a competitor in place for where *your* work will fit.
