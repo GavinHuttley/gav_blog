@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+  <id>https://gavinhuttley.com</id>
+  <title>Thinking Science with Computers</title>
+  <updated>2022-02-28T03:01:25.650698+00:00</updated>
+  <link href="https://gavinhuttley.com"/>
+  <link href="https://gavinhuttley.com/blag/atom.xml" rel="self"/>
+  <generator uri="https://ablog.readthedocs.org/" version="0.10.23">ABlog</generator>
+  <entry>
+    <id>https://gavinhuttley.com/posts/starting_research/</id>
+    <title>So you’re starting a research project, where do you begin?</title>
+    <updated>2022-02-25T00:00:00+00:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;This post is intended for anyone starting out in research and development with a computational bent, whether in a science (e.g. computational biology) or engineering context. In particular, it is focussed on the research process that leads to new tools and analysis methods.&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="https://gavinhuttley.com/posts/starting_research/" rel="alternate"/>
+    <summary>This post is intended for anyone starting out in research and development with a computational bent, whether in a science (e.g. computational biology) or engineering context. In particular, it is focussed on the research process that leads to new tools and analysis methods.</summary>
+    <category term="research" label="research"/>
+    <category term="tips" label="tips"/>
+    <category term="newbs" label="newbs"/>
+    <category term="education" label="education"/>
+    <published>2022-02-25T00:00:00+00:00</published>
+  </entry>
+</feed>
