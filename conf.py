@@ -6,13 +6,13 @@ import ablog
 
 # The "title" for the blog, used in active pages.  Default is ``'Blog'``.
 blog_title = "Thinking Science with Computers"
-blog_baseurl = ""  # r.g "https://predictablynoisy.com"
+blog_baseurl = "https://gavinhuttley.com"  # e.g "https://predictablynoisy.com"
 blog_path = "blag"
 fontawesome_included = True
 blog_post_pattern = "posts/*/*"
 post_redirect_refresh = 1
 post_auto_image = 1
-post_auto_excerpt = 2
+post_auto_excerpt = 1
 post_date_format = "%d %b %Y"
 post_show_prev_next = True
 
@@ -26,12 +26,12 @@ blog_archive_titles = True
 # A dictionary of author names mapping to author full display names and
 # links. Dictionary keys are what should be used in ``post`` directive
 # to refer to the author.  Default is ``{}``.
-# blog_authors = {
-#     "Gavin Huttley": (
-#         "Gavin Huttley",
-#         "https://biology.anu.edu.au/research/groups/huttley-group-bioinformatics-molecular-evolution-genomes",
-#     ),
-# }
+blog_authors = {
+    "Gavin Huttley": (
+        "Gavin Huttley",
+        "https://biology.anu.edu.au/research/groups/huttley-group-bioinformatics-molecular-evolution-genomes",
+    ),
+}
 
 # -- ABlog Sidebars -------------------------------------------------------
 
@@ -146,7 +146,7 @@ master_doc = "index"
 
 # General information about the project.
 project = "Gav's Blog"
-copyright = "2022, Gavin Huttley"
+copyright = "2022-, Gavin Huttley"
 author = "Gavin Huttley"
 
 # The version info for the project you're documenting, acts as replacement for
@@ -294,4 +294,3 @@ comments_config = {
         # "optional": "config",
     }
 }
-
