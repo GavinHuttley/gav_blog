@@ -1,6 +1,6 @@
-###############################
-Thinking Science with Computers
-###############################
+############################
+Doing Science with Computers
+############################
 
 ************
 Recent posts

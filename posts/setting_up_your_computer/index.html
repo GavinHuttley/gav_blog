@@ -135,8 +135,8 @@ commentsRunWhenDOMLoaded(addUtterances);
 <p><em>How can you simplify keeping the different computational environments in sync?</em></p>
 <p>Adopt a directed relationship (click the tabs below to see illustrations for our example). For example, designate your laptop as the canonical machine for any source code. That means only editing code on that machine. Communicate those edits to the other computers in one direction only (use git for this). If you don’t adhere to this, your code will quickly devolve to an inconsistent state, making you 😢.</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="38100c7d-1c07-41b0-a438-c05bb68125e7" name="6e69d73c-2222-46b6-92f6-cccc7d37b09b" type="radio">
-</input><label class="tabbed-label" for="38100c7d-1c07-41b0-a438-c05bb68125e7">
+<input checked="checked" id="6d9d4026-a252-4ce0-9c69-6331af5a2158" name="0222e10e-19d8-47bf-80b6-9685f6e3782e" type="radio">
+</input><label class="tabbed-label" for="6d9d4026-a252-4ce0-9c69-6331af5a2158">
 Code flow</label><div class="tabbed-content docutils">
 <div class="graphviz"><object data="../../_images/graphviz-e8f78c57f7d965103e817aace163798e4cfec4bc.svg" type="image/svg+xml" class="graphviz">
 <p class="warning">digraph code_flow {
@@ -154,8 +154,8 @@ GitHub -&gt; &quot;Supercomputer&quot; [style=dotted];
 }</p></object></div>
 <p>Arrows direction indicates direction of flow. If you authorise all computers (via ssh keys) with GitHub, you enable moving all code between computers via git <a class="footnote-reference brackets" href="#id8" id="id1">1</a>.</p>
 </div>
-<input id="5d28f6f1-6ab0-4218-b542-69d1e1d8f76f" name="6e69d73c-2222-46b6-92f6-cccc7d37b09b" type="radio">
-</input><label class="tabbed-label" for="5d28f6f1-6ab0-4218-b542-69d1e1d8f76f">
+<input id="ee216a40-0a88-42c6-9ab2-63ab174754a6" name="0222e10e-19d8-47bf-80b6-9685f6e3782e" type="radio">
+</input><label class="tabbed-label" for="ee216a40-0a88-42c6-9ab2-63ab174754a6">
 Data flow</label><div class="tabbed-content docutils">
 <div class="graphviz"><object data="../../_images/graphviz-698f4be85680c591d7339bea3e4016964cbdc2f3.svg" type="image/svg+xml" class="graphviz">
 <p class="warning">digraph data_flow {
@@ -171,8 +171,8 @@ Laptop -&gt; Supercomputer;
 }</p></object></div>
 <p>Arrows direction indicates direction of flow. The Lab Server is where data sampling is taking place (remember, we’re assuming it hosts databases), and the laptop specifies what is moved to the Supercomputer.</p>
 </div>
-<input id="c42926f4-bb60-4eda-a751-399acfec6f92" name="6e69d73c-2222-46b6-92f6-cccc7d37b09b" type="radio">
-</input><label class="tabbed-label" for="c42926f4-bb60-4eda-a751-399acfec6f92">
+<input id="6f55282f-407d-4f59-ad07-688b323a1b89" name="0222e10e-19d8-47bf-80b6-9685f6e3782e" type="radio">
+</input><label class="tabbed-label" for="6f55282f-407d-4f59-ad07-688b323a1b89">
 Results flow</label><div class="tabbed-content docutils">
 <div class="graphviz"><object data="../../_images/graphviz-a0f33125e99bf21739e776787ce7f6456a7b269b.svg" type="image/svg+xml" class="graphviz">
 <p class="warning">digraph results_flow {
