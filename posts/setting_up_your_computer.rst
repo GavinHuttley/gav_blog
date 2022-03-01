@@ -7,7 +7,7 @@
 Setting up your computer for computational research
 ***************************************************
 
-How much impact can a computer setup possibly have? Why should it matter if my choices don't align with yours? It turns out some choices can make your daily life as a computational scientist a lot happier. Conversely, other choices can make you curse yourself. If it sounds like I'm talking from experience, you're correct -- over 20 years worth of it.
+How much impact can a computer setup possibly have? It turns out some choices can make your daily life as a computational scientist a lot happier. Conversely, other choices can make you curse yourself. If it sounds like I'm talking from experience, you're correct -- 20+ years worth.
 
 Be systematic
 =============

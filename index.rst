@@ -1,8 +1,10 @@
-################
-And so it begins
-################
+###############################
+Thinking Science with Computers
+###############################
 
-Here is a list of most recent posts:
+************
+Recent posts
+************
 
 .. postlist:: 5
    :excerpts:
