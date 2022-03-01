@@ -51,7 +51,7 @@ Adopt a directed relationship (click the tabs below to see illustrations for our
         GitHub -> "Lab Server" [style=dotted];
         GitHub -> "Supercomputer" [style=dotted];
 
-    Arrows direction indicates direction of flow. If you authorise all computers (via ssh keys) with GitHub, you enable moving all code between computers via git.
+    Arrows direction indicates direction of flow. If you authorise all computers (via ssh keys) with GitHub, you enable moving all code between computers via git [#]_.
 
 .. tabbed:: Data flow
     :name: data_flow
@@ -101,6 +101,18 @@ Terminal app
 ^^^^^^^^^^^^
 
 The Terminal application is your gateway to the command line on all the computers you will access. The terminal is just an interface to your shell environment. At present, ``zsh`` is the default shell on macOS, while ``bash`` is the default on Linux distributions. Configuration files are located in your home directory and named ``.zshrc`` and ``.bashrc`` respectively. You will be editing them.
+
+As this same application is employed to interact with all the computers you will use, it's worth looking into making your shell environments on different computers as similar as possible, albeit you need to make sure it's clear which computer you're on. The latter can be achieved by customising the terminal prompt.
+
+If you use ``zsh``, consider installing `ohmyzsh <https://ohmyz.sh/>`_. Some other command line tools I find super useful are:
+
+- `autojump <https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/autojump>`_, jump to commonly used directories
+- `starship <https://github.com/starship/starship>`_, customised prompts
+- ``mcfly``, control+r magic for getting back to past commands
+- ``fd``, super fast find
+- ``ripgrep``, a better, easier to use, grep
+
+See the `modern unix tools <https://github.com/ibraheemdev/modern-unix>`_ page.
 
 Text editor
 ^^^^^^^^^^^
@@ -262,6 +274,7 @@ For a research project, these data files can be massive! As such, you are advise
 
 .. rubric:: Footnotes
 
+.. [#] Yo do not actually have to use GitHub_ for this. But if GitHub_ is how you will share your work with other |:scientist:|, you may as well.
 .. [#] This is necessary for prototyping your code runs in parallel using MPI library (Message Passing Interface). MPI is the most likely protocol for parallel computation supported on the supercomputer.
 .. [#] The public key must be on a single line.
 .. [#] It is up to you be sure you know how to use the ``nano`` editor. When in doubt, google.
