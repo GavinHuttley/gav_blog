@@ -32,14 +32,58 @@ In this scenario, data sampling code and data are synchronised between the lapto
 
 *How can you simplify keeping the different computational environments in sync?*
 
-Adopt a directed relationship. Designate your laptop as the canonical machine for any source code. That means only editing code on that machine. Communicate those edits to the other computers in one direction only (use git for this). If you don't adhere to this, your code will quickly devolve to an inconsistent state, making you |:cry:|.
+Adopt a directed relationship (click the tabs below to see illustrations for our example). For example, designate your laptop as the canonical machine for any source code. That means only editing code on that machine. Communicate those edits to the other computers in one direction only (use git for this). If you don't adhere to this, your code will quickly devolve to an inconsistent state, making you |:cry:|.
 
-Designate the lab server and supercomputer as the canonical sources for the data and result files respectively. Again, make the flow of data directed.
+.. tabbed:: Code flow
+    :name: code_flow
 
-.. todo:: make this graphviz figures
+    .. digraph:: code_flow
 
-- **Data flow**: lab server |:arrow_right:| laptop |:arrow_right:|  supercomputer
-- **Result flow**: supercomputer |:arrow_right:| laptop.
+        node [shape="rectangle"];
+
+        GitHub [color="darkgray" style=filled];
+        Laptop [color="skyblue" style=filled];
+        "Lab Server" [fontcolor="white" color="blue" style=filled];
+        Supercomputer [fontcolor="white" color="darkblue" style=filled];
+        Laptop -> GitHub;
+        Laptop -> "Lab Server";
+        Laptop -> Supercomputer;
+        GitHub -> "Lab Server" [style=dotted];
+        GitHub -> "Supercomputer" [style=dotted];
+
+    Arrows direction indicates direction of flow. If you authorise all computers (via ssh keys) with GitHub, you enable moving all code between computers via git.
+
+.. tabbed:: Data flow
+    :name: data_flow
+
+    .. digraph:: data_flow
+
+        node [shape="rectangle"];
+
+        External [color="darkgray" style=filled];
+        Laptop [color="skyblue" style=filled];
+        "Lab Server" [fontcolor="white" color="blue" style=filled];
+        Supercomputer [fontcolor="white" color="darkblue" style=filled];
+        External -> Laptop;
+        "Lab Server" -> Laptop;
+        Laptop -> Supercomputer;
+
+    Arrows direction indicates direction of flow. The Lab Server is where data sampling is taking place (remember, we're assuming it hosts databases), and the laptop specifies what is moved to the Supercomputer.
+
+.. tabbed:: Results flow
+    :name: results_flow
+
+    .. digraph:: results_flow
+
+        node [shape="rectangle"];
+
+        Laptop [color="skyblue" style=filled];
+        Supercomputer [fontcolor="white" color="darkblue" style=filled];
+        Laptop -> Laptop
+        Supercomputer -> Laptop;
+
+    Arrows direction indicates direction of flow. Results are either generated on the Laptop or the Supercomputer.
+
 
 .. How to do this is described below. Add cross ref
 

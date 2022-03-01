@@ -9,6 +9,7 @@
     <title>Setting up your computer for computational research &#8212; Gav&#39;s Blog 01 documentation</title>
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/jupyter-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/thebelab.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/twemoji.css" />
@@ -132,18 +133,65 @@ commentsRunWhenDOMLoaded(addUtterances);
 </ul>
 <p>In this scenario, data sampling code and data are synchronised between the laptop and the lab server. Large scale analyses are first prototyped on the laptop, and a selected data subset, code, and computational environment are synchronised with the supercomputer. Results are brought back to the laptop.</p>
 <p><em>How can you simplify keeping the different computational environments in sync?</em></p>
-<p>Adopt a directed relationship. Designate your laptop as the canonical machine for any source code. That means only editing code on that machine. Communicate those edits to the other computers in one direction only (use git for this). If you don’t adhere to this, your code will quickly devolve to an inconsistent state, making you 😢.</p>
-<p>Designate the lab server and supercomputer as the canonical sources for the data and result files respectively. Again, make the flow of data directed.</p>
-<ul class="simple">
-<li><p><strong>Data flow</strong>: lab server ➡️ laptop ➡️  supercomputer</p></li>
-<li><p><strong>Result flow</strong>: supercomputer ➡️ laptop.</p></li>
-</ul>
+<p>Adopt a directed relationship (click the tabs below to see illustrations for our example). For example, designate your laptop as the canonical machine for any source code. That means only editing code on that machine. Communicate those edits to the other computers in one direction only (use git for this). If you don’t adhere to this, your code will quickly devolve to an inconsistent state, making you 😢.</p>
+<div class="tabbed-set docutils">
+<input checked="checked" id="537368fe-dd29-4e6f-914d-ed34dce902fc" name="10f59957-9d84-4c83-bf78-c27511faa30b" type="radio">
+</input><label class="tabbed-label" for="537368fe-dd29-4e6f-914d-ed34dce902fc">
+Code flow</label><div class="tabbed-content docutils">
+<div class="graphviz"><object data="../../_images/graphviz-e8f78c57f7d965103e817aace163798e4cfec4bc.svg" type="image/svg+xml" class="graphviz">
+<p class="warning">digraph code_flow {
+node [shape=&quot;rectangle&quot;];
+
+GitHub [color=&quot;darkgray&quot; style=filled];
+Laptop [color=&quot;skyblue&quot; style=filled];
+&quot;Lab Server&quot; [fontcolor=&quot;white&quot; color=&quot;blue&quot; style=filled];
+Supercomputer [fontcolor=&quot;white&quot; color=&quot;darkblue&quot; style=filled];
+Laptop -&gt; GitHub;
+Laptop -&gt; &quot;Lab Server&quot;;
+Laptop -&gt; Supercomputer;
+GitHub -&gt; &quot;Lab Server&quot; [style=dotted];
+GitHub -&gt; &quot;Supercomputer&quot; [style=dotted];
+}</p></object></div>
+<p>Arrows direction indicates direction of flow. If you authorise all computers (via ssh keys) with GitHub, you enable moving all code between computers via git.</p>
+</div>
+<input id="59398ec9-b74b-4d6f-ae94-aa27e38239c3" name="10f59957-9d84-4c83-bf78-c27511faa30b" type="radio">
+</input><label class="tabbed-label" for="59398ec9-b74b-4d6f-ae94-aa27e38239c3">
+Data flow</label><div class="tabbed-content docutils">
+<div class="graphviz"><object data="../../_images/graphviz-698f4be85680c591d7339bea3e4016964cbdc2f3.svg" type="image/svg+xml" class="graphviz">
+<p class="warning">digraph data_flow {
+node [shape=&quot;rectangle&quot;];
+
+External [color=&quot;darkgray&quot; style=filled];
+Laptop [color=&quot;skyblue&quot; style=filled];
+&quot;Lab Server&quot; [fontcolor=&quot;white&quot; color=&quot;blue&quot; style=filled];
+Supercomputer [fontcolor=&quot;white&quot; color=&quot;darkblue&quot; style=filled];
+External -&gt; Laptop;
+&quot;Lab Server&quot; -&gt; Laptop;
+Laptop -&gt; Supercomputer;
+}</p></object></div>
+<p>Arrows direction indicates direction of flow. The Lab Server is where data sampling is taking place (remember, we’re assuming it hosts databases), and the laptop specifies what is moved to the Supercomputer.</p>
+</div>
+<input id="401ffe31-60b7-4230-a974-8fadabf8b915" name="10f59957-9d84-4c83-bf78-c27511faa30b" type="radio">
+</input><label class="tabbed-label" for="401ffe31-60b7-4230-a974-8fadabf8b915">
+Results flow</label><div class="tabbed-content docutils">
+<div class="graphviz"><object data="../../_images/graphviz-a0f33125e99bf21739e776787ce7f6456a7b269b.svg" type="image/svg+xml" class="graphviz">
+<p class="warning">digraph results_flow {
+node [shape=&quot;rectangle&quot;];
+
+Laptop [color=&quot;skyblue&quot; style=filled];
+Supercomputer [fontcolor=&quot;white&quot; color=&quot;darkblue&quot; style=filled];
+Laptop -&gt; Laptop
+Supercomputer -&gt; Laptop;
+}</p></object></div>
+<p>Arrows direction indicates direction of flow. Results are either generated on the Laptop or the Supercomputer.</p>
+</div>
+</div>
 </section>
 <section id="major-software-tools">
 <h3>Major software tools<a class="headerlink" href="#major-software-tools" title="Permalink to this headline">¶</a></h3>
 <section id="package-manager">
 <h4>Package manager<a class="headerlink" href="#package-manager" title="Permalink to this headline">¶</a></h4>
-<p>If your laptop is running macOS, you already have a unix based system 😎. However, you will almost certainly need to install a unix-style package manager. I recommend <a class="reference external" href="https://brew.sh/">Homebrew</a>. This can be used to install non-python tools, such as the <code class="docutils literal notranslate"><span class="pre">openmpi</span></code> library <a class="footnote-reference brackets" href="#id8" id="id2">1</a>.</p>
+<p>If your laptop is running macOS, you already have a unix based system 😎. However, you will almost certainly need to install a unix-style package manager. I recommend <a class="reference external" href="https://brew.sh/">Homebrew</a>. This can be used to install non-python tools, such as the <code class="docutils literal notranslate"><span class="pre">openmpi</span></code> library <a class="footnote-reference brackets" href="#id7" id="id1">1</a>.</p>
 <p>If your laptop is running Windows, you should install the latest <a class="reference external" href="https://docs.microsoft.com/en-us/windows/wsl/install">WSL</a> (Windows subsystem for Linux) for your version of Windows. This  installs Ubuntu.</p>
 </section>
 <section id="terminal-app">
@@ -198,7 +246,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 $ nano ~/.ssh/authorized_keys # or your favourite editor
 </pre></div>
 </div>
-<p>paste the key on a new line <a class="footnote-reference brackets" href="#id9" id="id3">2</a> and exit <code class="docutils literal notranslate"><span class="pre">nano</span></code> <a class="footnote-reference brackets" href="#id10" id="id4">3</a>.</p>
+<p>paste the key on a new line <a class="footnote-reference brackets" href="#id8" id="id2">2</a> and exit <code class="docutils literal notranslate"><span class="pre">nano</span></code> <a class="footnote-reference brackets" href="#id9" id="id3">3</a>.</p>
 </section>
 <section id="using-git-and-github-for-version-control">
 <h4>Using <code class="docutils literal notranslate"><span class="pre">git</span></code> and GitHub for version control<a class="headerlink" href="#using-git-and-github-for-version-control" title="Permalink to this headline">¶</a></h4>
@@ -217,8 +265,8 @@ $ git config --global user.email &quot;username@myEmail.com&quot;
 <section id="reproducible-computational-environments">
 <h4>Reproducible computational environments<a class="headerlink" href="#reproducible-computational-environments" title="Permalink to this headline">¶</a></h4>
 <p>There is no single answer to this challenge that applies to all cases. Some will argue that <a class="reference external" href="https://docs.conda.io/en/latest/miniconda.html">conda</a> provides the most general solution to this problem. My own experience is that if your computations include a supercomputer, you may find conda troublesome. Supercomputers are often administered via a granting system whereby some quantity of resources is allocated. Those resources include CPU hours and storage. If you exceed your allocation, you can no longer use the computer.</p>
-<p><code class="docutils literal notranslate"><span class="pre">conda</span></code> does not work well in the supercomputer context. Shared facilities may penalise user accounts with many files <a class="footnote-reference brackets" href="#id11" id="id5">4</a> due to the significant overhead they can impose on performance of the file sustem. I have witnessed this effect with naive <code class="docutils literal notranslate"><span class="pre">conda</span></code> installs. In addition, supercomputer facilities often provide custom builds of core tools. For instance, higher performance builds of Python than what you will obtain from <code class="docutils literal notranslate"><span class="pre">conda-forge</span></code>.</p>
-<p>If <code class="docutils literal notranslate"><span class="pre">conda</span></code> seems to be the only way to solve your case, make sure you only install the minimal dependency set. You can specify that set using a <a class="reference external" href="https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#create-env-file-manually">conda environment yaml file</a>, remembering to “pin” <a class="footnote-reference brackets" href="#id12" id="id6">5</a> your versions.</p>
+<p><code class="docutils literal notranslate"><span class="pre">conda</span></code> does not work well in the supercomputer context. Shared facilities may penalise user accounts with many files <a class="footnote-reference brackets" href="#id10" id="id4">4</a> due to the significant overhead they can impose on performance of the file sustem. I have witnessed this effect with naive <code class="docutils literal notranslate"><span class="pre">conda</span></code> installs. In addition, supercomputer facilities often provide custom builds of core tools. For instance, higher performance builds of Python than what you will obtain from <code class="docutils literal notranslate"><span class="pre">conda-forge</span></code>.</p>
+<p>If <code class="docutils literal notranslate"><span class="pre">conda</span></code> seems to be the only way to solve your case, make sure you only install the minimal dependency set. You can specify that set using a <a class="reference external" href="https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#create-env-file-manually">conda environment yaml file</a>, remembering to “pin” <a class="footnote-reference brackets" href="#id11" id="id5">5</a> your versions.</p>
 <p>If you are lucky enough to have a Python-only project, then use the <a class="reference external" href="https://realpython.com/python-virtual-environments-a-primer/">built-in capability</a> to create virtual environments. These can be made portable by creating a <code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code> file, which you share between your different accounts. If this is the approach you take, be sure and <a class="reference external" href="https://pip.pypa.io/en/latest/reference/requirements-file-format/">pin your dependency versions</a>.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
@@ -231,7 +279,7 @@ $ git config --global user.email &quot;username@myEmail.com&quot;
 <h2>Structuring your projects<a class="headerlink" href="#structuring-your-projects" title="Permalink to this headline">¶</a></h2>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>Put them all into a single directory, call it <code class="docutils literal notranslate"><span class="pre">repos</span></code> <a class="footnote-reference brackets" href="#id13" id="id7">6</a>.</p>
+<p>Put them all into a single directory, call it <code class="docutils literal notranslate"><span class="pre">repos</span></code> <a class="footnote-reference brackets" href="#id12" id="id6">6</a>.</p>
 </div>
 <p>Having a single directory makes moving your research projects between computers easier. I advise you also to include repositories for any dependency that is being actively developed in this directory. This way, you preserve the entire compute state.</p>
 <div class="admonition tip">
@@ -287,22 +335,22 @@ $ git config --global user.email &quot;username@myEmail.com&quot;
 </div>
 <p class="rubric">Footnotes</p>
 <dl class="footnote brackets">
-<dt class="label" id="id8"><span class="brackets"><a class="fn-backref" href="#id2">1</a></span></dt>
+<dt class="label" id="id7"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
 <dd><p>This is necessary for prototyping your code runs in parallel using MPI library (Message Passing Interface). MPI is the most likely protocol for parallel computation supported on the supercomputer.</p>
 </dd>
-<dt class="label" id="id9"><span class="brackets"><a class="fn-backref" href="#id3">2</a></span></dt>
+<dt class="label" id="id8"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
 <dd><p>The public key must be on a single line.</p>
 </dd>
-<dt class="label" id="id10"><span class="brackets"><a class="fn-backref" href="#id4">3</a></span></dt>
+<dt class="label" id="id9"><span class="brackets"><a class="fn-backref" href="#id3">3</a></span></dt>
 <dd><p>It is up to you be sure you know how to use the <code class="docutils literal notranslate"><span class="pre">nano</span></code> editor. When in doubt, google.</p>
 </dd>
-<dt class="label" id="id11"><span class="brackets"><a class="fn-backref" href="#id5">4</a></span></dt>
+<dt class="label" id="id10"><span class="brackets"><a class="fn-backref" href="#id4">4</a></span></dt>
 <dd><p>measured via <a class="reference external" href="https://en.wikipedia.org/wiki/Inode">inodes</a></p>
 </dd>
-<dt class="label" id="id12"><span class="brackets"><a class="fn-backref" href="#id6">5</a></span></dt>
+<dt class="label" id="id11"><span class="brackets"><a class="fn-backref" href="#id5">5</a></span></dt>
 <dd><p>Pinning here means to state a specific version number of the tool.</p>
 </dd>
-<dt class="label" id="id13"><span class="brackets"><a class="fn-backref" href="#id7">6</a></span></dt>
+<dt class="label" id="id12"><span class="brackets"><a class="fn-backref" href="#id6">6</a></span></dt>
 <dd><p><code class="docutils literal notranslate"><span class="pre">repos</span></code> because it is short for repositories, and <strong>every</strong> project will be version controlled … right?</p>
 </dd>
 </dl>
