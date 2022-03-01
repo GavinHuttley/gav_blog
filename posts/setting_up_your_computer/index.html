@@ -135,15 +135,15 @@ commentsRunWhenDOMLoaded(addUtterances);
 <p>Adopt a directed relationship. Designate your laptop as the canonical machine for any source code. That means only editing code on that machine. Communicate those edits to the other computers in one direction only (use git for this). If you don’t adhere to this, your code will quickly devolve to an inconsistent state, making you 😢.</p>
 <p>Designate the lab server and supercomputer as the canonical sources for the data and result files respectively. Again, make the flow of data directed.</p>
 <ul class="simple">
-<li><p><strong>Data flows</strong> lab server –&gt; laptop –&gt;  supercomputer</p></li>
-<li><p><strong>Results flow</strong> supercomputer –&gt; laptop.</p></li>
+<li><p><strong>Data flow</strong>: lab server ➡️ laptop ➡️  supercomputer</p></li>
+<li><p><strong>Result flow</strong>: supercomputer ➡️ laptop.</p></li>
 </ul>
 </section>
 <section id="major-software-tools">
 <h3>Major software tools<a class="headerlink" href="#major-software-tools" title="Permalink to this headline">¶</a></h3>
 <section id="package-manager">
 <h4>Package manager<a class="headerlink" href="#package-manager" title="Permalink to this headline">¶</a></h4>
-<p>If your laptop is running macOS, you already have a unix based system 😎. However, you will almost certainly need to install a unix-style package manager. I recommend <a class="reference external" href="https://brew.sh/">Homebrew</a>. This can be used to install non-python tools, such as the <code class="docutils literal notranslate"><span class="pre">openmpi</span></code> library, which is necessary for prototyping your code runs in parallel using the MPI library <a class="footnote-reference brackets" href="#id5" id="id1">1</a>.</p>
+<p>If your laptop is running macOS, you already have a unix based system 😎. However, you will almost certainly need to install a unix-style package manager. I recommend <a class="reference external" href="https://brew.sh/">Homebrew</a>. This can be used to install non-python tools, such as the <code class="docutils literal notranslate"><span class="pre">openmpi</span></code> library, which is necessary for prototyping your code runs in parallel using the MPI library <a class="footnote-reference brackets" href="#id6" id="id2">1</a>.</p>
 <p>If your laptop is running Windows, you should install the latest <a class="reference external" href="https://docs.microsoft.com/en-us/windows/wsl/install">WSL</a> (Windows subsystem for Linux) for your version of Windows. This  installs Ubuntu.</p>
 </section>
 <section id="terminal-app">
@@ -199,7 +199,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 $ nano ~/.ssh/authorized_keys # or your favourite editor
 </pre></div>
 </div>
-<p>and paste the key on a new line <a class="footnote-reference brackets" href="#id6" id="id2">2</a>.</p>
+<p>and paste the key on a new line <a class="footnote-reference brackets" href="#id7" id="id3">2</a>.</p>
 </section>
 <section id="using-git-and-github-for-version-control">
 <h4>Using <code class="docutils literal notranslate"><span class="pre">git</span></code> and GitHub for version control<a class="headerlink" href="#using-git-and-github-for-version-control" title="Permalink to this headline">¶</a></h4>
@@ -218,7 +218,7 @@ $ git config --global user.email &quot;username@myEmail.com&quot;
 <section id="reproducible-computational-environments">
 <h4>Reproducible computational environments<a class="headerlink" href="#reproducible-computational-environments" title="Permalink to this headline">¶</a></h4>
 <p>There is no single answer to this challenge that applies to all cases. Some will argue that <a class="reference external" href="https://docs.conda.io/en/latest/miniconda.html">conda</a> provides the most general solution to this problem. My own experience is that if your computations include a supercomputer, you may find it troublesome. Supercomputers are often administered via a granting system whereby some quantity of resources is allocated. Those resources include CPU hours and storage. If you exceed your allocation, you can no longer use the computer.</p>
-<p><code class="docutils literal notranslate"><span class="pre">conda</span></code> does not work well in the supercomputer context. Shared facilities may penalise user accounts with many files due to the significant overhead they can impose. (This is measured via <a class="reference external" href="https://en.wikipedia.org/wiki/Inode">inodes</a>.) I have witnessed this effect of naive <code class="docutils literal notranslate"><span class="pre">conda</span></code> installs.) Second, supercomputer facilities often provide custom builds of core tools. For instance, higher performance builds of Python than what you will obtain from <code class="docutils literal notranslate"><span class="pre">conda-forge</span></code>. So if <code class="docutils literal notranslate"><span class="pre">conda</span></code> seems to be the only way to solve your case, make sure you only install the minimal dependency set. You can specify that set using a <a class="reference external" href="https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#create-env-file-manually">conda environment yaml file</a>, remembering to “pin” <a class="footnote-reference brackets" href="#id7" id="id3">3</a> your versions.</p>
+<p><code class="docutils literal notranslate"><span class="pre">conda</span></code> does not work well in the supercomputer context. Shared facilities may penalise user accounts with many files due to the significant overhead they can impose. (This is measured via <a class="reference external" href="https://en.wikipedia.org/wiki/Inode">inodes</a>.) I have witnessed this effect of naive <code class="docutils literal notranslate"><span class="pre">conda</span></code> installs.) Second, supercomputer facilities often provide custom builds of core tools. For instance, higher performance builds of Python than what you will obtain from <code class="docutils literal notranslate"><span class="pre">conda-forge</span></code>. So if <code class="docutils literal notranslate"><span class="pre">conda</span></code> seems to be the only way to solve your case, make sure you only install the minimal dependency set. You can specify that set using a <a class="reference external" href="https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#create-env-file-manually">conda environment yaml file</a>, remembering to “pin” <a class="footnote-reference brackets" href="#id8" id="id4">3</a> your versions.</p>
 <p>If you are lucky enough to have a Python-only project, then use the built-in capability to create virtual environments. These can be made portable by creating a <code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code> file, which you share between your different accounts. If this is the approach you take, be sure and <a class="reference external" href="https://pip.pypa.io/en/latest/reference/requirements-file-format/">pin your dependency versions</a>.</p>
 </section>
 </section>
@@ -227,7 +227,7 @@ $ git config --global user.email &quot;username@myEmail.com&quot;
 <h2>Structuring your projects<a class="headerlink" href="#structuring-your-projects" title="Permalink to this headline">¶</a></h2>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>Put them all into a single directory, call it <code class="docutils literal notranslate"><span class="pre">repos</span></code> <a class="footnote-reference brackets" href="#id8" id="id4">4</a>.</p>
+<p>Put them all into a single directory, call it <code class="docutils literal notranslate"><span class="pre">repos</span></code> <a class="footnote-reference brackets" href="#id9" id="id5">4</a>.</p>
 </div>
 <p>Having a single directory makes moving your research projects between computers easier. I advise you also to include repositories for any dependency that is being actively developed in this directory. This way, you preserve the entire compute state.</p>
 <p>Typically, I have two repositories if I’m engaged in research to develop a software tool. The first is the tool to be distributed to the target audience. The second contains the analyses undertaken to establish the tool is worth using. Below I give sample structures for a software project and a “research project”.</p>
@@ -278,16 +278,16 @@ $ git config --global user.email &quot;username@myEmail.com&quot;
 </div>
 <p class="rubric">Footnotes</p>
 <dl class="footnote brackets">
-<dt class="label" id="id5"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dt class="label" id="id6"><span class="brackets"><a class="fn-backref" href="#id2">1</a></span></dt>
 <dd><p>Message Passing Interface is the most likely protocol for parallel computation supported on the supercomputer.</p>
 </dd>
-<dt class="label" id="id6"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
+<dt class="label" id="id7"><span class="brackets"><a class="fn-backref" href="#id3">2</a></span></dt>
 <dd><p>The public key must be on a single line.</p>
 </dd>
-<dt class="label" id="id7"><span class="brackets"><a class="fn-backref" href="#id3">3</a></span></dt>
+<dt class="label" id="id8"><span class="brackets"><a class="fn-backref" href="#id4">3</a></span></dt>
 <dd><p>Pinning here means to state a specific version number of the tool.</p>
 </dd>
-<dt class="label" id="id8"><span class="brackets"><a class="fn-backref" href="#id4">4</a></span></dt>
+<dt class="label" id="id9"><span class="brackets"><a class="fn-backref" href="#id5">4</a></span></dt>
 <dd><p><code class="docutils literal notranslate"><span class="pre">repos</span></code> because it is short for repositories, and <strong>every</strong> project will be version controlled … right?</p>
 </dd>
 </dl>

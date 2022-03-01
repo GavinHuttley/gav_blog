@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://gavinhuttley.com</id>
   <title>Thinking Science with Computers</title>
-  <updated>2022-03-01T06:04:08.137323+00:00</updated>
+  <updated>2022-03-01T07:15:25.383005+00:00</updated>
   <link href="https://gavinhuttley.com"/>
   <link href="https://gavinhuttley.com/blag/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.23">ABlog</generator>
