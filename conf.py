@@ -103,6 +103,7 @@ fontawesome_included = False
 
 extensions = [
     "sphinx.ext.extlinks",
+    "sphinx.ext.graphviz",
     "sphinx.ext.intersphinx",
     "sphinx.ext.todo",
     "sphinx.ext.mathjax",
@@ -114,7 +115,7 @@ extensions = [
 ]
 
 sphinxemoji_style = 'twemoji'
-
+graphviz_output_format = "svg"
 # following forces using MathJax version 2, since Plotly js has not migrated to
 # version 3 yet
 mathjax_path = (
