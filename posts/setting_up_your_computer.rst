@@ -49,21 +49,19 @@ Major software tools
 Package manager
 ^^^^^^^^^^^^^^^
 
-If your laptop is running macOS, you already have a unix based system |:sunglasses:|. However, you will almost certainly need to install a unix-style package manager. I recommend Homebrew_. This can be used to install non-python tools, such as the ``openmpi`` library, which is necessary for prototyping your code runs in parallel using the MPI library [#]_.
+If your laptop is running macOS, you already have a unix based system |:sunglasses:|. However, you will almost certainly need to install a unix-style package manager. I recommend Homebrew_. This can be used to install non-python tools, such as the ``openmpi`` library [#]_.
 
 If your laptop is running Windows, you should install the latest WSL_ (Windows subsystem for Linux) for your version of Windows. This  installs Ubuntu.
 
 Terminal app
 ^^^^^^^^^^^^
 
-The Terminal application is your gateway to the command line on all the computers you will access. On the mac, the built-in Terminal.app provides a Unix standard terminal experience.
-
-The terminal is just an interface to your shell environment. At present, ``zsh`` is the default shell on macOS, while ``bash`` is the default on Linux distributions. The configuration files are located in your home directory and named ``.zshrc`` and ``.bashrc`` respectively. You will likely need to edit these.
+The Terminal application is your gateway to the command line on all the computers you will access. The terminal is just an interface to your shell environment. At present, ``zsh`` is the default shell on macOS, while ``bash`` is the default on Linux distributions. Configuration files are located in your home directory and named ``.zshrc`` and ``.bashrc`` respectively. You will be editing them.
 
 Text editor
 ^^^^^^^^^^^
 
-No matter what OS your laptop is running, I encourage you to install `VS Code`_ . The reasons are simple, it provides (via "Remote - SSH" extension") an excellent experience for editing files on remote machines along with a fully-featured terminal experience. Be sure and research useful extensions. On my system, I have:
+No matter what OS your laptop is running, I encourage you to install `VS Code`_ . The reasons are simple, it provides an excellent experience for editing files on remote machines along with a fully-featured terminal experience. Be sure and research useful extensions. On my system, I have:
 
 - `autodocstring <https://marketplace.visualstudio.com/items?itemName=njpwerner.autodocstring>`_
 - `Python extensions <https://marketplace.visualstudio.com/items?itemName=ms-python.python>`_
@@ -82,7 +80,7 @@ Configure ssh
 
     $ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
 
-Follow the prompts, and set a good password to your ssh key. The public copy of this key (which you can find under ``~/.ssh/id_rsa.pub``) will be copied to your other computer accounts, enabling simplified steps to authorise your access.
+Follow the prompts, and set a good password. The public copy of this key (which you can find under ``~/.ssh/id_rsa.pub``) will be copied to your other computer accounts, enabling simplified steps to authorise your access.
 
 But wait, you're not done with ssh yet! Using your newly configured VS Code, enter the following command in the terminal
 
@@ -113,7 +111,7 @@ You can do
 
 |:tada:|
 
-Login into each computer and repeat the ssh keygen step there (this will facilitate code sharing, see below). Copy your **public** ssh key into your clip board on each computer. On the mac the approach is
+Login into each computer and repeat the ssh keygen step there (this will facilitate code sharing, see below). Copy your **public** ssh key into your clip board on each computer.
 
 .. code::
 
@@ -126,7 +124,7 @@ Add the result to your ``authorized_keys`` on each of your remote computers by l
     $ ssh qik
     $ nano ~/.ssh/authorized_keys # or your favourite editor
 
-and paste the key on a new line [#]_.
+paste the key on a new line [#]_ and exit ``nano`` [#]_.
 
 Using ``git`` and GitHub for version control
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -147,11 +145,15 @@ If you don't already have an account on GitHub, create one. At this point, you s
 Reproducible computational environments
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-There is no single answer to this challenge that applies to all cases. Some will argue that conda_ provides the most general solution to this problem. My own experience is that if your computations include a supercomputer, you may find it troublesome. Supercomputers are often administered via a granting system whereby some quantity of resources is allocated. Those resources include CPU hours and storage. If you exceed your allocation, you can no longer use the computer.
+There is no single answer to this challenge that applies to all cases. Some will argue that conda_ provides the most general solution to this problem. My own experience is that if your computations include a supercomputer, you may find conda troublesome. Supercomputers are often administered via a granting system whereby some quantity of resources is allocated. Those resources include CPU hours and storage. If you exceed your allocation, you can no longer use the computer.
 
-``conda`` does not work well in the supercomputer context. Shared facilities may penalise user accounts with many files due to the significant overhead they can impose. (This is measured via `inodes <https://en.wikipedia.org/wiki/Inode>`_.) I have witnessed this effect of naive ``conda`` installs.) Second, supercomputer facilities often provide custom builds of core tools. For instance, higher performance builds of Python than what you will obtain from ``conda-forge``. So if ``conda`` seems to be the only way to solve your case, make sure you only install the minimal dependency set. You can specify that set using a `conda environment yaml file <https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#create-env-file-manually>`_, remembering to "pin" [#]_ your versions.
+``conda`` does not work well in the supercomputer context. Shared facilities may penalise user accounts with many files [#]_ due to the significant overhead they can impose on performance of the file sustem. I have witnessed this effect with naive ``conda`` installs. In addition, supercomputer facilities often provide custom builds of core tools. For instance, higher performance builds of Python than what you will obtain from ``conda-forge``.
 
-If you are lucky enough to have a Python-only project, then use the built-in capability to create virtual environments. These can be made portable by creating a ``requirements.txt`` file, which you share between your different accounts. If this is the approach you take, be sure and `pin your dependency versions <https://pip.pypa.io/en/latest/reference/requirements-file-format/>`_.
+If ``conda`` seems to be the only way to solve your case, make sure you only install the minimal dependency set. You can specify that set using a `conda environment yaml file <https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#create-env-file-manually>`_, remembering to "pin" [#]_ your versions.
+
+If you are lucky enough to have a Python-only project, then use the `built-in capability <https://realpython.com/python-virtual-environments-a-primer/>`_ to create virtual environments. These can be made portable by creating a ``requirements.txt`` file, which you share between your different accounts. If this is the approach you take, be sure and `pin your dependency versions <https://pip.pypa.io/en/latest/reference/requirements-file-format/>`_.
+
+.. tip:: You can reconstruct your computing environment by just the yaml or requirements file. This file should be version controlled too.
 
 Structuring your projects
 =========================
@@ -160,7 +162,9 @@ Structuring your projects
 
 Having a single directory makes moving your research projects between computers easier. I advise you also to include repositories for any dependency that is being actively developed in this directory. This way, you preserve the entire compute state.
 
-Typically, I have two repositories if I'm engaged in research to develop a software tool. The first is the tool to be distributed to the target audience. The second contains the analyses undertaken to establish the tool is worth using. Below I give sample structures for a software project and a "research project".
+.. tip:: Since you will be versioning everything, the first action you take to start a new project is create a repository on GitHub_. Then clone it into your ``~/repos`` directory.
+
+Typically, I have two repositories if I'm engaged in research to develop a software tool. The first is for the tool to be distributed to the target audience. The second is for the analyses to be undertaken to establish the tool is worth using. Below I give sample structures for a "software project" and a "research project".
 
 Directory structure for a software methods project
 --------------------------------------------------
@@ -182,7 +186,7 @@ Directory structure for a software methods project
             │   └── small sample data files
             └── test files
 
-Software development projects have input data necessary for your test suite and documentation, which should be tracked in version control. They should be minima, sufficient for their testing and / or demonstration purposes.
+Software development projects have input data necessary for your test suite and documentation, which should be tracked in version control. They should be minimal, sufficient for their testing and / or demonstration purposes.
 
 Directory structure for a research project
 ------------------------------------------
@@ -206,14 +210,18 @@ Directory structure for a research project
             ├── data/
             └── test files
 
-Research projects have input data that may be local to your institute or external. The latter can be resources such as Zenodo_, GenBank_, or Ensembl_. Wherever your data comes from, store it in folders within your project in a way that reflects its origin. For a research project, these data files can be massive! As such, you are advised not to add data files to your research project's ``git`` repository. An alternate way to version those files is by uploading them to Zenodo_ (for instance) and adding a script that does the download. Users seeking to replicate your work then run that script to reconstitute the state of your project directory.
+Research projects have input data that may be local to your institute or external, e.g. resources such as Zenodo_, GenBank_, or Ensembl_. Wherever your data comes from, store it under the ``data/`` directory with a name that reflects its origin.
+
+For a research project, these data files can be massive! As such, you are advised not to add data files to your research project's ``git`` repository. An alternate way to version those files is by uploading them to Zenodo_ (for instance) and adding a script that does the download. Users seeking to replicate your work then run that script to reconstitute the state of your project directory.
 
 .. note:: Putting Jupyter notebook files in version control can be problematic. There are multiple reasons for this, e.g. embedded images can make these files very large. This has led to tools like `nbstripout <https://github.com/kynan/nbstripout>`_. My advice is only to include notebooks if they're small.
 
 .. rubric:: Footnotes
 
-.. [#] Message Passing Interface is the most likely protocol for parallel computation supported on the supercomputer.
+.. [#] This is necessary for prototyping your code runs in parallel using MPI library (Message Passing Interface). MPI is the most likely protocol for parallel computation supported on the supercomputer.
 .. [#] The public key must be on a single line.
+.. [#] It is up to you be sure you know how to use the ``nano`` editor. When in doubt, google.
+.. [#] measured via `inodes <https://en.wikipedia.org/wiki/Inode>`_
 .. [#] Pinning here means to state a specific version number of the tool.
 .. [#] ``repos`` because it is short for repositories, and **every** project will be version controlled ... right?
 
