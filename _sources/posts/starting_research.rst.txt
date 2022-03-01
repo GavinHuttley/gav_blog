@@ -2,11 +2,12 @@
    :tags: research, tips, newbs, education
    :category: computational science
 
+**********************************************************
 So you're starting a research project, where do you begin?
-==========================================================
+**********************************************************
 
 Overview
---------
+========
 
 .. companion article, So you're supervising someone who is doing their first research project, help!
 .. Welcome to explorer school, you will are the instructor
@@ -18,7 +19,7 @@ So far, your exposure to knowledge discovery has likely been limited to textbook
 Take heart! Discoveries are not arrived at in completed form. By employing a systematic approach, we incrementally assemble the pieces to draw that new insight and develop something new and valuable. What follows is a sketch of my process.
 
 Structure is key
-----------------
+================
 
 I break the process into three questions you must answer: *Why*, *What* and *How*. These correspond to:
 
@@ -33,7 +34,7 @@ Establish what form your **final** output should be in (talk to your supervisor)
 .. _the_why:
 
 The Why
--------
+=======
 
 .. epigraph::
 
@@ -42,7 +43,7 @@ The Why
 This is the big picture part of the project and should proceed everything else. Identifying the existence of a problem requires you have a solid understanding of the domain. At this stage in your career, it's quite likely that you have been "given" the problem. But once you take it, it becomes **your** problem [#]_. In other words, the onus is on you to understand the background material that led to defining the problem. Ultimately, this requires reading about what others have done.
 
 What are the existing solutions, and why are those inadequate?
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+--------------------------------------------------------------
 
 .. epigraph::
 
@@ -63,10 +64,10 @@ Establishing :ref:`the_why` almost always requires in-depth of consideration of 
 .. _the_what:
 
 The What
---------
+========
 
 Your proposition
-^^^^^^^^^^^^^^^^
+----------------
 
 .. epigraph::
 
@@ -79,7 +80,7 @@ This is the nitty-gritty and why you're reading this. It is your statement of wh
 What you propose should explicitly address at least part of the shortcomings of existing solutions you identified in :ref:`the_why`.
 
 Its value
-^^^^^^^^^
+---------
 
 .. epigraph::
 
@@ -87,7 +88,7 @@ Its value
 
 Your answer should reflect the significance you have attributed to the shortcomings of existing approaches and your argument of the benefit to the target audience.
 
-But that thinking is contingent upon the successful completion of the project. The value of a project also comes from what can be learned *if it fails*. Prepare yourself for the possibility that your proposal will not deliver on this promised value. 
+But that thinking is contingent upon the successful completion of the project. The value of a project also comes from what can be learned *if it fails*. Prepare yourself for the possibility that your proposal will not deliver on this promised value.
 
 Here's a crucial reality-check -- is a negative answer still interesting [#]_?
 
@@ -96,10 +97,10 @@ At the very least, you do not want the project to fail because you did not ensur
 .. _the_how:
 
 The How
--------
+=======
 
 Your solution
-^^^^^^^^^^^^^
+-------------
 
 .. epigraph::
 
@@ -113,7 +114,7 @@ Your solution
 .. _correctness:
 
 Making it believable
-^^^^^^^^^^^^^^^^^^^^
+--------------------
 
 .. epigraph::
 
@@ -126,7 +127,7 @@ Making it believable
 .. _measure_performance:
 
 Measure performance
-^^^^^^^^^^^^^^^^^^^
+-------------------
 
 .. epigraph::
 
@@ -137,16 +138,16 @@ Measure performance
 - Identify appropriate metrics to highlight the different attributes, adopting standards of the domain wherever possible
 
 Identify milestones
-^^^^^^^^^^^^^^^^^^^
+-------------------
 
 - Stages towards project completion
 - Define termination project condition(s)
 
 Principles of Pragmatic Project Execution
------------------------------------------
+=========================================
 
 Plan, do, repeat
-^^^^^^^^^^^^^^^^
+----------------
 
 .. warning:: Your time is your most valuable currency. Spend it wisely.
 
@@ -157,7 +158,7 @@ Newbies are very tempted to jump straight into the "doing" part of a new project
 Your project plan begins by addressing the issues listed above. Convert those responses into a flowchart where the nodes are "processes" in your research project (e.g. data sampling). This flow chart will be a dynamic figure, meaning that you will update and refine it as you go. It is also a figure that you will likely employ when you explain the project to an audience, either in a conference presentation or a research / technical paper.
 
 Optimise for the minimal project duration
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-----------------------------------------
 
 .. epigraph::
 
@@ -170,7 +171,7 @@ It requires some significant mental effort to see how you can break a problem do
 .. tip:: Remember, you want to fail fast!
 
 Fast prototyping
-^^^^^^^^^^^^^^^^
+----------------
 
 .. epigraph::
 
@@ -187,7 +188,7 @@ Once you have a project sketch, you should aim to prototype the entire workflow 
 You will learn a lot from this process, including the types of tests you will need to write to ensure :ref:`correctness <correctness>`.
 
 Iterate the flow, baby!
-^^^^^^^^^^^^^^^^^^^^^^^
+-----------------------
 
 .. epigraph::
 
@@ -196,7 +197,7 @@ Iterate the flow, baby!
 In the beginning, there may be many things you don't understand. Highlight the things you don't understand and discuss them with your supervisor and/or colleagues.
 
 What if your approach is impossible?
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+------------------------------------
 
 .. epigraph::
 
@@ -205,7 +206,7 @@ What if your approach is impossible?
 Make sure your project can produce something. The form this might take will differ between a science and an engineering project. Discuss with your supervisor for specifics.
 
 How will you decide when you're done?
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------
 
 .. epigraph::
 
@@ -216,7 +217,7 @@ What if your work does not "outperform" competitors? Is knowing this still valua
 If it does "outperform" competitors, happy days! You still have to avoid excessive polishing. The relevant saying here is "great is the enemy of good", i.e. don't be a perfectionist.
 
 Don't isolate yourself
-^^^^^^^^^^^^^^^^^^^^^^
+----------------------
 
 .. epigraph::
 
@@ -227,7 +228,7 @@ Too often, junior researchers / engineers think they need to solve the entirety 
 Science and engineering deliver consistently better results when multiple brains are involved. Discussions with others help you develop your understanding and provide a crucial perspective that can help you decide when you may be wasting your time pursuing an approach that cannot work or when a superior approach is possible. Your supervisor provides a crucial point of contact for such discussions. In my view, however, they should not be the only person you discuss things with.
 
 Tackling the inevitable problems
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+--------------------------------
 
 .. epigraph::
 
@@ -244,7 +245,7 @@ Often, just discussing the problem with someone else is sufficient for you to id
 .. tip:: Give yourself a break from working on a hard problem. Do something else for a while so that you stop thinking about it. A fresh mind solves more problems than a tired one.
 
 Don't forget to enjoy yourself
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+------------------------------
 
 .. epigraph::
 
@@ -261,7 +262,7 @@ So give yourself the best chance to enjoy the journey. Over to Carl for a remind
     "...understanding is an exquisite form of ecstasy..."
 
     -- Carl Sagan
-    
+
 
 .. rubric:: Footnotes
 
