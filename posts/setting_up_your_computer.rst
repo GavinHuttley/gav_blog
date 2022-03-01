@@ -36,8 +36,10 @@ Adopt a directed relationship. Designate your laptop as the canonical machine fo
 
 Designate the lab server and supercomputer as the canonical sources for the data and result files respectively. Again, make the flow of data directed.
 
-- **Data flows** lab server --> laptop -->  supercomputer
-- **Results flow** supercomputer --> laptop.
+.. todo:: make this graphviz figures
+
+- **Data flow**: lab server |:arrow_right:| laptop |:arrow_right:|  supercomputer
+- **Result flow**: supercomputer |:arrow_right:| laptop.
 
 .. How to do this is described below. Add cross ref
 
