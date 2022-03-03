@@ -84,8 +84,11 @@ Adopt a directed relationship (click the tabs below to see illustrations for our
 
     Arrows direction indicates direction of flow. Results are either generated on the Laptop or the Supercomputer.
 
+.. note::
 
-.. How to do this is described below. Add cross ref
+    Homogeneity in operating systems is key to the portability of your work. While macOS and Linux have substantial differences, they are both POSIX operating systems. So the effort to develop code on a macOS laptop and get it running on a Linux machine is, in my experience, quite small.
+    
+    Windows, on the other hand, is more of a challenge. Because most machines used in the computational sciences are running a POSIX OS (i.e. Linux), I strongly advise you to do your development work using WSL_ on a Windows laptop.
 
 Major software tools
 --------------------
@@ -95,7 +98,7 @@ Package manager
 
 If your laptop is running macOS, you already have a unix based system |:sunglasses:|. However, you will almost certainly need to install a unix-style package manager. I recommend Homebrew_. This can be used to install non-python tools, such as the ``openmpi`` library [#]_.
 
-If your laptop is running Windows, you should install the latest WSL_ (Windows subsystem for Linux) for your version of Windows. This  installs Ubuntu.
+If your laptop is running Windows, install the latest WSL_ (Windows subsystem for Linux, which installs Ubuntu). You will then get the ``apt`` package manager.
 
 Terminal app
 ^^^^^^^^^^^^
@@ -207,9 +210,9 @@ There is no single answer to this challenge that applies to all cases. Some will
 
 If ``conda`` seems to be the only way to solve your case, make sure you only install the minimal dependency set. You can specify that set using a `conda environment yaml file <https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#create-env-file-manually>`_, remembering to "pin" [#]_ your versions.
 
-If you are lucky enough to have a Python-only project, then use the `built-in capability <https://realpython.com/python-virtual-environments-a-primer/>`_ to create virtual environments. These can be made portable by creating a ``requirements.txt`` file, which you share between your different accounts. If this is the approach you take, be sure and `pin your dependency versions <https://pip.pypa.io/en/latest/reference/requirements-file-format/>`_.
+If you are lucky enough to have a Python-only project [#]_, then use the `built-in capability <https://realpython.com/python-virtual-environments-a-primer/>`_ to create virtual environments. These can be made portable by creating a ``requirements.txt`` file, which you share between your different accounts. If this is the approach you take, be sure and `pin your dependency versions <https://pip.pypa.io/en/latest/reference/requirements-file-format/>`_.
 
-.. tip:: You can reconstruct your computing environment by just the yaml or requirements file. This file should be version controlled too.
+.. tip:: You can reconstruct your computing environment by just the yaml or requirements file. As plaint text file formats, they should be version controlled too.
 
 Structuring your projects
 =========================
@@ -236,7 +239,7 @@ Directory structure for a software methods project
         │   └── doc files
         ├── src/
         │   └── lib_name/
-        │       └── source code files
+        │   └── source code files
         └── tests/
             ├── data/
             │   └── small sample data files
@@ -280,6 +283,7 @@ For a research project, these data files can be massive! As such, you are advise
 .. [#] It is up to you be sure you know how to use the ``nano`` editor. When in doubt, google.
 .. [#] measured via `inodes <https://en.wikipedia.org/wiki/Inode>`_
 .. [#] Pinning here means to state a specific version number of the tool.
+.. [#] "Lucky" in the sense that there is less complexity in the project, simplifying your development process and reducing the storage footprint of your project.
 .. [#] ``repos`` because it is short for repositories, and **every** project will be version controlled ... right?
 
 .. _Ensembl: https://ensembl.org
