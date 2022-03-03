@@ -126,7 +126,7 @@ No matter what OS your laptop is running, I encourage you to install `VS Code`_ 
 - `Python extensions <https://marketplace.visualstudio.com/items?itemName=ms-python.python>`_
 - `Jupyter <https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter>`_
 - `Python Test Explorer UI <https://marketplace.visualstudio.com/items?itemName=hbenl.vscode-test-explorer>`_
-- `Remote SSH <https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh>`_
+- `Remote SSH <https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh>`_ [#]_
 
 Install the ``code`` command-line tool for invoking VS Code from the terminal. Open the command palette (macOS command+shift+p) and type "install code" at the prompt. This will show a single listing with "Shell Command: Install 'code' in PATH". Click on that and follow any prompts.
 
@@ -279,6 +279,7 @@ For a research project, these data files can be massive! As such, you are advise
 
 .. [#] Yo do not actually have to use GitHub_ for this. But if GitHub_ is how you will share your work with other |:scientist:|, you may as well.
 .. [#] This is necessary for prototyping your code runs in parallel using MPI library (Message Passing Interface). MPI is the most likely protocol for parallel computation supported on the supercomputer.
+.. [#] On windows, install the `Remote WSL <https://code.visualstudio.com/docs/remote/wsl-tutorial>`_ extension.
 .. [#] The public key must be on a single line.
 .. [#] It is up to you be sure you know how to use the ``nano`` editor. When in doubt, google.
 .. [#] measured via `inodes <https://en.wikipedia.org/wiki/Inode>`_
