@@ -22,7 +22,7 @@ Take account of the resources you will use
 Computers
 ---------
 
-Consider the following computational setup:
+Consider the following scenario:
 
 - *laptop, running macOS or Windows*: most development and prototyping will be done here
 - *lab server, running Ubuntu 20*: data sampling against databases is done here
@@ -32,7 +32,7 @@ In this scenario, data sampling code and data are synchronised between the lapto
 
 *How can you simplify keeping the different computational environments in sync?*
 
-Adopt a directed relationship (click the tabs below to see illustrations for our example). For example, designate your laptop as the canonical machine for any source code. That means only editing code on that machine. Communicate those edits to the other computers in one direction only (use git for this). If you don't adhere to this, your code will quickly devolve to an inconsistent state, making you |:cry:|.
+Adopt a directed relationship (click the tabs below to see illustrations for our scenario). For example, designate your laptop as the canonical machine for any source code. That means only editing code on that machine. Communicate those edits to the other computers in one direction only (use ``git`` [#]_ for this). If you don't adhere to this, your code will quickly devolve to an inconsistent state, making you |:cry:|.
 
 .. tabbed:: Code flow
     :name: code_flow
@@ -87,7 +87,7 @@ Adopt a directed relationship (click the tabs below to see illustrations for our
 .. note::
 
     Homogeneity in operating systems is key to the portability of your work. While macOS and Linux have substantial differences, they are both POSIX operating systems. So the effort to develop code on a macOS laptop and get it running on a Linux machine is, in my experience, quite small.
-    
+
     Windows, on the other hand, is more of a challenge. Because most machines used in the computational sciences are running a POSIX OS (i.e. Linux), I strongly advise you to do your development work using WSL_ on a Windows laptop.
 
 Major software tools
@@ -124,7 +124,7 @@ No matter what OS your laptop is running, I encourage you to install `VS Code`_ 
 
 - `autodocstring <https://marketplace.visualstudio.com/items?itemName=njpwerner.autodocstring>`_
 - `Python extensions <https://marketplace.visualstudio.com/items?itemName=ms-python.python>`_
-- `Jupyter <https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter>`_
+- `Jupyter extension <https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter>`_
 - `Python Test Explorer UI <https://marketplace.visualstudio.com/items?itemName=hbenl.vscode-test-explorer>`_
 - `Remote SSH <https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh>`_ [#]_
 
@@ -155,6 +155,8 @@ This will open an empty file. You can include a shortcut in this file for every 
     UseKeychain yes
     HostName super.annoying.domain.com
     User ini777
+
+.. tip:: ``qik`` is an "alias" I defined. Pro-tip, make your aliases easy to type!
 
 Save the file. Instead of logging into ``super.annoying.domain.com`` as
 
@@ -206,7 +208,7 @@ Reproducible computational environments
 
 There is no single answer to this challenge that applies to all cases. Some will argue that conda_ provides the most general solution to this problem. My own experience is that if your computations include a supercomputer, you may find conda troublesome. Supercomputers are often administered via a granting system whereby some quantity of resources is allocated. Those resources include CPU hours and storage. If you exceed your allocation, you can no longer use the computer.
 
-``conda`` does not work well in the supercomputer context. Shared facilities may penalise user accounts with many files [#]_ due to the significant overhead they can impose on performance of the file sustem. I have witnessed this effect with naive ``conda`` installs. In addition, supercomputer facilities often provide custom builds of core tools. For instance, higher performance builds of Python than what you will obtain from ``conda-forge``.
+``conda`` does not work well in the supercomputer context. Shared facilities may penalise user accounts with many files [#]_ due to the significant overhead they can impose on performance of the file system. I have witnessed this effect with naive ``conda`` installs. In addition, supercomputer facilities often provide custom builds of core tools. For instance, higher performance builds of Python than what you will obtain from ``conda-forge``.
 
 If ``conda`` seems to be the only way to solve your case, make sure you only install the minimal dependency set. You can specify that set using a `conda environment yaml file <https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#create-env-file-manually>`_, remembering to "pin" [#]_ your versions.
 
@@ -225,8 +227,8 @@ Having a single directory makes moving your research projects between computers 
 
 Typically, I have two repositories if I'm engaged in research to develop a software tool. The first is for the tool to be distributed to the target audience. The second is for the analyses to be undertaken to establish the tool is worth using. Below I give sample structures for a "software project" and a "research project".
 
-Directory structure for a software methods project
---------------------------------------------------
+Directory structure for a software methods project [#]_
+-------------------------------------------------------
 
 ::
 
@@ -269,14 +271,15 @@ Directory structure for a research project
             ├── data/
             └── test files
 
-Research projects have input data that may be local to your institute or external, e.g. resources such as Zenodo_, GenBank_, or Ensembl_. Wherever your data comes from, store it under the ``data/`` directory with a name that reflects its origin.
+Research projects have input data that may be local to your institute or external, e.g. resources such as Ensembl_, GenBank_, or Zenodo_. Wherever your data comes from, store it under the ``data/`` directory with a name that reflects its origin.
 
-For a research project, these data files can be massive! As such, you are advised not to add data files to your research project's ``git`` repository. An alternate way to version those files is by uploading them to Zenodo_ (for instance) and adding a script that does the download. Users seeking to replicate your work then run that script to reconstitute the state of your project directory.
+For a research project, these data files can be massive! As such, **do not** to add the data files to your research project's ``git`` repository. An alternate way to version those files is by uploading them to Zenodo_ (for instance) and adding a script that does the download. Users seeking to replicate your work then run that script to reconstitute the state of your project directory.
 
-.. note:: Putting Jupyter notebook files in version control can be problematic. There are multiple reasons for this, e.g. embedded images can make these files very large. This has led to tools like `nbstripout <https://github.com/kynan/nbstripout>`_. My advice is only to include notebooks if they're small.
+.. note:: "notebook files" refers to Jupyter_ notebook files. Putting these in version control can be problematic. There are multiple reasons for this, e.g. embedded images can make these files very large. This has led to tools like `nbstripout <https://github.com/kynan/nbstripout>`_. My advice is only to include notebooks if they're small.
 
 .. rubric:: Footnotes
 
+.. [#] ``git`` is the major tool used for "version control" of text files.
 .. [#] Yo do not actually have to use GitHub_ for this. But if GitHub_ is how you will share your work with other |:scientist:|, you may as well.
 .. [#] This is necessary for prototyping your code runs in parallel using MPI library (Message Passing Interface). MPI is the most likely protocol for parallel computation supported on the supercomputer.
 .. [#] On windows, install the `Remote WSL <https://code.visualstudio.com/docs/remote/wsl-tutorial>`_ extension.
@@ -286,6 +289,7 @@ For a research project, these data files can be massive! As such, you are advise
 .. [#] Pinning here means to state a specific version number of the tool.
 .. [#] "Lucky" in the sense that there is less complexity in the project, simplifying your development process and reducing the storage footprint of your project.
 .. [#] ``repos`` because it is short for repositories, and **every** project will be version controlled ... right?
+.. [#] This is for a Python language based project. Adopt a structure that is considered best pratice for the language you're working in.
 
 .. _Ensembl: https://ensembl.org
 .. _GenBank: https://www.ncbi.nlm.nih.gov/genbank/
@@ -295,3 +299,4 @@ For a research project, these data files can be massive! As such, you are advise
 .. _GitHub: https://github.com
 .. _Homebrew: https://brew.sh/
 .. _WSL: https://docs.microsoft.com/en-us/windows/wsl/install
+.. _Jupyter: https://jupyter.org/
