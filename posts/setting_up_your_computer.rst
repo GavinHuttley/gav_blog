@@ -7,7 +7,7 @@
 Setting up your computer for computational research
 ***************************************************
 
-How much impact can a computer setup possibly have? It turns out some choices can make your daily life as a computational scientist a lot happier. Conversely, other choices can make you curse yourself. If it sounds like I'm talking from experience, you're correct -- 20+ years worth.
+How much impact can a computer setup possibly have? Some choices can make your daily life as a computational scientist a lot happier. Conversely, other choices can make you curse yourself. If it sounds like I'm talking from experience, you're correct -- 20+ years worth.
 
 Be systematic
 =============
@@ -234,20 +234,22 @@ Directory structure for a software methods project [#]_
 
     .
     └── software_project/
+        ├── README stating project purpose and basic instructions
+        ├── LICENSE pick one that facilitates user adoption
         ├── project config files
         ├── docs/
         │   ├── data/
         │   │   └── small sample data files
-        │   └── doc files
+        │   └── documentation covering API and examples
         ├── src/
         │   └── lib_name/
-        │   └── source code files
+        │     └── source code files
         └── tests/
             ├── data/
             │   └── small sample data files
             └── test files
 
-Software development projects have input data necessary for your test suite and documentation, which should be tracked in version control. They should be minimal, sufficient for their testing and / or demonstration purposes.
+Software development projects have input data necessary for your test suite and documentation, which should be tracked in version control. They should be minimal, sufficient for testing and / or demonstration purposes.
 
 Directory structure for a research project
 ------------------------------------------
