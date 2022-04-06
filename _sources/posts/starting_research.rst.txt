@@ -73,7 +73,7 @@ Your proposition
 
     What is the problem you will solve? Try and express this as succinctly as possible. This statement may need to be updated as your knowledge of the domain increases [#]_. Critically, the statement must be something you can actually solve.
 
-This is the nitty-gritty and why you're reading this. It is your statement of what YOU will achieve and stems from the careful consideration described above. The framing of "what" problem you will solve can benefit from identifying both its inputs and outputs. Meaning, what is the input data (including where the data will, or can, come from)?. What is the output you will produce?
+This is the nitty-gritty and why you're reading this. It is your statement of what YOU will achieve and stems from the careful consideration described above. The framing of "what" problem you will solve can benefit from identifying both its inputs and outputs. Meaning, what is the input data (including where the data will, or can, come from)? What is the output you will produce?
 
 .. note:: Together, the inputs and outputs define your target audience.
 
