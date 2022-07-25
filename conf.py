@@ -281,7 +281,7 @@ def setup(app):
 # specifying comment info by utterances
 comments_config = {
     "utterances": {
-        "repo": "GavinHuttley/tib",
+        "repo": "GavinHuttley/gav_blog",
         # "optional": "config",
     }
 }
