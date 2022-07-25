@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Setting up your computer for computational research &#8212; Gav&#39;s Blog 06 documentation</title>
+    <title>Setting up your computer for computational research &#8212; Gav&#39;s Blog 25 documentation</title>
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
@@ -45,7 +45,7 @@ var addUtterances = () => {
     script.src = "https://utteranc.es/client.js";
     script.async = "async";
 
-    script.setAttribute("repo", "GavinHuttley/tib");
+    script.setAttribute("repo", "GavinHuttley/gav_blog");
     script.setAttribute("issue-term", "pathname");
     script.setAttribute("theme", "github-light");
     script.setAttribute("label", "💬 comment");
@@ -135,8 +135,8 @@ commentsRunWhenDOMLoaded(addUtterances);
 <p><em>How can you simplify keeping the different computational environments in sync?</em></p>
 <p>Adopt a directed relationship (click the tabs below to see illustrations for our scenario). For example, designate your laptop as the canonical machine for any source code. That means only editing code on that machine. Communicate those edits to the other computers in one direction only (use <code class="docutils literal notranslate"><span class="pre">git</span></code> <a class="footnote-reference brackets" href="#id12" id="id1">1</a> for this). If you don’t adhere to this, your code will quickly devolve to an inconsistent state, making you 😢.</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="775d34ef-8a90-4897-9db2-eecf857d6ece" name="e5a839ba-e60d-47bc-8e4c-e59a07ccf680" type="radio">
-</input><label class="tabbed-label" for="775d34ef-8a90-4897-9db2-eecf857d6ece">
+<input checked="checked" id="8c9200f7-2897-4b70-a894-3cf62d4e16f5" name="d6986dc2-1f1a-4476-b4d7-b18c48c9be6f" type="radio">
+</input><label class="tabbed-label" for="8c9200f7-2897-4b70-a894-3cf62d4e16f5">
 Code flow</label><div class="tabbed-content docutils">
 <div class="graphviz"><object data="../../_images/graphviz-e8f78c57f7d965103e817aace163798e4cfec4bc.svg" type="image/svg+xml" class="graphviz">
 <p class="warning">digraph code_flow {
@@ -154,8 +154,8 @@ GitHub -&gt; &quot;Supercomputer&quot; [style=dotted];
 }</p></object></div>
 <p>Arrows direction indicates direction of flow. If you authorise all computers (via ssh keys) with GitHub, you enable moving all code between computers via git <a class="footnote-reference brackets" href="#id13" id="id2">2</a>.</p>
 </div>
-<input id="1a031866-c0f5-483b-bf42-3832d1ead205" name="e5a839ba-e60d-47bc-8e4c-e59a07ccf680" type="radio">
-</input><label class="tabbed-label" for="1a031866-c0f5-483b-bf42-3832d1ead205">
+<input id="41cb690a-8d3e-4e38-a0af-88feaf664d4d" name="d6986dc2-1f1a-4476-b4d7-b18c48c9be6f" type="radio">
+</input><label class="tabbed-label" for="41cb690a-8d3e-4e38-a0af-88feaf664d4d">
 Data flow</label><div class="tabbed-content docutils">
 <div class="graphviz"><object data="../../_images/graphviz-698f4be85680c591d7339bea3e4016964cbdc2f3.svg" type="image/svg+xml" class="graphviz">
 <p class="warning">digraph data_flow {
@@ -171,8 +171,8 @@ Laptop -&gt; Supercomputer;
 }</p></object></div>
 <p>Arrows direction indicates direction of flow. The Lab Server is where data sampling is taking place (remember, we’re assuming it hosts databases), and the laptop specifies what is moved to the Supercomputer.</p>
 </div>
-<input id="2c8baf6b-ab2a-492f-850a-f5e758bbcf85" name="e5a839ba-e60d-47bc-8e4c-e59a07ccf680" type="radio">
-</input><label class="tabbed-label" for="2c8baf6b-ab2a-492f-850a-f5e758bbcf85">
+<input id="6fdca6bd-0c1d-4710-bcf9-912d9792df70" name="d6986dc2-1f1a-4476-b4d7-b18c48c9be6f" type="radio">
+</input><label class="tabbed-label" for="6fdca6bd-0c1d-4710-bcf9-912d9792df70">
 Results flow</label><div class="tabbed-content docutils">
 <div class="graphviz"><object data="../../_images/graphviz-a0f33125e99bf21739e776787ce7f6456a7b269b.svg" type="image/svg+xml" class="graphviz">
 <p class="warning">digraph results_flow {
