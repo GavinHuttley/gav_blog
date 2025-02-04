@@ -34,55 +34,57 @@ In this scenario, data sampling code and data are synchronised between the lapto
 
 Adopt a directed relationship (click the tabs below to see illustrations for our scenario). For example, designate your laptop as the canonical machine for any source code. That means only editing code on that machine. Communicate those edits to the other computers in one direction only (use ``git`` [#]_ for this). If you don't adhere to this, your code will quickly devolve to an inconsistent state, making you |:cry:|.
 
-.. tabbed:: Code flow
-    :name: code_flow
+.. tab-set::
 
-    .. digraph:: code_flow
+    .. tab-item:: Code flow
+        :name: code_flow
 
-        node [shape="rectangle"];
+        .. digraph:: code_flow
 
-        GitHub [color="darkgray" style=filled];
-        Laptop [color="skyblue" style=filled];
-        "Lab Server" [fontcolor="white" color="blue" style=filled];
-        Supercomputer [fontcolor="white" color="darkblue" style=filled];
-        Laptop -> GitHub;
-        Laptop -> "Lab Server";
-        Laptop -> Supercomputer;
-        GitHub -> "Lab Server" [style=dotted];
-        GitHub -> "Supercomputer" [style=dotted];
+            node [shape="rectangle"];
 
-    Arrows direction indicates direction of flow. If you authorise all computers (via ssh keys) with GitHub, you enable moving all code between computers via git [#]_.
+            GitHub [color="darkgray" style=filled];
+            Laptop [color="skyblue" style=filled];
+            "Lab Server" [fontcolor="white" color="blue" style=filled];
+            Supercomputer [fontcolor="white" color="darkblue" style=filled];
+            Laptop -> GitHub;
+            Laptop -> "Lab Server";
+            Laptop -> Supercomputer;
+            GitHub -> "Lab Server" [style=dotted];
+            GitHub -> "Supercomputer" [style=dotted];
 
-.. tabbed:: Data flow
-    :name: data_flow
+        Arrows direction indicates direction of flow. If you authorise all computers (via ssh keys) with GitHub, you enable moving all code between computers via git [#]_.
 
-    .. digraph:: data_flow
+    .. tab-item:: Data flow
+        :name: data_flow
 
-        node [shape="rectangle"];
+        .. digraph:: data_flow
 
-        External [color="darkgray" style=filled];
-        Laptop [color="skyblue" style=filled];
-        "Lab Server" [fontcolor="white" color="blue" style=filled];
-        Supercomputer [fontcolor="white" color="darkblue" style=filled];
-        External -> Laptop;
-        "Lab Server" -> Laptop;
-        Laptop -> Supercomputer;
+            node [shape="rectangle"];
 
-    Arrows direction indicates direction of flow. The Lab Server is where data sampling is taking place (remember, we're assuming it hosts databases), and the laptop specifies what is moved to the Supercomputer.
+            External [color="darkgray" style=filled];
+            Laptop [color="skyblue" style=filled];
+            "Lab Server" [fontcolor="white" color="blue" style=filled];
+            Supercomputer [fontcolor="white" color="darkblue" style=filled];
+            External -> Laptop;
+            "Lab Server" -> Laptop;
+            Laptop -> Supercomputer;
 
-.. tabbed:: Results flow
-    :name: results_flow
+        Arrows direction indicates direction of flow. The Lab Server is where data sampling is taking place (remember, we're assuming it hosts databases), and the laptop specifies what is moved to the Supercomputer.
 
-    .. digraph:: results_flow
+    .. tab-item:: Results flow
+        :name: results_flow
 
-        node [shape="rectangle"];
+        .. digraph:: results_flow
 
-        Laptop [color="skyblue" style=filled];
-        Supercomputer [fontcolor="white" color="darkblue" style=filled];
-        Laptop -> Laptop
-        Supercomputer -> Laptop;
+            node [shape="rectangle"];
 
-    Arrows direction indicates direction of flow. Results are either generated on the Laptop or the Supercomputer.
+            Laptop [color="skyblue" style=filled];
+            Supercomputer [fontcolor="white" color="darkblue" style=filled];
+            Laptop -> Laptop
+            Supercomputer -> Laptop;
+
+        Arrows direction indicates direction of flow. Results are either generated on the Laptop or the Supercomputer.
 
 .. note::
 

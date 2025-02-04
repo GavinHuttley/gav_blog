@@ -47,13 +47,13 @@ blog_authors = {
 html_sidebars = {
     "**": [
         "about.html",
-        "postcard.html",
+        "ablog/postcard.html",
         "navigation.html",
-        "recentposts.html",
-        "tagcloud.html",
-        "categories.html",
-        "archives.html",
-        "searchbox.html",
+        "ablog/recentposts.html",
+        "ablog/tagcloud.html",
+        "ablog/categories.html",
+        "ablog/archives.html",
+        "searchfield.html",
     ],
 }
 
@@ -110,7 +110,7 @@ extensions = [
     "ablog",
     "jupyter_sphinx",
     "sphinx_comments",
-    "sphinx_panels",
+    "sphinx_design",
     "sphinxemoji.sphinxemoji",
 ]
 
@@ -124,7 +124,7 @@ mathjax_path = (
 
 
 # Add any paths that contain templates here, relative to this directory.
-templates_path = ["_templates"]
+# templates_path = ["_templates"]
 
 # The suffix(es) of source filenames.
 source_suffix = ".rst"
