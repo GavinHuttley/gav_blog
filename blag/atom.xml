@@ -2,40 +2,38 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://gavinhuttley.com</id>
   <title>Thinking Science with Computers</title>
-  <updated>2023-02-25T23:14:07.454856+00:00</updated>
+  <updated>2025-02-04T00:04:25.728015+00:00</updated>
   <link href="https://gavinhuttley.com"/>
   <link href="https://gavinhuttley.com/blag/atom.xml" rel="self"/>
-  <generator uri="https://ablog.readthedocs.org/" version="0.10.23">ABlog</generator>
-  <entry>
-    <id>https://gavinhuttley.com/posts/starting_research/</id>
-    <title>So you’re starting a research project, where do you begin?</title>
-    <updated>2022-02-25T00:00:00+00:00</updated>
-    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
-&lt;p&gt;This post is intended for anyone starting out in research and development with a computational bent, whether in a science (e.g. computational biology) or engineering context. In particular, it is focussed on the research process that leads to new tools and analysis methods.&lt;/p&gt;
-&lt;/div&gt;
-</content>
-    <link href="https://gavinhuttley.com/posts/starting_research/" rel="alternate"/>
-    <summary>This post is intended for anyone starting out in research and development with a computational bent, whether in a science (e.g. computational biology) or engineering context. In particular, it is focussed on the research process that leads to new tools and analysis methods.</summary>
-    <category term="research" label="research"/>
-    <category term="tips" label="tips"/>
-    <category term="newbs" label="newbs"/>
-    <category term="education" label="education"/>
-    <published>2022-02-25T00:00:00+00:00</published>
-  </entry>
+  <generator uri="https://ablog.readthedocs.io/" version="0.11.12">ABlog</generator>
   <entry>
     <id>https://gavinhuttley.com/posts/setting_up_your_computer/</id>
     <title>Setting up your computer for computational research</title>
     <updated>2022-03-01T00:00:00+00:00</updated>
-    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
-&lt;p&gt;How much impact can a computer setup possibly have? Some choices can make your daily life as a computational scientist a lot happier. Conversely, other choices can make you curse yourself. If it sounds like I’m talking from experience, you’re correct – 20+ years worth.&lt;/p&gt;
-&lt;/div&gt;
+    <content type="html">&lt;p class="ablog-post-excerpt"&gt;&lt;p&gt;How much impact can a computer setup possibly have? Some choices can make your daily life as a computational scientist a lot happier. Conversely, other choices can make you curse yourself. If it sounds like I’m talking from experience, you’re correct – 20+ years worth.&lt;/p&gt;
+&lt;/p&gt;
 </content>
-    <link href="https://gavinhuttley.com/posts/setting_up_your_computer/" rel="alternate"/>
+    <link href="https://gavinhuttley.com/posts/setting_up_your_computer/"/>
     <summary>How much impact can a computer setup possibly have? Some choices can make your daily life as a computational scientist a lot happier. Conversely, other choices can make you curse yourself. If it sounds like I’m talking from experience, you’re correct – 20+ years worth.</summary>
-    <category term="education" label="education"/>
     <category term="development" label="development"/>
+    <category term="education" label="education"/>
     <category term="research" label="research"/>
     <category term="tips" label="tips"/>
     <published>2022-03-01T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>https://gavinhuttley.com/posts/starting_research/</id>
+    <title>So you’re starting a research project, where do you begin?</title>
+    <updated>2022-02-25T00:00:00+00:00</updated>
+    <content type="html">&lt;p class="ablog-post-excerpt"&gt;&lt;p&gt;This post is intended for anyone starting out in research and development with a computational bent, whether in a science (e.g. computational biology) or engineering context. In particular, it is focussed on the research process that leads to new tools and analysis methods.&lt;/p&gt;
+&lt;/p&gt;
+</content>
+    <link href="https://gavinhuttley.com/posts/starting_research/"/>
+    <summary>This post is intended for anyone starting out in research and development with a computational bent, whether in a science (e.g. computational biology) or engineering context. In particular, it is focussed on the research process that leads to new tools and analysis methods.</summary>
+    <category term="education" label="education"/>
+    <category term="newbs" label="newbs"/>
+    <category term="research" label="research"/>
+    <category term="tips" label="tips"/>
+    <published>2022-02-25T00:00:00+00:00</published>
   </entry>
 </feed>

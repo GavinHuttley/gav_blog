@@ -1,30 +1,27 @@
-
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="en" data-content_root="../../">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>So you’re starting a research project, where do you begin? &#8212; Gav&#39;s Blog 25 documentation</title>
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
+    <title>So you’re starting a research project, where do you begin? &#8212; Gav&#39;s Blog 04 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../_static/basic.css?v=686e5160" />
+    <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css?v=e70394ae" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=4ae1632d" />
     <link rel="stylesheet" type="text/css" href="../../_static/jupyter-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/thebelab.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/twemoji.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css" />
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/jquery.js"></script>
-    <script src="../../_static/underscore.js"></script>
-    <script src="../../_static/doctools.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=c55bfeac" />
+    <script src="../../_static/documentation_options.js?v=af8b2a3d"></script>
+    <script src="../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/thebelab-helper.js"></script>
-    <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js"></script>
+    <script src="https://unpkg.com/twemoji@latest/dist/twemoji.min.js"></script>
     <script src="../../_static/twemoji.js"></script>
-    <script src="../../_static/plotly-latest.min.js"></script>
+    <script src="../../_static/plotly-latest.min.js?v=309d0351"></script>
     <script kind="utterances">
 
     var commentsRunWhenDOMLoaded = cb => {
@@ -61,14 +58,16 @@ commentsRunWhenDOMLoaded(addUtterances);
 </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
     <link rel="author" title="About these documents" href="../../about/" />
     <link rel="index" title="Index" href="../../genindex/" />
     <link rel="search" title="Search" href="../../search/" /> 
    
   <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
   
+
   
-  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+  
  
 <link
   rel="alternate"
@@ -78,32 +77,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 />
  
 <link href="True" rel="stylesheet" />
-
-<style type="text/css">
-  ul.ablog-archive {
-    list-style: none;
-    overflow: auto;
-    margin-left: 0px;
-  }
-  ul.ablog-archive li {
-    float: left;
-    margin-right: 5px;
-    font-size: 80%;
-  }
-  ul.postlist a {
-    font-style: italic;
-  }
-  ul.postlist-style-disc {
-    list-style-type: disc;
-  }
-  ul.postlist-style-none {
-    list-style-type: none;
-  }
-  ul.postlist-style-circle {
-    list-style-type: circle;
-  }
-</style>
-
+ 
   </head><body>
   
 
@@ -114,15 +88,15 @@ commentsRunWhenDOMLoaded(addUtterances);
 
           <div class="body" role="main">
              <section id="so-you-re-starting-a-research-project-where-do-you-begin">
-<h1>So you’re starting a research project, where do you begin?<a class="headerlink" href="#so-you-re-starting-a-research-project-where-do-you-begin" title="Permalink to this headline">¶</a></h1>
+<h1>So you’re starting a research project, where do you begin?<a class="headerlink" href="#so-you-re-starting-a-research-project-where-do-you-begin" title="Link to this heading">¶</a></h1>
 <section id="overview">
-<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading">¶</a></h2>
 <p>This post is intended for anyone starting out in research and development with a computational bent, whether in a science (e.g. computational biology) or engineering context. In particular, it is focussed on the research process that leads to new tools and analysis methods.</p>
 <p>So far, your exposure to knowledge discovery has likely been limited to textbook descriptions of how “thing x” was discovered. While being a consumer of such knowledge discovery is often challenging, the account you read is a highly distilled version of what happened. Being the original discoverer is more complicated.</p>
 <p>Take heart! Discoveries are not arrived at in completed form. By employing a systematic approach, we incrementally assemble the pieces to draw that new insight and develop something new and valuable. What follows is a sketch of my process.</p>
 </section>
 <section id="structure-is-key">
-<h2>Structure is key<a class="headerlink" href="#structure-is-key" title="Permalink to this headline">¶</a></h2>
+<h2>Structure is key<a class="headerlink" href="#structure-is-key" title="Link to this heading">¶</a></h2>
 <p>I break the process into three questions you must answer: <em>Why</em>, <em>What</em> and <em>How</em>. These correspond to:</p>
 <ul class="simple">
 <li><p><em>Why</em> is there a problem?</p></li>
@@ -133,13 +107,13 @@ commentsRunWhenDOMLoaded(addUtterances);
 <p>Establish what form your <strong>final</strong> output should be in (talk to your supervisor). Your project plan should be something that directly references that and makes delivering it easy.</p>
 </section>
 <section id="the-why">
-<span id="id1"></span><h2>The Why<a class="headerlink" href="#the-why" title="Permalink to this headline">¶</a></h2>
+<span id="id1"></span><h2>The Why<a class="headerlink" href="#the-why" title="Link to this heading">¶</a></h2>
 <blockquote class="epigraph">
 <div><p>Why does the problem even exist? Why is it a problem worthy of your attention? Why hasn’t it already been solved? Answering all these is your justification for doing the work and, at the very least, should make you comfortable you may be doing something worthwhile.</p>
 </div></blockquote>
-<p>This is the big picture part of the project and should proceed everything else. Identifying the existence of a problem requires you have a solid understanding of the domain. At this stage in your career, it’s quite likely that you have been “given” the problem. But once you take it, it becomes <strong>your</strong> problem <a class="footnote-reference brackets" href="#id11" id="id2">1</a>. In other words, the onus is on you to understand the background material that led to defining the problem. Ultimately, this requires reading about what others have done.</p>
+<p>This is the big picture part of the project and should proceed everything else. Identifying the existence of a problem requires you have a solid understanding of the domain. At this stage in your career, it’s quite likely that you have been “given” the problem. But once you take it, it becomes <strong>your</strong> problem <a class="footnote-reference brackets" href="#id11" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>. In other words, the onus is on you to understand the background material that led to defining the problem. Ultimately, this requires reading about what others have done.</p>
 <section id="what-are-the-existing-solutions-and-why-are-those-inadequate">
-<h3>What are the existing solutions, and why are those inadequate?<a class="headerlink" href="#what-are-the-existing-solutions-and-why-are-those-inadequate" title="Permalink to this headline">¶</a></h3>
+<h3>What are the existing solutions, and why are those inadequate?<a class="headerlink" href="#what-are-the-existing-solutions-and-why-are-those-inadequate" title="Link to this heading">¶</a></h3>
 <blockquote class="epigraph">
 <div><p>When you examine existing solutions, take a big picture view. What are the core algorithms they implement? How do the algorithms relate to each other? What are their inputs and outputs? Do they have a killer flaw or are they blocking a key opportunity?</p>
 </div></blockquote>
@@ -149,7 +123,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <p>Criticising the work of others is a “core business” in science and engineering. That said, consider these three crucial qualifiers when you frame that criticism.</p>
 <ol class="arabic simple">
 <li><p>What is the <strong>evidence</strong> the solutions are inadequate? (That evidence can be measurement, or a theoretical property.)</p></li>
-<li><p>The prior work was likely developed against different technological inputs <a class="footnote-reference brackets" href="#id12" id="id3">2</a>.</p></li>
+<li><p>The prior work was likely developed against different technological inputs <a class="footnote-reference brackets" href="#id12" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a>.</p></li>
 <li><p>Much of the information available to us now may not have been known to the authors of the original work.</p></li>
 </ol>
 <p>A critique of the work of others is based on what we know now. So be respectful. I guarantee you that someone will be casting their critical eye over what you do in the future.</p>
@@ -157,11 +131,11 @@ commentsRunWhenDOMLoaded(addUtterances);
 </section>
 </section>
 <section id="the-what">
-<span id="id4"></span><h2>The What<a class="headerlink" href="#the-what" title="Permalink to this headline">¶</a></h2>
+<span id="id4"></span><h2>The What<a class="headerlink" href="#the-what" title="Link to this heading">¶</a></h2>
 <section id="your-proposition">
-<h3>Your proposition<a class="headerlink" href="#your-proposition" title="Permalink to this headline">¶</a></h3>
+<h3>Your proposition<a class="headerlink" href="#your-proposition" title="Link to this heading">¶</a></h3>
 <blockquote class="epigraph">
-<div><p>What is the problem you will solve? Try and express this as succinctly as possible. This statement may need to be updated as your knowledge of the domain increases <a class="footnote-reference brackets" href="#id13" id="id5">3</a>. Critically, the statement must be something you can actually solve.</p>
+<div><p>What is the problem you will solve? Try and express this as succinctly as possible. This statement may need to be updated as your knowledge of the domain increases <a class="footnote-reference brackets" href="#id13" id="id5" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a>. Critically, the statement must be something you can actually solve.</p>
 </div></blockquote>
 <p>This is the nitty-gritty and why you’re reading this. It is your statement of what YOU will achieve and stems from the careful consideration described above. The framing of “what” problem you will solve can benefit from identifying both its inputs and outputs. Meaning, what is the input data (including where the data will, or can, come from)? What is the output you will produce?</p>
 <div class="admonition note">
@@ -171,20 +145,20 @@ commentsRunWhenDOMLoaded(addUtterances);
 <p>What you propose should explicitly address at least part of the shortcomings of existing solutions you identified in <a class="reference internal" href="#the-why"><span class="std std-ref">The Why</span></a>.</p>
 </section>
 <section id="its-value">
-<h3>Its value<a class="headerlink" href="#its-value" title="Permalink to this headline">¶</a></h3>
+<h3>Its value<a class="headerlink" href="#its-value" title="Link to this heading">¶</a></h3>
 <blockquote class="epigraph">
-<div><p>What is the value <a class="footnote-reference brackets" href="#id14" id="id6">4</a> of your proposed solution? To establish this value, be clear on the output of your work and why it will be more valuable than what exists. Will it improve prediction accuracy? Will it require magnitudes less computing resources? Will it be more maintainable?</p>
+<div><p>What is the value <a class="footnote-reference brackets" href="#id14" id="id6" role="doc-noteref"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></a> of your proposed solution? To establish this value, be clear on the output of your work and why it will be more valuable than what exists. Will it improve prediction accuracy? Will it require magnitudes less computing resources? Will it be more maintainable?</p>
 </div></blockquote>
 <p>Your answer should reflect the significance you have attributed to the shortcomings of existing approaches and your argument of the benefit to the target audience.</p>
 <p>But that thinking is contingent upon the successful completion of the project. The value of a project also comes from what can be learned <em>if it fails</em>. Prepare yourself for the possibility that your proposal will not deliver on this promised value.</p>
-<p>Here’s a crucial reality-check – is a negative answer still interesting <a class="footnote-reference brackets" href="#id15" id="id7">5</a>?</p>
+<p>Here’s a crucial reality-check – is a negative answer still interesting <a class="footnote-reference brackets" href="#id15" id="id7" role="doc-noteref"><span class="fn-bracket">[</span>5<span class="fn-bracket">]</span></a>?</p>
 <p>At the very least, you do not want the project to fail because you did not ensure the <a class="reference internal" href="#correctness"><span class="std std-ref">correctness</span></a> of your implementation or execution.</p>
 </section>
 </section>
 <section id="the-how">
-<span id="id8"></span><h2>The How<a class="headerlink" href="#the-how" title="Permalink to this headline">¶</a></h2>
+<span id="id8"></span><h2>The How<a class="headerlink" href="#the-how" title="Link to this heading">¶</a></h2>
 <section id="your-solution">
-<h3>Your solution<a class="headerlink" href="#your-solution" title="Permalink to this headline">¶</a></h3>
+<h3>Your solution<a class="headerlink" href="#your-solution" title="Link to this heading">¶</a></h3>
 <blockquote class="epigraph">
 <div><p>How will you tackle the inadequacy of existing solution(s)?</p>
 </div></blockquote>
@@ -196,7 +170,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </ul>
 </section>
 <section id="making-it-believable">
-<span id="correctness"></span><h3>Making it believable<a class="headerlink" href="#making-it-believable" title="Permalink to this headline">¶</a></h3>
+<span id="correctness"></span><h3>Making it believable<a class="headerlink" href="#making-it-believable" title="Link to this heading">¶</a></h3>
 <blockquote class="epigraph">
 <div><p>How will you check correctness?</p>
 </div></blockquote>
@@ -207,7 +181,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </ul>
 </section>
 <section id="measure-performance">
-<span id="id9"></span><h3>Measure performance<a class="headerlink" href="#measure-performance" title="Permalink to this headline">¶</a></h3>
+<span id="id9"></span><h3>Measure performance<a class="headerlink" href="#measure-performance" title="Link to this heading">¶</a></h3>
 <blockquote class="epigraph">
 <div><p>What measurable quantities best capture performance?</p>
 </div></blockquote>
@@ -218,7 +192,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </ul>
 </section>
 <section id="identify-milestones">
-<h3>Identify milestones<a class="headerlink" href="#identify-milestones" title="Permalink to this headline">¶</a></h3>
+<h3>Identify milestones<a class="headerlink" href="#identify-milestones" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p>Stages towards project completion</p></li>
 <li><p>Define termination project condition(s)</p></li>
@@ -226,9 +200,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 </section>
 </section>
 <section id="principles-of-pragmatic-project-execution">
-<h2>Principles of Pragmatic Project Execution<a class="headerlink" href="#principles-of-pragmatic-project-execution" title="Permalink to this headline">¶</a></h2>
+<h2>Principles of Pragmatic Project Execution<a class="headerlink" href="#principles-of-pragmatic-project-execution" title="Link to this heading">¶</a></h2>
 <section id="plan-do-repeat">
-<h3>Plan, do, repeat<a class="headerlink" href="#plan-do-repeat" title="Permalink to this headline">¶</a></h3>
+<h3>Plan, do, repeat<a class="headerlink" href="#plan-do-repeat" title="Link to this heading">¶</a></h3>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Your time is your most valuable currency. Spend it wisely.</p>
@@ -241,7 +215,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <p>Your project plan begins by addressing the issues listed above. Convert those responses into a flowchart where the nodes are “processes” in your research project (e.g. data sampling). This flow chart will be a dynamic figure, meaning that you will update and refine it as you go. It is also a figure that you will likely employ when you explain the project to an audience, either in a conference presentation or a research / technical paper.</p>
 </section>
 <section id="optimise-for-the-minimal-project-duration">
-<h3>Optimise for the minimal project duration<a class="headerlink" href="#optimise-for-the-minimal-project-duration" title="Permalink to this headline">¶</a></h3>
+<h3>Optimise for the minimal project duration<a class="headerlink" href="#optimise-for-the-minimal-project-duration" title="Link to this heading">¶</a></h3>
 <blockquote class="epigraph">
 <div><p>Can you build the project order of execution so that the best outcome is achieved with minimal effort (i.e., breaking the problem down so that you incrementally prototype to the final solution)?</p>
 </div></blockquote>
@@ -253,7 +227,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 </section>
 <section id="fast-prototyping">
-<h3>Fast prototyping<a class="headerlink" href="#fast-prototyping" title="Permalink to this headline">¶</a></h3>
+<h3>Fast prototyping<a class="headerlink" href="#fast-prototyping" title="Link to this heading">¶</a></h3>
 <blockquote class="epigraph">
 <div><p>“Premature optimisation is the root of all evil.”</p>
 <p class="attribution">—Donald Knuth</p>
@@ -262,25 +236,25 @@ commentsRunWhenDOMLoaded(addUtterances);
 <div><p>“Seriously!”</p>
 <p class="attribution">—Gavin</p>
 </div></blockquote>
-<p>Once you have a project sketch, you should aim to prototype the entire workflow <a class="footnote-reference brackets" href="#id16" id="id10">6</a> as fast as possible, including getting to the point of quantifying performance. “Fast” refers to both implementation time (crude code is the goal) AND computation time with the latter often achieved by using a minimal amount of data.</p>
+<p>Once you have a project sketch, you should aim to prototype the entire workflow <a class="footnote-reference brackets" href="#id16" id="id10" role="doc-noteref"><span class="fn-bracket">[</span>6<span class="fn-bracket">]</span></a> as fast as possible, including getting to the point of quantifying performance. “Fast” refers to both implementation time (crude code is the goal) AND computation time with the latter often achieved by using a minimal amount of data.</p>
 <p>You will learn a lot from this process, including the types of tests you will need to write to ensure <a class="reference internal" href="#correctness"><span class="std std-ref">correctness</span></a>.</p>
 </section>
 <section id="iterate-the-flow-baby">
-<h3>Iterate the flow, baby!<a class="headerlink" href="#iterate-the-flow-baby" title="Permalink to this headline">¶</a></h3>
+<h3>Iterate the flow, baby!<a class="headerlink" href="#iterate-the-flow-baby" title="Link to this heading">¶</a></h3>
 <blockquote class="epigraph">
 <div><p>Repeat the above steps.</p>
 </div></blockquote>
 <p>In the beginning, there may be many things you don’t understand. Highlight the things you don’t understand and discuss them with your supervisor and/or colleagues.</p>
 </section>
 <section id="what-if-your-approach-is-impossible">
-<h3>What if your approach is impossible?<a class="headerlink" href="#what-if-your-approach-is-impossible" title="Permalink to this headline">¶</a></h3>
+<h3>What if your approach is impossible?<a class="headerlink" href="#what-if-your-approach-is-impossible" title="Link to this heading">¶</a></h3>
 <blockquote class="epigraph">
 <div><p>How will you decide if the project is infeasible? What is your backup plan?</p>
 </div></blockquote>
 <p>Make sure your project can produce something. The form this might take will differ between a science and an engineering project. Discuss with your supervisor for specifics.</p>
 </section>
 <section id="how-will-you-decide-when-you-re-done">
-<h3>How will you decide when you’re done?<a class="headerlink" href="#how-will-you-decide-when-you-re-done" title="Permalink to this headline">¶</a></h3>
+<h3>How will you decide when you’re done?<a class="headerlink" href="#how-will-you-decide-when-you-re-done" title="Link to this heading">¶</a></h3>
 <blockquote class="epigraph">
 <div><p>Is there a clear end-point? How will you avoid the infinite loop of tweaking?</p>
 </div></blockquote>
@@ -288,7 +262,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <p>If it does “outperform” competitors, happy days! You still have to avoid excessive polishing. The relevant saying here is “great is the enemy of good”, i.e. don’t be a perfectionist.</p>
 </section>
 <section id="don-t-isolate-yourself">
-<h3>Don’t isolate yourself<a class="headerlink" href="#don-t-isolate-yourself" title="Permalink to this headline">¶</a></h3>
+<h3>Don’t isolate yourself<a class="headerlink" href="#don-t-isolate-yourself" title="Link to this heading">¶</a></h3>
 <blockquote class="epigraph">
 <div><p>How often and with who will you discuss your project?</p>
 </div></blockquote>
@@ -296,7 +270,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <p>Science and engineering deliver consistently better results when multiple brains are involved. Discussions with others help you develop your understanding and provide a crucial perspective that can help you decide when you may be wasting your time pursuing an approach that cannot work or when a superior approach is possible. Your supervisor provides a crucial point of contact for such discussions. In my view, however, they should not be the only person you discuss things with.</p>
 </section>
 <section id="tackling-the-inevitable-problems">
-<h3>Tackling the inevitable problems<a class="headerlink" href="#tackling-the-inevitable-problems" title="Permalink to this headline">¶</a></h3>
+<h3>Tackling the inevitable problems<a class="headerlink" href="#tackling-the-inevitable-problems" title="Link to this heading">¶</a></h3>
 <blockquote class="epigraph">
 <div><p>Troubleshoot! If the process of identifying the minimal example of a problem does not expose the solution, then find someone to discuss it with.</p>
 </div></blockquote>
@@ -313,7 +287,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 </section>
 <section id="don-t-forget-to-enjoy-yourself">
-<h3>Don’t forget to enjoy yourself<a class="headerlink" href="#don-t-forget-to-enjoy-yourself" title="Permalink to this headline">¶</a></h3>
+<h3>Don’t forget to enjoy yourself<a class="headerlink" href="#don-t-forget-to-enjoy-yourself" title="Link to this heading">¶</a></h3>
 <blockquote class="epigraph">
 <div><p>Research should enrich your life, not consume it.</p>
 </div></blockquote>
@@ -325,45 +299,50 @@ commentsRunWhenDOMLoaded(addUtterances);
 <p class="attribution">—Carl Sagan</p>
 </div></blockquote>
 <p class="rubric">Footnotes</p>
-<dl class="footnote brackets">
-<dt class="label" id="id11"><span class="brackets"><a class="fn-backref" href="#id2">1</a></span></dt>
-<dd><p>If you aren’t prepared to accept that, you should probably do something else.</p>
-</dd>
-<dt class="label" id="id12"><span class="brackets"><a class="fn-backref" href="#id3">2</a></span></dt>
-<dd><p>Properties that are problematic now may not have been evident before; hence “the problem” is new.</p>
-</dd>
-<dt class="label" id="id13"><span class="brackets"><a class="fn-backref" href="#id5">3</a></span></dt>
-<dd><p>Bearing in mind you must avoid restating it to a question to which you already know the answer from examining your data – avoid <em>a posteori</em> questions.</p>
-</dd>
-<dt class="label" id="id14"><span class="brackets"><a class="fn-backref" href="#id6">4</a></span></dt>
-<dd><p>In science, we frame the value of work as its “significance”.</p>
-</dd>
-<dt class="label" id="id15"><span class="brackets"><a class="fn-backref" href="#id7">5</a></span></dt>
-<dd><p>In a well designed and executed project, a “failure” will be useful since it reveals some fundamental property that was previously not appreciated. Getting value from a failure requires you to be able to <a class="reference internal" href="#correctness"><span class="std std-ref">avoid uninteresting answers</span></a>. You need to ensure that failure is not due to an error on your part. If you cannot establish failure as interesting, you likely have a very high-risk project indeed, and you should probably change your project goals.</p>
-</dd>
-<dt class="label" id="id16"><span class="brackets"><a class="fn-backref" href="#id10">6</a></span></dt>
-<dd><p>For challenging algorithmic problems, substitute a competitor in place for where <em>your</em> work will fit.</p>
-</dd>
-</dl>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="id11" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">1</a><span class="fn-bracket">]</span></span>
+<p>If you aren’t prepared to accept that, you should probably do something else.</p>
+</aside>
+<aside class="footnote brackets" id="id12" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">2</a><span class="fn-bracket">]</span></span>
+<p>Properties that are problematic now may not have been evident before; hence “the problem” is new.</p>
+</aside>
+<aside class="footnote brackets" id="id13" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id5">3</a><span class="fn-bracket">]</span></span>
+<p>Bearing in mind you must avoid restating it to a question to which you already know the answer from examining your data – avoid <em>a posteori</em> questions.</p>
+</aside>
+<aside class="footnote brackets" id="id14" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id6">4</a><span class="fn-bracket">]</span></span>
+<p>In science, we frame the value of work as its “significance”.</p>
+</aside>
+<aside class="footnote brackets" id="id15" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id7">5</a><span class="fn-bracket">]</span></span>
+<p>In a well designed and executed project, a “failure” will be useful since it reveals some fundamental property that was previously not appreciated. Getting value from a failure requires you to be able to <a class="reference internal" href="#correctness"><span class="std std-ref">avoid uninteresting answers</span></a>. You need to ensure that failure is not due to an error on your part. If you cannot establish failure as interesting, you likely have a very high-risk project indeed, and you should probably change your project goals.</p>
+</aside>
+<aside class="footnote brackets" id="id16" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id10">6</a><span class="fn-bracket">]</span></span>
+<p>For challenging algorithmic problems, substitute a competitor in place for where <em>your</em> work will fit.</p>
+</aside>
+</aside>
 </section>
 </section>
 </section>
 
-<div class="section">
-    
-
-<div class="section">
-  <span style="float: left">
+<div class="section ablog__blog_comments">
+     
+<div class="section ablog__prev-next">
+  <span class="ablog__prev">
     
   </span>
-  <span>&nbsp;</span>
-  <span style="float: right">
+  <span class="ablog__spacer">&nbsp;</span>
+  <span class="ablog__next">
      
     <a href="../setting_up_your_computer/">
-      Setting up your computer for computational research <i
-        class="fa fa-arrow-circle-right"
-      ></i
-      >
+      <span>Setting up your computer for computational research</span>
+      
+      <i class="fa fa-arrow-circle-right"></i>
+      
     </a>
     
   </span>
@@ -375,7 +354,7 @@ commentsRunWhenDOMLoaded(addUtterances);
           
         </div>
       </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
         <div class="sphinxsidebarwrapper">
 <h1 class="logo"><a href="../../">Gav's Blog</a></h1>
 
@@ -386,151 +365,148 @@ commentsRunWhenDOMLoaded(addUtterances);
 
 
 
-  
-<h2>
-   <i class="fa fa-calendar"></i>
-  25 Feb 2022 
-</h2>
 
-<ul>
+<div class="ablog-sidebar-item ablog__postcard">
+   
+  <h2>
+     
+    <i class="fa fa-calendar"></i>
+    
+    <span>25 Feb 2022</span>
+    
+  </h2>
+  <ul>
+    <div class="ablog-sidebar-item ablog__postcard2">
       
-<li id="category">
-  <span
-    ><i class="fa-fw fa fa-folder-open"></i></span
-  >
+  <li id="ablog-sidebar-item category ablog__category">
+    <span>
+      
+      <i class="fa-fw fa fa-folder-open"></i>
+      
+    </span>
+     
+    <a href="../../blag/category/computational-science/">computational science</a>
+      
+  </li>
    
-  <a href="../../blag/category/computational-science/">computational science</a>  
-</li>
- 
-<li id="tags">
-  <span
-    ><i class="fa-fw fa fa-tags"></i> </span
-  >
+  <li id="ablog-sidebar-item tags ablog__tags">
+    <span>
+       
+      <i class="fa-fw fa fa-tags"></i>
+       
+    </span>
+     
+    <a href="../../blag/tag/research/">research</a>
+        
+    <a href="../../blag/tag/tips/">tips</a>
+        
+    <a href="../../blag/tag/newbs/">newbs</a>
+        
+    <a href="../../blag/tag/education/">education</a>
+      
+  </li>
    
-  <a href="../../blag/tag/research/">research</a>   
-  <a href="../../blag/tag/tips/">tips</a>   
-  <a href="../../blag/tag/newbs/">newbs</a>   
-  <a href="../../blag/tag/education/">education</a>  
-</li>
- 
-</ul>
+</div>
+  </ul>
+</div>
 <h3>Navigation</h3>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../about/">About Gavin Huttley</a></li>
 </ul>
 
 
-<h3>
-  <a href="../../blag/">Recent Posts</a>
-</h3>
-<ul>
-   
-  <li>
-    <a href="../setting_up_your_computer/"
-      >01 March - Setting up your computer for computational research</a
-    >
-  </li>
-  
-</ul>
-
-<h3><a href="../../blag/tag/">Tags</a></h3>
-<style type="text/css">
-  ul.ablog-cloud {
-    list-style: none;
-    overflow: auto;
-  }
-  ul.ablog-cloud li {
-    float: left;
-    height: 20pt;
-    line-height: 18pt;
-    margin-right: 5px;
-  }
-  ul.ablog-cloud a {
-    text-decoration: none;
-    vertical-align: middle;
-  }
-  li.ablog-cloud-1 {
-    font-size: 80%;
-  }
-  li.ablog-cloud-2 {
-    font-size: 95%;
-  }
-  li.ablog-cloud-3 {
-    font-size: 110%;
-  }
-  li.ablog-cloud-4 {
-    font-size: 125%;
-  }
-  li.ablog-cloud-5 {
-    font-size: 140%;
-  }
-</style>
-<ul class="ablog-cloud">
-   
-  <li class="ablog-cloud ablog-cloud-1">
-    <a href="../../blag/tag/development/">development</a>
-  </li>
+<div class="ablog-sidebar-item ablog__recentposts">
+  <h3>
+    <a href="../../blag/">Recent Posts</a>
+  </h3>
+  <ul>
+     
+    <li>
+      <a href="../setting_up_your_computer/">
+        01 March - Setting up your computer for computational research
+      </a>
+    </li>
     
-  <li class="ablog-cloud ablog-cloud-5">
-    <a href="../../blag/tag/education/">education</a>
-  </li>
-    
-  <li class="ablog-cloud ablog-cloud-1">
-    <a href="../../blag/tag/newbs/">newbs</a>
-  </li>
-    
-  <li class="ablog-cloud ablog-cloud-5">
-    <a href="../../blag/tag/research/">research</a>
-  </li>
-    
-  <li class="ablog-cloud ablog-cloud-5">
-    <a href="../../blag/tag/tips/">tips</a>
-  </li>
-   
-</ul>
+  </ul>
+</div>
 
-<h3>
-  <a href="../../blag/category/">Categories</a>
-</h3>
-<ul>
-   
-  <li>
-    <a href="../../blag/category/computational-science/">computational science (2)</a>
-  </li>
-   
-</ul>
+<div class="ablog-sidebar-item ablog__tagcloud">
+  <link
+    rel="stylesheet"
+    href="../../_static/ablog/tagcloud.css"
+    type="text/css"
+  />
+  <h3><a href="../../blag/tag/">Tags</a></h3>
+  <ul class="ablog-cloud">
+     
+    <li class="ablog-cloud ablog-cloud-1">
+      <a href="../../blag/tag/development/">development</a>
+    </li>
+      
+    <li class="ablog-cloud ablog-cloud-5">
+      <a href="../../blag/tag/education/">education</a>
+    </li>
+      
+    <li class="ablog-cloud ablog-cloud-1">
+      <a href="../../blag/tag/newbs/">newbs</a>
+    </li>
+      
+    <li class="ablog-cloud ablog-cloud-5">
+      <a href="../../blag/tag/research/">research</a>
+    </li>
+      
+    <li class="ablog-cloud ablog-cloud-5">
+      <a href="../../blag/tag/tips/">tips</a>
+    </li>
+     
+  </ul>
+</div>
 
-<h3>
-  <a href="../../blag/archive/">Archives</a>
-</h3>
-<ul>
-   
-  <li>
-    <a href="../../blag/2022/">2022 (2)</a>
-  </li>
-   
-</ul>
+<div class="ablog-sidebar-item ablog__categories">
+  <h3>
+    <a href="../../blag/category/">Categories</a>
+  </h3>
+  <ul>
+     
+    <li>
+      <a href="../../blag/category/computational-science/">computational science (2)</a>
+    </li>
+     
+  </ul>
+</div>
 
-<div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">Quick search</h3>
+<div class="ablog-sidebar-item ablog__archives">
+  <h3>
+    <a href="../../blag/archive/">Archives</a>
+  </h3>
+  <ul>
+     
+    <li>
+      <a href="../../blag/2022/">2022 (2)</a>
+    </li>
+     
+  </ul>
+</div>
+
+<search id="searchbox" style="display: none" role="search">
     <div class="searchformwrapper">
     <form class="search" action="../../search/" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Search"/>
       <input type="submit" value="Go" />
     </form>
     </div>
-</div>
-<script>$('#searchbox').show(0);</script>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
         </div>
       </div>
       <div class="clearer"></div>
     </div>
     <div class="footer">
-      &copy;2022-, Gavin Huttley.
+      &#169;2022-, Gavin Huttley.
       
       |
-      Powered by <a href="https://sphinx-doc.org/">Sphinx 4.5.0</a>
-      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.13</a>
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 8.1.3</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 1.0.0</a>
       
     </div>
 

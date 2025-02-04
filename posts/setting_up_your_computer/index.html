@@ -1,30 +1,27 @@
-
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="en" data-content_root="../../">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Setting up your computer for computational research &#8212; Gav&#39;s Blog 25 documentation</title>
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
+    <title>Setting up your computer for computational research &#8212; Gav&#39;s Blog 04 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../_static/basic.css?v=686e5160" />
+    <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css?v=e70394ae" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=4ae1632d" />
     <link rel="stylesheet" type="text/css" href="../../_static/jupyter-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/thebelab.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/twemoji.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css" />
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/jquery.js"></script>
-    <script src="../../_static/underscore.js"></script>
-    <script src="../../_static/doctools.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=c55bfeac" />
+    <script src="../../_static/documentation_options.js?v=af8b2a3d"></script>
+    <script src="../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/thebelab-helper.js"></script>
-    <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js"></script>
+    <script src="https://unpkg.com/twemoji@latest/dist/twemoji.min.js"></script>
     <script src="../../_static/twemoji.js"></script>
-    <script src="../../_static/plotly-latest.min.js"></script>
+    <script src="../../_static/plotly-latest.min.js?v=309d0351"></script>
     <script kind="utterances">
 
     var commentsRunWhenDOMLoaded = cb => {
@@ -61,14 +58,16 @@ commentsRunWhenDOMLoaded(addUtterances);
 </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
     <link rel="author" title="About these documents" href="../../about/" />
     <link rel="index" title="Index" href="../../genindex/" />
     <link rel="search" title="Search" href="../../search/" /> 
    
   <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
   
+
   
-  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+  
  
 <link
   rel="alternate"
@@ -78,32 +77,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 />
  
 <link href="True" rel="stylesheet" />
-
-<style type="text/css">
-  ul.ablog-archive {
-    list-style: none;
-    overflow: auto;
-    margin-left: 0px;
-  }
-  ul.ablog-archive li {
-    float: left;
-    margin-right: 5px;
-    font-size: 80%;
-  }
-  ul.postlist a {
-    font-style: italic;
-  }
-  ul.postlist-style-disc {
-    list-style-type: disc;
-  }
-  ul.postlist-style-none {
-    list-style-type: none;
-  }
-  ul.postlist-style-circle {
-    list-style-type: circle;
-  }
-</style>
-
+ 
   </head><body>
   
 
@@ -114,17 +88,17 @@ commentsRunWhenDOMLoaded(addUtterances);
 
           <div class="body" role="main">
              <section id="setting-up-your-computer-for-computational-research">
-<h1>Setting up your computer for computational research<a class="headerlink" href="#setting-up-your-computer-for-computational-research" title="Permalink to this headline">¶</a></h1>
+<h1>Setting up your computer for computational research<a class="headerlink" href="#setting-up-your-computer-for-computational-research" title="Link to this heading">¶</a></h1>
 <p>How much impact can a computer setup possibly have? Some choices can make your daily life as a computational scientist a lot happier. Conversely, other choices can make you curse yourself. If it sounds like I’m talking from experience, you’re correct – 20+ years worth.</p>
 <section id="be-systematic">
-<h2>Be systematic<a class="headerlink" href="#be-systematic" title="Permalink to this headline">¶</a></h2>
+<h2>Be systematic<a class="headerlink" href="#be-systematic" title="Link to this heading">¶</a></h2>
 <p>There are many reasons why adopting a systematic approach to organising your research activities on your computer is important. If you adopt a naming scheme and always organise your project files in the same way, you increase the <em>clarity and predictability</em> of your work. Putting all research work under a single directory facilitates <em>portability</em>, meaning it can easily be mirrored on different computers and code working on one system works on another. Predictability and portability improve the <em>reproducibility</em> of your work since you will not have to write custom code to handle execution on different systems.</p>
 <p>Designing your work with reproducibility in mind benefits you and your colleagues and contributes to your long-term reputation. It also reduces the chance you’ll go 🤪.</p>
 </section>
 <section id="take-account-of-the-resources-you-will-use">
-<h2>Take account of the resources you will use<a class="headerlink" href="#take-account-of-the-resources-you-will-use" title="Permalink to this headline">¶</a></h2>
+<h2>Take account of the resources you will use<a class="headerlink" href="#take-account-of-the-resources-you-will-use" title="Link to this heading">¶</a></h2>
 <section id="computers">
-<h3>Computers<a class="headerlink" href="#computers" title="Permalink to this headline">¶</a></h3>
+<h3>Computers<a class="headerlink" href="#computers" title="Link to this heading">¶</a></h3>
 <p>Consider the following scenario:</p>
 <ul class="simple">
 <li><p><em>laptop, running macOS or Windows</em>: most development and prototyping will be done here</p></li>
@@ -133,11 +107,11 @@ commentsRunWhenDOMLoaded(addUtterances);
 </ul>
 <p>In this scenario, data sampling code and data are synchronised between the laptop and the lab server. Large scale analyses are first prototyped on the laptop, and a selected data subset, code, and computational environment are synchronised with the supercomputer. Results are brought back to the laptop.</p>
 <p><em>How can you simplify keeping the different computational environments in sync?</em></p>
-<p>Adopt a directed relationship (click the tabs below to see illustrations for our scenario). For example, designate your laptop as the canonical machine for any source code. That means only editing code on that machine. Communicate those edits to the other computers in one direction only (use <code class="docutils literal notranslate"><span class="pre">git</span></code> <a class="footnote-reference brackets" href="#id12" id="id1">1</a> for this). If you don’t adhere to this, your code will quickly devolve to an inconsistent state, making you 😢.</p>
-<div class="tabbed-set docutils">
-<input checked="checked" id="bd045847-7a51-4fd6-a850-b157df680f90" name="8f919687-097d-46f0-9100-b3eda01cc382" type="radio">
-</input><label class="tabbed-label" for="bd045847-7a51-4fd6-a850-b157df680f90">
-Code flow</label><div class="tabbed-content docutils">
+<p>Adopt a directed relationship (click the tabs below to see illustrations for our scenario). For example, designate your laptop as the canonical machine for any source code. That means only editing code on that machine. Communicate those edits to the other computers in one direction only (use <code class="docutils literal notranslate"><span class="pre">git</span></code> <a class="footnote-reference brackets" href="#id12" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> for this). If you don’t adhere to this, your code will quickly devolve to an inconsistent state, making you 😢.</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-0" id="code-flow">
+Code flow</label><div class="sd-tab-content docutils">
 <div class="graphviz"><object data="../../_images/graphviz-e8f78c57f7d965103e817aace163798e4cfec4bc.svg" type="image/svg+xml" class="graphviz">
 <p class="warning">digraph code_flow {
 node [shape=&quot;rectangle&quot;];
@@ -152,11 +126,11 @@ Laptop -&gt; Supercomputer;
 GitHub -&gt; &quot;Lab Server&quot; [style=dotted];
 GitHub -&gt; &quot;Supercomputer&quot; [style=dotted];
 }</p></object></div>
-<p>Arrows direction indicates direction of flow. If you authorise all computers (via ssh keys) with GitHub, you enable moving all code between computers via git <a class="footnote-reference brackets" href="#id13" id="id2">2</a>.</p>
+<p>Arrows direction indicates direction of flow. If you authorise all computers (via ssh keys) with GitHub, you enable moving all code between computers via git <a class="footnote-reference brackets" href="#id13" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a>.</p>
 </div>
-<input id="1ca858e8-7cd4-498d-b7db-295d1f9ac97e" name="8f919687-097d-46f0-9100-b3eda01cc382" type="radio">
-</input><label class="tabbed-label" for="1ca858e8-7cd4-498d-b7db-295d1f9ac97e">
-Data flow</label><div class="tabbed-content docutils">
+<input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-1" id="data-flow">
+Data flow</label><div class="sd-tab-content docutils">
 <div class="graphviz"><object data="../../_images/graphviz-698f4be85680c591d7339bea3e4016964cbdc2f3.svg" type="image/svg+xml" class="graphviz">
 <p class="warning">digraph data_flow {
 node [shape=&quot;rectangle&quot;];
@@ -171,9 +145,9 @@ Laptop -&gt; Supercomputer;
 }</p></object></div>
 <p>Arrows direction indicates direction of flow. The Lab Server is where data sampling is taking place (remember, we’re assuming it hosts databases), and the laptop specifies what is moved to the Supercomputer.</p>
 </div>
-<input id="09f4ee23-f622-4838-af15-195bb14c8902" name="8f919687-097d-46f0-9100-b3eda01cc382" type="radio">
-</input><label class="tabbed-label" for="09f4ee23-f622-4838-af15-195bb14c8902">
-Results flow</label><div class="tabbed-content docutils">
+<input id="sd-tab-item-2" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-2" id="results-flow">
+Results flow</label><div class="sd-tab-content docutils">
 <div class="graphviz"><object data="../../_images/graphviz-a0f33125e99bf21739e776787ce7f6456a7b269b.svg" type="image/svg+xml" class="graphviz">
 <p class="warning">digraph results_flow {
 node [shape=&quot;rectangle&quot;];
@@ -193,14 +167,14 @@ Supercomputer -&gt; Laptop;
 </div>
 </section>
 <section id="major-software-tools">
-<h3>Major software tools<a class="headerlink" href="#major-software-tools" title="Permalink to this headline">¶</a></h3>
+<h3>Major software tools<a class="headerlink" href="#major-software-tools" title="Link to this heading">¶</a></h3>
 <section id="package-manager">
-<h4>Package manager<a class="headerlink" href="#package-manager" title="Permalink to this headline">¶</a></h4>
-<p>If your laptop is running macOS, you already have a unix based system 😎. However, you will almost certainly need to install a unix-style package manager. I recommend <a class="reference external" href="https://brew.sh/">Homebrew</a>. This can be used to install non-python tools, such as the <code class="docutils literal notranslate"><span class="pre">openmpi</span></code> library <a class="footnote-reference brackets" href="#id14" id="id3">3</a>.</p>
+<h4>Package manager<a class="headerlink" href="#package-manager" title="Link to this heading">¶</a></h4>
+<p>If your laptop is running macOS, you already have a unix based system 😎. However, you will almost certainly need to install a unix-style package manager. I recommend <a class="reference external" href="https://brew.sh/">Homebrew</a>. This can be used to install non-python tools, such as the <code class="docutils literal notranslate"><span class="pre">openmpi</span></code> library <a class="footnote-reference brackets" href="#id14" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a>.</p>
 <p>If your laptop is running Windows, install the latest <a class="reference external" href="https://docs.microsoft.com/en-us/windows/wsl/install">WSL</a> (Windows subsystem for Linux, which installs Ubuntu). You will then get the <code class="docutils literal notranslate"><span class="pre">apt</span></code> package manager.</p>
 </section>
 <section id="terminal-app">
-<h4>Terminal app<a class="headerlink" href="#terminal-app" title="Permalink to this headline">¶</a></h4>
+<h4>Terminal app<a class="headerlink" href="#terminal-app" title="Link to this heading">¶</a></h4>
 <p>The Terminal application is your gateway to the command line on all the computers you will access. The terminal is just an interface to your shell environment. At present, <code class="docutils literal notranslate"><span class="pre">zsh</span></code> is the default shell on macOS, while <code class="docutils literal notranslate"><span class="pre">bash</span></code> is the default on Linux distributions. Configuration files are located in your home directory and named <code class="docutils literal notranslate"><span class="pre">.zshrc</span></code> and <code class="docutils literal notranslate"><span class="pre">.bashrc</span></code> respectively. You will be editing them.</p>
 <p>As this same application is employed to interact with all the computers you will use, it’s worth looking into making your shell environments on different computers as similar as possible, albeit you need to make sure it’s clear which computer you’re on. The latter can be achieved by customising the terminal prompt.</p>
 <p>If you use <code class="docutils literal notranslate"><span class="pre">zsh</span></code>, consider installing <a class="reference external" href="https://ohmyz.sh/">ohmyzsh</a>. Some other command line tools I find super useful are:</p>
@@ -214,19 +188,19 @@ Supercomputer -&gt; Laptop;
 <p>See the <a class="reference external" href="https://github.com/ibraheemdev/modern-unix">modern unix tools</a> page.</p>
 </section>
 <section id="text-editor">
-<h4>Text editor<a class="headerlink" href="#text-editor" title="Permalink to this headline">¶</a></h4>
+<h4>Text editor<a class="headerlink" href="#text-editor" title="Link to this heading">¶</a></h4>
 <p>No matter what OS your laptop is running, I encourage you to install <a class="reference external" href="https://code.visualstudio.com">VS Code</a> . The reasons are simple, it provides an excellent experience for editing files on remote machines along with a fully-featured terminal experience. Be sure and research useful extensions. On my system, I have:</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://marketplace.visualstudio.com/items?itemName=njpwerner.autodocstring">autodocstring</a></p></li>
 <li><p><a class="reference external" href="https://marketplace.visualstudio.com/items?itemName=ms-python.python">Python extensions</a></p></li>
 <li><p><a class="reference external" href="https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter">Jupyter extension</a></p></li>
 <li><p><a class="reference external" href="https://marketplace.visualstudio.com/items?itemName=hbenl.vscode-test-explorer">Python Test Explorer UI</a></p></li>
-<li><p><a class="reference external" href="https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh">Remote SSH</a> <a class="footnote-reference brackets" href="#id15" id="id4">4</a></p></li>
+<li><p><a class="reference external" href="https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh">Remote SSH</a> <a class="footnote-reference brackets" href="#id15" id="id4" role="doc-noteref"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></a></p></li>
 </ul>
 <p>Install the <code class="docutils literal notranslate"><span class="pre">code</span></code> command-line tool for invoking VS Code from the terminal. Open the command palette (macOS command+shift+p) and type “install code” at the prompt. This will show a single listing with “Shell Command: Install ‘code’ in PATH”. Click on that and follow any prompts.</p>
 </section>
 <section id="configure-ssh">
-<h4>Configure ssh<a class="headerlink" href="#configure-ssh" title="Permalink to this headline">¶</a></h4>
+<h4>Configure ssh<a class="headerlink" href="#configure-ssh" title="Link to this heading">¶</a></h4>
 <p><code class="docutils literal notranslate"><span class="pre">ssh</span></code> stands for secure shell which provides a mechanism for accessing remote computers either for interactive terminal sessions or for copying files to / from. On your laptop, you should create a private / public key pair.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ssh-keygen -t rsa -b 4096 -C &quot;your_email@example.com&quot;
 </pre></div>
@@ -265,10 +239,10 @@ Supercomputer -&gt; Laptop;
 $ nano ~/.ssh/authorized_keys # or your favourite editor
 </pre></div>
 </div>
-<p>paste the key on a new line <a class="footnote-reference brackets" href="#id16" id="id5">5</a> and exit <code class="docutils literal notranslate"><span class="pre">nano</span></code> <a class="footnote-reference brackets" href="#id17" id="id6">6</a>.</p>
+<p>paste the key on a new line <a class="footnote-reference brackets" href="#id16" id="id5" role="doc-noteref"><span class="fn-bracket">[</span>5<span class="fn-bracket">]</span></a> and exit <code class="docutils literal notranslate"><span class="pre">nano</span></code> <a class="footnote-reference brackets" href="#id17" id="id6" role="doc-noteref"><span class="fn-bracket">[</span>6<span class="fn-bracket">]</span></a>.</p>
 </section>
 <section id="using-git-and-github-for-version-control">
-<h4>Using <code class="docutils literal notranslate"><span class="pre">git</span></code> and GitHub for version control<a class="headerlink" href="#using-git-and-github-for-version-control" title="Permalink to this headline">¶</a></h4>
+<h4>Using <code class="docutils literal notranslate"><span class="pre">git</span></code> and GitHub for version control<a class="headerlink" href="#using-git-and-github-for-version-control" title="Link to this heading">¶</a></h4>
 <p>The version control tool <code class="docutils literal notranslate"><span class="pre">git</span></code> should already be installed on your computer. To use <code class="docutils literal notranslate"><span class="pre">git</span></code> you need to configure it.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ git config --global user.name &quot;Firstname Lastname&quot;
 $ git config --global user.email &quot;username@myEmail.com&quot;
@@ -282,11 +256,11 @@ $ git config --global user.email &quot;username@myEmail.com&quot;
 </div>
 </section>
 <section id="reproducible-computational-environments">
-<h4>Reproducible computational environments<a class="headerlink" href="#reproducible-computational-environments" title="Permalink to this headline">¶</a></h4>
+<h4>Reproducible computational environments<a class="headerlink" href="#reproducible-computational-environments" title="Link to this heading">¶</a></h4>
 <p>There is no single answer to this challenge that applies to all cases. Some will argue that <a class="reference external" href="https://docs.conda.io/en/latest/miniconda.html">conda</a> provides the most general solution to this problem. My own experience is that if your computations include a supercomputer, you may find conda troublesome. Supercomputers are often administered via a granting system whereby some quantity of resources is allocated. Those resources include CPU hours and storage. If you exceed your allocation, you can no longer use the computer.</p>
-<p><code class="docutils literal notranslate"><span class="pre">conda</span></code> does not work well in the supercomputer context. Shared facilities may penalise user accounts with many files <a class="footnote-reference brackets" href="#id18" id="id7">7</a> due to the significant overhead they can impose on performance of the file system. I have witnessed this effect with naive <code class="docutils literal notranslate"><span class="pre">conda</span></code> installs. In addition, supercomputer facilities often provide custom builds of core tools. For instance, higher performance builds of Python than what you will obtain from <code class="docutils literal notranslate"><span class="pre">conda-forge</span></code>.</p>
-<p>If <code class="docutils literal notranslate"><span class="pre">conda</span></code> seems to be the only way to solve your case, make sure you only install the minimal dependency set. You can specify that set using a <a class="reference external" href="https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#create-env-file-manually">conda environment yaml file</a>, remembering to “pin” <a class="footnote-reference brackets" href="#id19" id="id8">8</a> your versions.</p>
-<p>If you are lucky enough to have a Python-only project <a class="footnote-reference brackets" href="#id20" id="id9">9</a>, then use the <a class="reference external" href="https://realpython.com/python-virtual-environments-a-primer/">built-in capability</a> to create virtual environments. These can be made portable by creating a <code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code> file, which you share between your different accounts. If this is the approach you take, be sure and <a class="reference external" href="https://pip.pypa.io/en/latest/reference/requirements-file-format/">pin your dependency versions</a>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">conda</span></code> does not work well in the supercomputer context. Shared facilities may penalise user accounts with many files <a class="footnote-reference brackets" href="#id18" id="id7" role="doc-noteref"><span class="fn-bracket">[</span>7<span class="fn-bracket">]</span></a> due to the significant overhead they can impose on performance of the file system. I have witnessed this effect with naive <code class="docutils literal notranslate"><span class="pre">conda</span></code> installs. In addition, supercomputer facilities often provide custom builds of core tools. For instance, higher performance builds of Python than what you will obtain from <code class="docutils literal notranslate"><span class="pre">conda-forge</span></code>.</p>
+<p>If <code class="docutils literal notranslate"><span class="pre">conda</span></code> seems to be the only way to solve your case, make sure you only install the minimal dependency set. You can specify that set using a <a class="reference external" href="https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#create-env-file-manually">conda environment yaml file</a>, remembering to “pin” <a class="footnote-reference brackets" href="#id19" id="id8" role="doc-noteref"><span class="fn-bracket">[</span>8<span class="fn-bracket">]</span></a> your versions.</p>
+<p>If you are lucky enough to have a Python-only project <a class="footnote-reference brackets" href="#id20" id="id9" role="doc-noteref"><span class="fn-bracket">[</span>9<span class="fn-bracket">]</span></a>, then use the <a class="reference external" href="https://realpython.com/python-virtual-environments-a-primer/">built-in capability</a> to create virtual environments. These can be made portable by creating a <code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code> file, which you share between your different accounts. If this is the approach you take, be sure and <a class="reference external" href="https://pip.pypa.io/en/latest/reference/requirements-file-format/">pin your dependency versions</a>.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>You can reconstruct your computing environment by just the yaml or requirements file. As plaint text file formats, they should be version controlled too.</p>
@@ -295,10 +269,10 @@ $ git config --global user.email &quot;username@myEmail.com&quot;
 </section>
 </section>
 <section id="structuring-your-projects">
-<h2>Structuring your projects<a class="headerlink" href="#structuring-your-projects" title="Permalink to this headline">¶</a></h2>
+<h2>Structuring your projects<a class="headerlink" href="#structuring-your-projects" title="Link to this heading">¶</a></h2>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>Put them all into a single directory, call it <code class="docutils literal notranslate"><span class="pre">repos</span></code> <a class="footnote-reference brackets" href="#id21" id="id10">10</a>.</p>
+<p>Put them all into a single directory, call it <code class="docutils literal notranslate"><span class="pre">repos</span></code> <a class="footnote-reference brackets" href="#id21" id="id10" role="doc-noteref"><span class="fn-bracket">[</span>10<span class="fn-bracket">]</span></a>.</p>
 </div>
 <p>Having a single directory makes moving your research projects between computers easier. I advise you also to include repositories for any dependency that is being actively developed in this directory. This way, you preserve the entire compute state.</p>
 <div class="admonition tip">
@@ -307,7 +281,7 @@ $ git config --global user.email &quot;username@myEmail.com&quot;
 </div>
 <p>Typically, I have two repositories if I’m engaged in research to develop a software tool. The first is for the tool to be distributed to the target audience. The second is for the analyses to be undertaken to establish the tool is worth using. Below I give sample structures for a “software project” and a “research project”.</p>
 <section id="directory-structure-for-a-software-methods-project">
-<h3>Directory structure for a software methods project <a class="footnote-reference brackets" href="#id22" id="id11">11</a><a class="headerlink" href="#directory-structure-for-a-software-methods-project" title="Permalink to this headline">¶</a></h3>
+<h3>Directory structure for a software methods project <a class="footnote-reference brackets" href="#id22" id="id11" role="doc-noteref"><span class="fn-bracket">[</span>11<span class="fn-bracket">]</span></a><a class="headerlink" href="#directory-structure-for-a-software-methods-project" title="Link to this heading">¶</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>.
 └── software_project/
     ├── README stating project purpose and basic instructions
@@ -329,7 +303,7 @@ $ git config --global user.email &quot;username@myEmail.com&quot;
 <p>Software development projects have input data necessary for your test suite and documentation, which should be tracked in version control. They should be minimal, sufficient for testing and / or demonstration purposes.</p>
 </section>
 <section id="directory-structure-for-a-research-project">
-<h3>Directory structure for a research project<a class="headerlink" href="#directory-structure-for-a-research-project" title="Permalink to this headline">¶</a></h3>
+<h3>Directory structure for a research project<a class="headerlink" href="#directory-structure-for-a-research-project" title="Link to this heading">¶</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>.
 └── research_project/
     ├── README describing usage
@@ -355,58 +329,71 @@ $ git config --global user.email &quot;username@myEmail.com&quot;
 <p>“notebook files” refers to <a class="reference external" href="https://jupyter.org/">Jupyter</a> notebook files. Putting these in version control can be problematic. There are multiple reasons for this, e.g. embedded images can make these files very large. This has led to tools like <a class="reference external" href="https://github.com/kynan/nbstripout">nbstripout</a>. My advice is only to include notebooks if they’re small.</p>
 </div>
 <p class="rubric">Footnotes</p>
-<dl class="footnote brackets">
-<dt class="label" id="id12"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
-<dd><p><code class="docutils literal notranslate"><span class="pre">git</span></code> is the major tool used for “version control” of text files.</p>
-</dd>
-<dt class="label" id="id13"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
-<dd><p>Yo do not actually have to use <a class="reference external" href="https://github.com">GitHub</a> for this. But if <a class="reference external" href="https://github.com">GitHub</a> is how you will share your work with other 🧑‍🔬, you may as well.</p>
-</dd>
-<dt class="label" id="id14"><span class="brackets"><a class="fn-backref" href="#id3">3</a></span></dt>
-<dd><p>This is necessary for prototyping your code runs in parallel using MPI library (Message Passing Interface). MPI is the most likely protocol for parallel computation supported on the supercomputer.</p>
-</dd>
-<dt class="label" id="id15"><span class="brackets"><a class="fn-backref" href="#id4">4</a></span></dt>
-<dd><p>On windows, install the <a class="reference external" href="https://code.visualstudio.com/docs/remote/wsl-tutorial">Remote WSL</a> extension.</p>
-</dd>
-<dt class="label" id="id16"><span class="brackets"><a class="fn-backref" href="#id5">5</a></span></dt>
-<dd><p>The public key must be on a single line.</p>
-</dd>
-<dt class="label" id="id17"><span class="brackets"><a class="fn-backref" href="#id6">6</a></span></dt>
-<dd><p>It is up to you be sure you know how to use the <code class="docutils literal notranslate"><span class="pre">nano</span></code> editor. When in doubt, google.</p>
-</dd>
-<dt class="label" id="id18"><span class="brackets"><a class="fn-backref" href="#id7">7</a></span></dt>
-<dd><p>measured via <a class="reference external" href="https://en.wikipedia.org/wiki/Inode">inodes</a></p>
-</dd>
-<dt class="label" id="id19"><span class="brackets"><a class="fn-backref" href="#id8">8</a></span></dt>
-<dd><p>Pinning here means to state a specific version number of the tool.</p>
-</dd>
-<dt class="label" id="id20"><span class="brackets"><a class="fn-backref" href="#id9">9</a></span></dt>
-<dd><p>“Lucky” in the sense that there is less complexity in the project, simplifying your development process and reducing the storage footprint of your project.</p>
-</dd>
-<dt class="label" id="id21"><span class="brackets"><a class="fn-backref" href="#id10">10</a></span></dt>
-<dd><p><code class="docutils literal notranslate"><span class="pre">repos</span></code> because it is short for repositories, and <strong>every</strong> project will be version controlled … right?</p>
-</dd>
-<dt class="label" id="id22"><span class="brackets"><a class="fn-backref" href="#id11">11</a></span></dt>
-<dd><p>This is for a Python language based project. Adopt a structure that is considered best pratice for the language you’re working in.</p>
-</dd>
-</dl>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="id12" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
+<p><code class="docutils literal notranslate"><span class="pre">git</span></code> is the major tool used for “version control” of text files.</p>
+</aside>
+<aside class="footnote brackets" id="id13" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">2</a><span class="fn-bracket">]</span></span>
+<p>Yo do not actually have to use <a class="reference external" href="https://github.com">GitHub</a> for this. But if <a class="reference external" href="https://github.com">GitHub</a> is how you will share your work with other 🧑‍🔬, you may as well.</p>
+</aside>
+<aside class="footnote brackets" id="id14" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">3</a><span class="fn-bracket">]</span></span>
+<p>This is necessary for prototyping your code runs in parallel using MPI library (Message Passing Interface). MPI is the most likely protocol for parallel computation supported on the supercomputer.</p>
+</aside>
+<aside class="footnote brackets" id="id15" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id4">4</a><span class="fn-bracket">]</span></span>
+<p>On windows, install the <a class="reference external" href="https://code.visualstudio.com/docs/remote/wsl-tutorial">Remote WSL</a> extension.</p>
+</aside>
+<aside class="footnote brackets" id="id16" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id5">5</a><span class="fn-bracket">]</span></span>
+<p>The public key must be on a single line.</p>
+</aside>
+<aside class="footnote brackets" id="id17" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id6">6</a><span class="fn-bracket">]</span></span>
+<p>It is up to you be sure you know how to use the <code class="docutils literal notranslate"><span class="pre">nano</span></code> editor. When in doubt, google.</p>
+</aside>
+<aside class="footnote brackets" id="id18" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id7">7</a><span class="fn-bracket">]</span></span>
+<p>measured via <a class="reference external" href="https://en.wikipedia.org/wiki/Inode">inodes</a></p>
+</aside>
+<aside class="footnote brackets" id="id19" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id8">8</a><span class="fn-bracket">]</span></span>
+<p>Pinning here means to state a specific version number of the tool.</p>
+</aside>
+<aside class="footnote brackets" id="id20" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id9">9</a><span class="fn-bracket">]</span></span>
+<p>“Lucky” in the sense that there is less complexity in the project, simplifying your development process and reducing the storage footprint of your project.</p>
+</aside>
+<aside class="footnote brackets" id="id21" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id10">10</a><span class="fn-bracket">]</span></span>
+<p><code class="docutils literal notranslate"><span class="pre">repos</span></code> because it is short for repositories, and <strong>every</strong> project will be version controlled … right?</p>
+</aside>
+<aside class="footnote brackets" id="id22" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id11">11</a><span class="fn-bracket">]</span></span>
+<p>This is for a Python language based project. Adopt a structure that is considered best pratice for the language you’re working in.</p>
+</aside>
+</aside>
 </section>
 </section>
 </section>
 
-<div class="section">
-    
-
-<div class="section">
-  <span style="float: left">
+<div class="section ablog__blog_comments">
+     
+<div class="section ablog__prev-next">
+  <span class="ablog__prev">
      
     <a href="../starting_research/">
-      <i class="fa fa-arrow-circle-left"></i> So you’re starting a research project, where do you begin?
+      
+      <i class="fa fa-arrow-circle-left"></i>
+      
+      <span>So you’re starting a research project, where do you begin?</span>
     </a>
     
   </span>
-  <span>&nbsp;</span>
-  <span style="float: right">
+  <span class="ablog__spacer">&nbsp;</span>
+  <span class="ablog__next">
     
   </span>
 </div>
@@ -417,7 +404,7 @@ $ git config --global user.email &quot;username@myEmail.com&quot;
           
         </div>
       </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
         <div class="sphinxsidebarwrapper">
 <h1 class="logo"><a href="../../">Gav's Blog</a></h1>
 
@@ -428,151 +415,148 @@ $ git config --global user.email &quot;username@myEmail.com&quot;
 
 
 
-  
-<h2>
-   <i class="fa fa-calendar"></i>
-  01 Mar 2022 
-</h2>
 
-<ul>
+<div class="ablog-sidebar-item ablog__postcard">
+   
+  <h2>
+     
+    <i class="fa fa-calendar"></i>
+    
+    <span>01 Mar 2022</span>
+    
+  </h2>
+  <ul>
+    <div class="ablog-sidebar-item ablog__postcard2">
       
-<li id="category">
-  <span
-    ><i class="fa-fw fa fa-folder-open"></i></span
-  >
+  <li id="ablog-sidebar-item category ablog__category">
+    <span>
+      
+      <i class="fa-fw fa fa-folder-open"></i>
+      
+    </span>
+     
+    <a href="../../blag/category/computational-science/">computational science</a>
+      
+  </li>
    
-  <a href="../../blag/category/computational-science/">computational science</a>  
-</li>
- 
-<li id="tags">
-  <span
-    ><i class="fa-fw fa fa-tags"></i> </span
-  >
+  <li id="ablog-sidebar-item tags ablog__tags">
+    <span>
+       
+      <i class="fa-fw fa fa-tags"></i>
+       
+    </span>
+     
+    <a href="../../blag/tag/education/">education</a>
+        
+    <a href="../../blag/tag/development/">development</a>
+        
+    <a href="../../blag/tag/research/">research</a>
+        
+    <a href="../../blag/tag/tips/">tips</a>
+      
+  </li>
    
-  <a href="../../blag/tag/education/">education</a>   
-  <a href="../../blag/tag/development/">development</a>   
-  <a href="../../blag/tag/research/">research</a>   
-  <a href="../../blag/tag/tips/">tips</a>  
-</li>
- 
-</ul>
+</div>
+  </ul>
+</div>
 <h3>Navigation</h3>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../about/">About Gavin Huttley</a></li>
 </ul>
 
 
-<h3>
-  <a href="../../blag/">Recent Posts</a>
-</h3>
-<ul>
-   
-  <li>
-    <a href="../starting_research/"
-      >25 February - So you’re starting a research project, where do you begin?</a
-    >
-  </li>
-  
-</ul>
-
-<h3><a href="../../blag/tag/">Tags</a></h3>
-<style type="text/css">
-  ul.ablog-cloud {
-    list-style: none;
-    overflow: auto;
-  }
-  ul.ablog-cloud li {
-    float: left;
-    height: 20pt;
-    line-height: 18pt;
-    margin-right: 5px;
-  }
-  ul.ablog-cloud a {
-    text-decoration: none;
-    vertical-align: middle;
-  }
-  li.ablog-cloud-1 {
-    font-size: 80%;
-  }
-  li.ablog-cloud-2 {
-    font-size: 95%;
-  }
-  li.ablog-cloud-3 {
-    font-size: 110%;
-  }
-  li.ablog-cloud-4 {
-    font-size: 125%;
-  }
-  li.ablog-cloud-5 {
-    font-size: 140%;
-  }
-</style>
-<ul class="ablog-cloud">
-   
-  <li class="ablog-cloud ablog-cloud-1">
-    <a href="../../blag/tag/development/">development</a>
-  </li>
+<div class="ablog-sidebar-item ablog__recentposts">
+  <h3>
+    <a href="../../blag/">Recent Posts</a>
+  </h3>
+  <ul>
+     
+    <li>
+      <a href="../starting_research/">
+        25 February - So you’re starting a research project, where do you begin?
+      </a>
+    </li>
     
-  <li class="ablog-cloud ablog-cloud-5">
-    <a href="../../blag/tag/education/">education</a>
-  </li>
-    
-  <li class="ablog-cloud ablog-cloud-1">
-    <a href="../../blag/tag/newbs/">newbs</a>
-  </li>
-    
-  <li class="ablog-cloud ablog-cloud-5">
-    <a href="../../blag/tag/research/">research</a>
-  </li>
-    
-  <li class="ablog-cloud ablog-cloud-5">
-    <a href="../../blag/tag/tips/">tips</a>
-  </li>
-   
-</ul>
+  </ul>
+</div>
 
-<h3>
-  <a href="../../blag/category/">Categories</a>
-</h3>
-<ul>
-   
-  <li>
-    <a href="../../blag/category/computational-science/">computational science (2)</a>
-  </li>
-   
-</ul>
+<div class="ablog-sidebar-item ablog__tagcloud">
+  <link
+    rel="stylesheet"
+    href="../../_static/ablog/tagcloud.css"
+    type="text/css"
+  />
+  <h3><a href="../../blag/tag/">Tags</a></h3>
+  <ul class="ablog-cloud">
+     
+    <li class="ablog-cloud ablog-cloud-1">
+      <a href="../../blag/tag/development/">development</a>
+    </li>
+      
+    <li class="ablog-cloud ablog-cloud-5">
+      <a href="../../blag/tag/education/">education</a>
+    </li>
+      
+    <li class="ablog-cloud ablog-cloud-1">
+      <a href="../../blag/tag/newbs/">newbs</a>
+    </li>
+      
+    <li class="ablog-cloud ablog-cloud-5">
+      <a href="../../blag/tag/research/">research</a>
+    </li>
+      
+    <li class="ablog-cloud ablog-cloud-5">
+      <a href="../../blag/tag/tips/">tips</a>
+    </li>
+     
+  </ul>
+</div>
 
-<h3>
-  <a href="../../blag/archive/">Archives</a>
-</h3>
-<ul>
-   
-  <li>
-    <a href="../../blag/2022/">2022 (2)</a>
-  </li>
-   
-</ul>
+<div class="ablog-sidebar-item ablog__categories">
+  <h3>
+    <a href="../../blag/category/">Categories</a>
+  </h3>
+  <ul>
+     
+    <li>
+      <a href="../../blag/category/computational-science/">computational science (2)</a>
+    </li>
+     
+  </ul>
+</div>
 
-<div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">Quick search</h3>
+<div class="ablog-sidebar-item ablog__archives">
+  <h3>
+    <a href="../../blag/archive/">Archives</a>
+  </h3>
+  <ul>
+     
+    <li>
+      <a href="../../blag/2022/">2022 (2)</a>
+    </li>
+     
+  </ul>
+</div>
+
+<search id="searchbox" style="display: none" role="search">
     <div class="searchformwrapper">
     <form class="search" action="../../search/" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Search"/>
       <input type="submit" value="Go" />
     </form>
     </div>
-</div>
-<script>$('#searchbox').show(0);</script>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
         </div>
       </div>
       <div class="clearer"></div>
     </div>
     <div class="footer">
-      &copy;2022-, Gavin Huttley.
+      &#169;2022-, Gavin Huttley.
       
       |
-      Powered by <a href="https://sphinx-doc.org/">Sphinx 4.5.0</a>
-      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.13</a>
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 8.1.3</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 1.0.0</a>
       
     </div>
 
