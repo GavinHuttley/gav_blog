@@ -9,6 +9,7 @@ tags:
   - research
   - tips
 slug: setting_up_your_computer
+comments: true
 ---
 
 # Setting up your computer for computational research

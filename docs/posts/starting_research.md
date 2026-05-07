@@ -9,6 +9,7 @@ tags:
   - newbs
   - education
 slug: starting_research
+comments: true
 ---
 
 # So you're starting a research project, where do you begin?
@@ -37,17 +38,17 @@ Establish what form your **final** output should be in (talk to your supervisor)
 
 ## The Why { #the-why }
 
-<div class="epigraph" markdown>
-> Why does the problem even exist? Why is it a problem worthy of your attention? Why hasn't it already been solved? Answering all these is your justification for doing the work and, at the very least, should make you comfortable you may be doing something worthwhile.
-</div>
+!!! question "Why does the problem even exist?"
+
+    Why is it a problem worthy of your attention? Why hasn't it already been solved? Answering all these is your justification for doing the work and, at the very least, should make you comfortable you may be doing something worthwhile.
 
 This is the big picture part of the project and should proceed everything else. Identifying the existence of a problem requires you have a solid understanding of the domain. At this stage in your career, it's quite likely that you have been "given" the problem. But once you take it, it becomes **your** problem [^own-problem]. In other words, the onus is on you to understand the background material that led to defining the problem. Ultimately, this requires reading about what others have done.
 
 ### What are the existing solutions, and why are those inadequate?
 
-<div class="epigraph" markdown>
-> When you examine existing solutions, take a big picture view. What are the core algorithms they implement? How do the algorithms relate to each other? What are their inputs and outputs? Do they have a killer flaw or are they blocking a key opportunity?
-</div>
+!!! tip
+
+    When you examine existing solutions, take a big picture view. What are the core algorithms they implement? How do the algorithms relate to each other? What are their inputs and outputs? Do they have a killer flaw or are they blocking a key opportunity?
 
 Establishing [the Why](#the-why) almost always requires in-depth of consideration of what others have already done. So what are the existing solutions, and why are they not good enough? Study them carefully to look for a new investigation avenue and frame your response to [the What](#the-what). Pay particular attention to how prior work was done, as that defines a minimum standard you must meet to have your work taken seriously.
 
@@ -65,9 +66,10 @@ Establishing [the Why](#the-why) almost always requires in-depth of consideratio
 
 ### Your proposition
 
-<div class="epigraph" markdown>
-> What is the problem you will solve? Try and express this as succinctly as possible. This statement may need to be updated as your knowledge of the domain increases [^posteori]. Critically, the statement must be something you can actually solve.
-</div>
+
+!!! question "What is the problem you will solve?"
+
+    Try and express this as succinctly as possible. This statement may need to be updated as your knowledge of the domain increases [^posteori]. Critically, the statement must be something you can actually solve.
 
 This is the nitty-gritty and why you're reading this. It is your statement of what YOU will achieve and stems from the careful consideration described above. The framing of "what" problem you will solve can benefit from identifying both its inputs and outputs. Meaning, what is the input data (including where the data will, or can, come from)? What is the output you will produce?
 
@@ -79,9 +81,9 @@ What you propose should explicitly address at least part of the shortcomings of 
 
 ### Its value
 
-<div class="epigraph" markdown>
-> What is the value [^significance] of your proposed solution? To establish this value, be clear on the output of your work and why it will be more valuable than what exists. Will it improve prediction accuracy? Will it require magnitudes less computing resources? Will it be more maintainable?
-</div>
+!!! question "What is the value[^significance] of your proposed solution?"
+
+    To establish this value, be clear on the output of your work and why it will be more valuable than what exists. Will it improve prediction accuracy? Will it require magnitudes less computing resources? Will it be more maintainable?
 
 Your answer should reflect the significance you have attributed to the shortcomings of existing approaches and your argument of the benefit to the target audience.
 
@@ -95,9 +97,7 @@ At the very least, you do not want the project to fail because you did not ensur
 
 ### Your solution
 
-<div class="epigraph" markdown>
-> How will you tackle the inadequacy of existing solution(s)?
-</div>
+!!! question "How will you tackle the inadequacy of existing solution(s)?"
 
 - Big-picture view of the core algorithms to be implemented
 - What input data does each algorithmic component need, and how will you get it?
@@ -106,9 +106,7 @@ At the very least, you do not want the project to fail because you did not ensur
 
 ### Making it believable { #correctness }
 
-<div class="epigraph" markdown>
-> How will you check correctness?
-</div>
+!!! question "How will you check correctness?"
 
 - What properties should be guaranteed?
 - What data property corner cases can you identify and how should the algorithm behave in those situations?
@@ -116,9 +114,7 @@ At the very least, you do not want the project to fail because you did not ensur
 
 ### Measure performance { #measure-performance }
 
-<div class="epigraph" markdown>
-> What measurable quantities best capture performance?
-</div>
+!!! question "What measurable quantities best capture performance?"
 
 - What competitors will you also benchmark?
 - What "experimental design" will you use that allows concluding your algorithm is a good choice over competitors?
@@ -147,9 +143,9 @@ Your project plan begins by addressing the issues listed above. Convert those re
 
 ### Optimise for the minimal project duration
 
-<div class="epigraph" markdown>
-> Can you build the project order of execution so that the best outcome is achieved with minimal effort (i.e., breaking the problem down so that you incrementally prototype to the final solution)?
-</div>
+!!! question
+
+    Can you build the project order of execution so that the best outcome is achieved with minimal effort (i.e., breaking the problem down so that you incrementally prototype to the final solution)?
 
 If you can break a project into components, what is the dependency structure among them? Put the most difficult ones as close to the beginning of a project execution plan as possible.
 
@@ -161,15 +157,17 @@ It requires some significant mental effort to see how you can break a problem do
 
 ### Fast prototyping
 
-<div class="epigraph" markdown>
-> "Premature optimisation is the root of all evil."
->
-> ---  Donald Knuth
->
-> "Seriously!"
->
-> --- Gavin
-</div>
+!!! quote
+
+    "Premature optimisation is the root of all evil."
+
+    ---  Donald Knuth
+
+    !!! quote
+
+        "Seriously!"
+
+        --- Gavin
 
 Once you have a project sketch, you should aim to prototype the entire workflow [^substitute] as fast as possible, including getting to the point of quantifying performance. "Fast" refers to both implementation time (crude code is the goal) AND computation time with the latter often achieved by using a minimal amount of data.
 
@@ -177,25 +175,19 @@ You will learn a lot from this process, including the types of tests you will ne
 
 ### Iterate the flow, baby!
 
-<div class="epigraph" markdown>
-> Repeat the above steps.
-</div>
+!!! success "Repeat the above steps"
 
 In the beginning, there may be many things you don't understand. Highlight the things you don't understand and discuss them with your supervisor and/or colleagues.
 
 ### What if your approach is impossible?
 
-<div class="epigraph" markdown>
-> How will you decide if the project is infeasible? What is your backup plan?
-</div>
+!!! question "How will you decide if the project is infeasible? What is your backup plan?"
 
 Make sure your project can produce something. The form this might take will differ between a science and an engineering project. Discuss with your supervisor for specifics.
 
 ### How will you decide when you're done?
 
-<div class="epigraph" markdown>
-> Is there a clear end-point? How will you avoid the infinite loop of tweaking?
-</div>
+!!! question "Is there a clear end-point? How will you avoid the infinite loop of tweaking?"
 
 What if your work does not "outperform" competitors? Is knowing this still valuable? There's a strong urge to try "just one more thing" in this situation. In a well designed and executed project, the futility of such tweaking should be apparent. But it requires strength of character to call it quits. You don't want to waste time polishing a :poop:.
 
@@ -203,9 +195,7 @@ If it does "outperform" competitors, happy days! You still have to avoid excessi
 
 ### Don't isolate yourself
 
-<div class="epigraph" markdown>
-> How often and with who will you discuss your project?
-</div>
+!!! question "How often and with who will you discuss your project?"
 
 Too often, junior researchers / engineers think they need to solve the entirety of a project by themselves ... in one massive go. Don't do that!
 
@@ -213,9 +203,9 @@ Science and engineering deliver consistently better results when multiple brains
 
 ### Tackling the inevitable problems
 
-<div class="epigraph" markdown>
-> Troubleshoot! If the process of identifying the minimal example of a problem does not expose the solution, then find someone to discuss it with.
-</div>
+!!! question "Troubleshoot!"
+
+    If the process of identifying the minimal example of a problem does not expose the solution, then find someone to discuss it with.
 
 An essential skill is knowing what *you* don't know and being able to identify someone else with the necessary knowledge. That said, another critical skill is trying to solve a problem yourself before you ask someone else for help. Prior to asking someone else for help, answer the following questions:
 
@@ -231,9 +221,7 @@ Often, just discussing the problem with someone else is sufficient for you to id
 
 ### Don't forget to enjoy yourself
 
-<div class="epigraph" markdown>
-> Research should enrich your life, not consume it.
-</div>
+!!! tip "Research should enrich your life, not consume it."
 
 The project should be fun. You will enjoy yourself if you balance project work with other activities. This means taking actual time off to do the other things you enjoy outside work.
 
@@ -241,11 +229,11 @@ Keep aiming for this balance, and *you will* be more productive, work more effec
 
 So give yourself the best chance to enjoy the journey. Over to Carl for a reminder on why we do this.
 
-<div class="epigraph" markdown>
-> "...understanding is an exquisite form of ecstasy..."
->
-> -- Carl Sagan
-</div>
+!!! quote
+
+    "...understanding is an exquisite form of ecstasy..."
+
+    -- Carl Sagan
 
 [^own-problem]: If you aren't prepared to accept that, you should probably do something else.
 [^tech-inputs]: Properties that are problematic now may not have been evident before; hence "the problem" is new.
