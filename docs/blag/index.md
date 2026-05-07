@@ -7,8 +7,8 @@ search:
   exclude: true
 ---
 
-<meta http-equiv="refresh" content="0; url=../posts/">
+<meta http-equiv="refresh" content="0; url=../">
 
 # Blog has moved
 
-The blog now lives at [/posts/](../posts/index.md).
+The blog now lives at [the home page](../index.md).

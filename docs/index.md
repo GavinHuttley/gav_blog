@@ -1,12 +1,10 @@
 ---
-hide:
-  - navigation
-  - toc
+title: Blag
+description: Posts on doing science with computers.
 ---
 
-# Doing Science with Computers
+# Thinking Science with Statistics and Computers
 
-Notes, advice and lessons learned from a career writing scientific software and supervising researchers.
+!!! abstract
 
-[Read the latest posts :material-arrow-right:](posts/index.md){ .md-button .md-button--primary }
-[About Gavin :material-account:](about.md){ .md-button }
+    I’m a scientist whose career has focused on developing statistical and computational methods for genetics and genomics. Here, I share advice and lessons learned from conducting research and from teaching others how to do it. I also provide reports on experiments related to my open-source software.

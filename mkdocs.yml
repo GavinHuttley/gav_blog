@@ -1,4 +1,4 @@
-site_name: Thinking Science with Computers
+site_name: Gav's Blog
 site_url: https://gavinhuttley.dev
 site_author: Gavin Huttley
 site_description: Doing Science with Computers — notes from Gavin Huttley.
@@ -15,7 +15,7 @@ theme:
   custom_dir: overrides
   language: en
   font:
-    text: Atkinson Hyperlegible
+    text: Inter
     code: Roboto Mono
   features:
     - navigation.instant
@@ -58,15 +58,15 @@ extra_css:
 
 extra_javascript:
   - javascripts/mathjax.js
-  - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
 plugins:
   - search
+  - privacy
   - blog:
-      blog_dir: posts
+      blog_dir: .
       blog_toc: true
-      post_url_format: "{slug}"
+      post_url_format: "posts/{slug}"
       post_excerpt: optional
       post_date_format: medium
       archive: true
@@ -76,7 +76,7 @@ plugins:
       authors_file: "{blog}/.authors.yml"
   - tags
   - rss:
-      match_path: "posts/posts/.*"
+      match_path: "posts/.*"
       date_from_meta:
         as_creation: date
       categories:
@@ -124,9 +124,7 @@ markdown_extensions:
       generic: true
 
 nav:
-  - Home: index.md
-  - Blog:
-      - posts/index.md
+  - Blog: index.md
   - About: about.md
 not_in_nav: |
   blag/index.md
