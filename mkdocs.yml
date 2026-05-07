@@ -62,7 +62,10 @@ extra_javascript:
 
 plugins:
   - search
-  - privacy
+  - privacy:
+      assets_exclude:
+        - giscus.app/*
+        - github.com/*
   - blog:
       blog_dir: .
       blog_toc: true
