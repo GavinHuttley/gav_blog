@@ -1,567 +1,1292 @@
-<!DOCTYPE html>
 
-<html lang="en" data-content_root="../../">
+<!doctype html>
+<html lang="en" class="no-js">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Doing Science with Computers — notes from Gavin Huttley.">
+      
+      
+        <meta name="author" content="Gavin Huttley">
+      
+      
+        <link rel="canonical" href="https://gavinhuttley.dev/posts/setting_up_your_computer/">
+      
+      
+        <link rel="prev" href="../starting_research/">
+      
+      
+      
+        
+      
+      
+        <link rel="alternate" type="application/rss+xml" title="RSS feed" href="../../feed_rss_created.xml">
+        <link rel="alternate" type="application/rss+xml" title="RSS feed of updated content" href="../../feed_rss_updated.xml">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Setting up your computer for computational research - Gav's Blog</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
 
-    <title>Setting up your computer for computational research &#8212; Gav&#39;s Blog 04 documentation</title>
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
-    <link rel="stylesheet" type="text/css" href="../../_static/basic.css?v=686e5160" />
-    <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css?v=e70394ae" />
-    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=4ae1632d" />
-    <link rel="stylesheet" type="text/css" href="../../_static/jupyter-sphinx.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/thebelab.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/twemoji.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
-    <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=c55bfeac" />
-    <script src="../../_static/documentation_options.js?v=af8b2a3d"></script>
-    <script src="../../_static/doctools.js?v=9bcbadda"></script>
-    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="../../_static/thebelab-helper.js"></script>
-    <script src="https://unpkg.com/twemoji@latest/dist/twemoji.min.js"></script>
-    <script src="../../_static/twemoji.js"></script>
-    <script src="../../_static/plotly-latest.min.js?v=309d0351"></script>
-    <script kind="utterances">
 
-    var commentsRunWhenDOMLoaded = cb => {
-    if (document.readyState != 'loading') {
-        cb()
-    } else if (document.addEventListener) {
-        document.addEventListener('DOMContentLoaded', cb)
-    } else {
-        document.attachEvent('onreadystatechange', function() {
-        if (document.readyState == 'complete') cb()
-        })
-    }
-}
+    
+    
+      
+    
+    
+      
+        
+        
+        
+        <link rel="stylesheet" href="../../assets/external/fonts.googleapis.com/css.cefe9b4b.css">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
 
-var addUtterances = () => {
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    script.src = "https://utteranc.es/client.js";
-    script.async = "async";
-
-    script.setAttribute("repo", "GavinHuttley/gav_blog");
-    script.setAttribute("issue-term", "pathname");
-    script.setAttribute("theme", "github-light");
-    script.setAttribute("label", "💬 comment");
-    script.setAttribute("crossorigin", "anonymous");
-
-    sections = document.querySelectorAll("div.section");
-    if (sections !== null) {
-        section = sections[sections.length-1];
-        section.appendChild(script);
-    }
-}
-commentsRunWhenDOMLoaded(addUtterances);
-</script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
-    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
-    <link rel="author" title="About these documents" href="../../about/" />
-    <link rel="index" title="Index" href="../../genindex/" />
-    <link rel="search" title="Search" href="../../search/" /> 
-   
-  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+    
+    
+  </head>
   
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#setting-up-your-computer-for-computational-research" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
 
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Gav&#39;s Blog" class="md-header__button md-logo" aria-label="Gav's Blog" data-md-component="logo">
+      
   
-  
- 
-<link
-  rel="alternate"
-  type="application/atom+xml"
-  href="../../blag/atom.xml"
-  title="Thinking Science with Computers"
-/>
- 
-<link href="True" rel="stylesheet" />
- 
-  </head><body>
-  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
 
-    <div class="document">
-      <div class="documentwrapper">
-        <div class="bodywrapper">
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Gav's Blog
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Setting up your computer for computational research
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
           
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/GavinHuttley/gav_blog" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GavinHuttley/gav_blog
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Blag
 
-          <div class="body" role="main">
-             <section id="setting-up-your-computer-for-computational-research">
-<h1>Setting up your computer for computational research<a class="headerlink" href="#setting-up-your-computer-for-computational-research" title="Link to this heading">¶</a></h1>
-<p>How much impact can a computer setup possibly have? Some choices can make your daily life as a computational scientist a lot happier. Conversely, other choices can make you curse yourself. If it sounds like I’m talking from experience, you’re correct – 20+ years worth.</p>
-<section id="be-systematic">
-<h2>Be systematic<a class="headerlink" href="#be-systematic" title="Link to this heading">¶</a></h2>
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../about/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  About
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../archive/2022/" class="md-tabs__link">
+          
+  
+  
+  Archive
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../category/computational-science/" class="md-tabs__link">
+          
+  
+  
+  Categories
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Gav&#39;s Blog" class="md-nav__button md-logo" aria-label="Gav's Blog" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Gav's Blog
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/GavinHuttley/gav_blog" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GavinHuttley/gav_blog
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Blag
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Archive
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Archive
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archive/2022/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2022
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Categories
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Categories
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../category/computational-science/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    computational science
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#be-systematic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Be systematic
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#take-account-of-the-resources-you-will-use" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Take account of the resources you will use
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Take account of the resources you will use">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#computers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Computers
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#major-software-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Major software tools
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Major software tools">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#package-manager" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Package manager
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#terminal-app" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Terminal app
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#text-editor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Text editor
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-ssh" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configure ssh
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-git-and-github-for-version-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Using git and GitHub for version control
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reproducible-computational-environments" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reproducible computational environments
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#structuring-your-projects" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Structuring your projects
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Structuring your projects">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#directory-structure-for-a-software-methods-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Directory structure for a software methods project
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#directory-structure-for-a-research-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Directory structure for a research project
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+  <div class="md-content md-content--post" data-md-component="content">
+    <div class="md-sidebar md-sidebar--post" data-md-component="sidebar" data-md-type="navigation">
+      <div class="md-sidebar__scrollwrap">
+        <div class="md-sidebar__inner md-post">
+          <nav class="md-nav md-nav--primary">
+            <div class="md-post__back">
+              <div class="md-nav__title md-nav__container">
+                <a href="../.." class="md-nav__link">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+                  <span class="md-ellipsis">
+                    Back to index
+                  </span>
+                </a>
+              </div>
+            </div>
+            
+              <div class="md-post__authors md-typeset">
+                
+                  <div class="md-profile md-post__profile">
+                    <span class="md-author md-author--long">
+                      <img src="../../assets/external/github.com/GavinHuttley.png.jpg" alt="Gavin Huttley">
+                    </span>
+                    <span class="md-profile__description">
+                      <strong>
+                        
+                          <a href="https://github.com/GavinHuttley">Gavin Huttley</a>
+                        
+                      </strong>
+                      <br>
+                      Honorary Professor, Australian National University
+                    </span>
+                  </div>
+                
+              </div>
+            
+            <ul class="md-post__meta md-nav__list">
+              <li class="md-nav__item md-nav__item--section">
+                <div class="md-post__title">
+                  <span class="md-ellipsis">
+                    Metadata
+                  </span>
+                </div>
+                <nav class="md-nav">
+                  <ul class="md-nav__list">
+                    <li class="md-nav__item">
+                      <div class="md-nav__link">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5z"/></svg>
+                        <time datetime="2022-03-01 00:00:00+00:00" class="md-ellipsis">Mar 1, 2022</time>
+                      </div>
+                    </li>
+                    
+                    
+                      <li class="md-nav__item">
+                        <div class="md-nav__link">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 3v15h3V3zm3 2 4 13 3-1-4-13zM5 5v13h3V5zM3 19v2h18v-2z"/></svg>
+                          <span class="md-ellipsis">
+                            in
+                            
+                              <a href="../../category/computational-science/">computational science</a></span>
+                        </div>
+                      </li>
+                    
+                    
+                      
+                      <li class="md-nav__item">
+                        <div class="md-nav__link">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7z"/></svg>
+                          <span class="md-ellipsis">
+                            
+                              10 min read
+                            
+                          </span>
+                        </div>
+                      </li>
+                    
+                  </ul>
+                </nav>
+              </li>
+            </ul>
+            
+          </nav>
+          
+        </div>
+      </div>
+    </div>
+    <article class="md-content__inner md-typeset">
+      
+        
+  
+
+
+  <nav class="md-tags" >
+    
+      
+      
+      
+      
+        <span class="md-tag">development</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">education</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">research</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">tips</span>
+      
+    
+  </nav>
+
+
+  
+  
+
+
+<h1 id="setting-up-your-computer-for-computational-research">Setting up your computer for computational research<a class="headerlink" href="#setting-up-your-computer-for-computational-research" title="Permanent link">&para;</a></h1>
+<p>How much impact can a computer setup possibly have? Some choices can make your daily life as a computational scientist a lot happier. Conversely, other choices can make you curse yourself. If it sounds like I'm talking from experience, you're correct -- 20+ years worth.</p>
+<!-- more -->
+
+<h2 id="be-systematic">Be systematic<a class="headerlink" href="#be-systematic" title="Permanent link">&para;</a></h2>
 <p>There are many reasons why adopting a systematic approach to organising your research activities on your computer is important. If you adopt a naming scheme and always organise your project files in the same way, you increase the <em>clarity and predictability</em> of your work. Putting all research work under a single directory facilitates <em>portability</em>, meaning it can easily be mirrored on different computers and code working on one system works on another. Predictability and portability improve the <em>reproducibility</em> of your work since you will not have to write custom code to handle execution on different systems.</p>
-<p>Designing your work with reproducibility in mind benefits you and your colleagues and contributes to your long-term reputation. It also reduces the chance you’ll go 🤪.</p>
-</section>
-<section id="take-account-of-the-resources-you-will-use">
-<h2>Take account of the resources you will use<a class="headerlink" href="#take-account-of-the-resources-you-will-use" title="Link to this heading">¶</a></h2>
-<section id="computers">
-<h3>Computers<a class="headerlink" href="#computers" title="Link to this heading">¶</a></h3>
+<p>Designing your work with reproducibility in mind benefits you and your colleagues and contributes to your long-term reputation. It also reduces the chance you'll go <img alt="🤪" class="twemoji" src="../../assets/external/cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f92a.svg" title=":zany_face:">.</p>
+<h2 id="take-account-of-the-resources-you-will-use">Take account of the resources you will use<a class="headerlink" href="#take-account-of-the-resources-you-will-use" title="Permanent link">&para;</a></h2>
+<h3 id="computers">Computers<a class="headerlink" href="#computers" title="Permanent link">&para;</a></h3>
 <p>Consider the following scenario:</p>
-<ul class="simple">
-<li><p><em>laptop, running macOS or Windows</em>: most development and prototyping will be done here</p></li>
-<li><p><em>lab server, running Ubuntu 20</em>: data sampling against databases is done here</p></li>
-<li><p><em>supercomputer, running “Rocky Linux release 8.5”</em>: large scale analysis is done here</p></li>
+<ul>
+<li><em>laptop, running macOS or Windows</em>: most development and prototyping will be done here</li>
+<li><em>lab server, running Ubuntu 20</em>: data sampling against databases is done here</li>
+<li><em>supercomputer, running "Rocky Linux release 8.5"</em>: large scale analysis is done here</li>
 </ul>
 <p>In this scenario, data sampling code and data are synchronised between the laptop and the lab server. Large scale analyses are first prototyped on the laptop, and a selected data subset, code, and computational environment are synchronised with the supercomputer. Results are brought back to the laptop.</p>
 <p><em>How can you simplify keeping the different computational environments in sync?</em></p>
-<p>Adopt a directed relationship (click the tabs below to see illustrations for our scenario). For example, designate your laptop as the canonical machine for any source code. That means only editing code on that machine. Communicate those edits to the other computers in one direction only (use <code class="docutils literal notranslate"><span class="pre">git</span></code> <a class="footnote-reference brackets" href="#id12" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> for this). If you don’t adhere to this, your code will quickly devolve to an inconsistent state, making you 😢.</p>
-<div class="sd-tab-set docutils">
-<input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
-<label class="sd-tab-label" for="sd-tab-item-0" id="code-flow">
-Code flow</label><div class="sd-tab-content docutils">
-<div class="graphviz"><object data="../../_images/graphviz-e8f78c57f7d965103e817aace163798e4cfec4bc.svg" type="image/svg+xml" class="graphviz">
-<p class="warning">digraph code_flow {
-node [shape=&quot;rectangle&quot;];
-
-GitHub [color=&quot;darkgray&quot; style=filled];
-Laptop [color=&quot;skyblue&quot; style=filled];
-&quot;Lab Server&quot; [fontcolor=&quot;white&quot; color=&quot;blue&quot; style=filled];
-Supercomputer [fontcolor=&quot;white&quot; color=&quot;darkblue&quot; style=filled];
-Laptop -&gt; GitHub;
-Laptop -&gt; &quot;Lab Server&quot;;
-Laptop -&gt; Supercomputer;
-GitHub -&gt; &quot;Lab Server&quot; [style=dotted];
-GitHub -&gt; &quot;Supercomputer&quot; [style=dotted];
-}</p></object></div>
-<p>Arrows direction indicates direction of flow. If you authorise all computers (via ssh keys) with GitHub, you enable moving all code between computers via git <a class="footnote-reference brackets" href="#id13" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a>.</p>
+<p>Adopt a directed relationship (click the tabs below to see illustrations for our scenario). For example, designate your laptop as the canonical machine for any source code. That means only editing code on that machine. Communicate those edits to the other computers in one direction only (use <code>git</code> <sup id="fnref:git"><a class="footnote-ref" href="#fn:git">1</a></sup> for this). If you don't adhere to this, your code will quickly devolve to an inconsistent state, making you <img alt="😢" class="twemoji" src="../../assets/external/cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f622.svg" title=":cry:">.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Code flow</label><label for="__tabbed_1_2">Data flow</label><label for="__tabbed_1_3">Results flow</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<pre class="mermaid"><code>flowchart LR
+    Laptop[&lt;b&gt;Laptop&lt;/b&gt;]:::laptop --&gt; GitHub[&lt;b&gt;GitHub&lt;/b&gt;]:::github
+    Laptop --&gt; LabServer[&lt;b&gt;Lab Server&lt;/b&gt;]:::lab
+    Laptop --&gt; Supercomputer[&lt;b&gt;Supercomputer&lt;/b&gt;]:::super
+    GitHub -.-&gt; LabServer
+    GitHub -.-&gt; Supercomputer
+    classDef github fill:#a9a9a9,stroke:#555,color:#fff
+    classDef laptop fill:#87ceeb,stroke:#555,color:#fff
+    classDef lab fill:#0000ff,stroke:#000,color:#fff
+    classDef super fill:#00008b,stroke:#000,color:#fff</code></pre>
+<p>Arrows direction indicates direction of flow. If you authorise all computers (via ssh keys) with GitHub, you enable moving all code between computers via git <sup id="fnref:github"><a class="footnote-ref" href="#fn:github">2</a></sup>.</p>
 </div>
-<input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
-<label class="sd-tab-label" for="sd-tab-item-1" id="data-flow">
-Data flow</label><div class="sd-tab-content docutils">
-<div class="graphviz"><object data="../../_images/graphviz-698f4be85680c591d7339bea3e4016964cbdc2f3.svg" type="image/svg+xml" class="graphviz">
-<p class="warning">digraph data_flow {
-node [shape=&quot;rectangle&quot;];
-
-External [color=&quot;darkgray&quot; style=filled];
-Laptop [color=&quot;skyblue&quot; style=filled];
-&quot;Lab Server&quot; [fontcolor=&quot;white&quot; color=&quot;blue&quot; style=filled];
-Supercomputer [fontcolor=&quot;white&quot; color=&quot;darkblue&quot; style=filled];
-External -&gt; Laptop;
-&quot;Lab Server&quot; -&gt; Laptop;
-Laptop -&gt; Supercomputer;
-}</p></object></div>
-<p>Arrows direction indicates direction of flow. The Lab Server is where data sampling is taking place (remember, we’re assuming it hosts databases), and the laptop specifies what is moved to the Supercomputer.</p>
+<div class="tabbed-block">
+<pre class="mermaid"><code>flowchart LR
+    External[&lt;b&gt;External&lt;/b&gt;]:::external --&gt; Laptop[&lt;b&gt;Laptop&lt;/b&gt;]:::laptop
+    LabServer[&lt;b&gt;Lab Server&lt;/b&gt;]:::lab --&gt; Laptop
+    Laptop --&gt; Supercomputer[&lt;b&gt;Supercomputer&lt;/b&gt;]:::super
+    classDef external fill:#a9a9a9,stroke:#555,color:#fff
+    classDef laptop fill:#87ceeb,stroke:#555,color:#fff
+    classDef lab fill:#0000ff,stroke:#000,color:#fff
+    classDef super fill:#00008b,stroke:#000,color:#fff</code></pre>
+<p>Arrows direction indicates direction of flow. The Lab Server is where data sampling is taking place (remember, we're assuming it hosts databases), and the laptop specifies what is moved to the Supercomputer.</p>
 </div>
-<input id="sd-tab-item-2" name="sd-tab-set-0" type="radio">
-<label class="sd-tab-label" for="sd-tab-item-2" id="results-flow">
-Results flow</label><div class="sd-tab-content docutils">
-<div class="graphviz"><object data="../../_images/graphviz-a0f33125e99bf21739e776787ce7f6456a7b269b.svg" type="image/svg+xml" class="graphviz">
-<p class="warning">digraph results_flow {
-node [shape=&quot;rectangle&quot;];
-
-Laptop [color=&quot;skyblue&quot; style=filled];
-Supercomputer [fontcolor=&quot;white&quot; color=&quot;darkblue&quot; style=filled];
-Laptop -&gt; Laptop
-Supercomputer -&gt; Laptop;
-}</p></object></div>
+<div class="tabbed-block">
+<pre class="mermaid"><code>flowchart LR
+    Laptop[&lt;b&gt;Laptop&lt;/b&gt;]:::laptop --&gt; Laptop
+    Supercomputer[&lt;b&gt;Supercomputer&lt;/b&gt;]:::super --&gt; Laptop
+    classDef laptop fill:#87ceeb,stroke:#555,color:#fff
+    classDef super fill:#00008b,stroke:#000,color:#fff</code></pre>
 <p>Arrows direction indicates direction of flow. Results are either generated on the Laptop or the Supercomputer.</p>
+</div>
 </div>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Homogeneity in operating systems is key to the portability of your work. While macOS and Linux have substantial differences, they are both POSIX operating systems. So the effort to develop code on a macOS laptop and get it running on a Linux machine is, in my experience, quite small.</p>
-<p>Windows, on the other hand, is more of a challenge. Because most machines used in the computational sciences are running a POSIX OS (i.e. Linux), I strongly advise you to do your development work using <a class="reference external" href="https://docs.microsoft.com/en-us/windows/wsl/install">WSL</a> on a Windows laptop.</p>
+<p>Windows, on the other hand, is more of a challenge. Because most machines used in the computational sciences are running a POSIX OS (i.e. Linux), I strongly advise you to do your development work using <a href="https://docs.microsoft.com/en-us/windows/wsl/install">WSL</a> on a Windows laptop.</p>
 </div>
-</section>
-<section id="major-software-tools">
-<h3>Major software tools<a class="headerlink" href="#major-software-tools" title="Link to this heading">¶</a></h3>
-<section id="package-manager">
-<h4>Package manager<a class="headerlink" href="#package-manager" title="Link to this heading">¶</a></h4>
-<p>If your laptop is running macOS, you already have a unix based system 😎. However, you will almost certainly need to install a unix-style package manager. I recommend <a class="reference external" href="https://brew.sh/">Homebrew</a>. This can be used to install non-python tools, such as the <code class="docutils literal notranslate"><span class="pre">openmpi</span></code> library <a class="footnote-reference brackets" href="#id14" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a>.</p>
-<p>If your laptop is running Windows, install the latest <a class="reference external" href="https://docs.microsoft.com/en-us/windows/wsl/install">WSL</a> (Windows subsystem for Linux, which installs Ubuntu). You will then get the <code class="docutils literal notranslate"><span class="pre">apt</span></code> package manager.</p>
-</section>
-<section id="terminal-app">
-<h4>Terminal app<a class="headerlink" href="#terminal-app" title="Link to this heading">¶</a></h4>
-<p>The Terminal application is your gateway to the command line on all the computers you will access. The terminal is just an interface to your shell environment. At present, <code class="docutils literal notranslate"><span class="pre">zsh</span></code> is the default shell on macOS, while <code class="docutils literal notranslate"><span class="pre">bash</span></code> is the default on Linux distributions. Configuration files are located in your home directory and named <code class="docutils literal notranslate"><span class="pre">.zshrc</span></code> and <code class="docutils literal notranslate"><span class="pre">.bashrc</span></code> respectively. You will be editing them.</p>
-<p>As this same application is employed to interact with all the computers you will use, it’s worth looking into making your shell environments on different computers as similar as possible, albeit you need to make sure it’s clear which computer you’re on. The latter can be achieved by customising the terminal prompt.</p>
-<p>If you use <code class="docutils literal notranslate"><span class="pre">zsh</span></code>, consider installing <a class="reference external" href="https://ohmyz.sh/">ohmyzsh</a>. Some other command line tools I find super useful are:</p>
-<ul class="simple">
-<li><p><a class="reference external" href="https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/autojump">autojump</a>, jump to commonly used directories</p></li>
-<li><p><a class="reference external" href="https://github.com/starship/starship">starship</a>, customised prompts</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">mcfly</span></code>, control+r magic for getting back to past commands</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">fd</span></code>, super fast find</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ripgrep</span></code>, a better, easier to use, grep</p></li>
+<h3 id="major-software-tools">Major software tools<a class="headerlink" href="#major-software-tools" title="Permanent link">&para;</a></h3>
+<h4 id="package-manager">Package manager<a class="headerlink" href="#package-manager" title="Permanent link">&para;</a></h4>
+<p>If your laptop is running macOS, you already have a unix based system <img alt="😎" class="twemoji" src="../../assets/external/cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f60e.svg" title=":sunglasses:">. However, you will almost certainly need to install a unix-style package manager. I recommend <a href="https://brew.sh/">Homebrew</a>. This can be used to install non-python tools, such as the <code>openmpi</code> library <sup id="fnref:mpi"><a class="footnote-ref" href="#fn:mpi">3</a></sup>.</p>
+<p>If your laptop is running Windows, install the latest <a href="https://docs.microsoft.com/en-us/windows/wsl/install">WSL</a> (Windows subsystem for Linux, which installs Ubuntu). You will then get the <code>apt</code> package manager.</p>
+<h4 id="terminal-app">Terminal app<a class="headerlink" href="#terminal-app" title="Permanent link">&para;</a></h4>
+<p>The Terminal application is your gateway to the command line on all the computers you will access. The terminal is just an interface to your shell environment. At present, <code>zsh</code> is the default shell on macOS, while <code>bash</code> is the default on Linux distributions. Configuration files are located in your home directory and named <code>.zshrc</code> and <code>.bashrc</code> respectively. You will be editing them.</p>
+<p>As this same application is employed to interact with all the computers you will use, it's worth looking into making your shell environments on different computers as similar as possible, albeit you need to make sure it's clear which computer you're on. The latter can be achieved by customising the terminal prompt.</p>
+<p>If you use <code>zsh</code>, consider installing <a href="https://ohmyz.sh/">ohmyzsh</a>. Some other command line tools I find super useful are:</p>
+<ul>
+<li><a href="https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/autojump">autojump</a>, jump to commonly used directories</li>
+<li><a href="https://github.com/starship/starship">starship</a>, customised prompts</li>
+<li><code>mcfly</code>, control+r magic for getting back to past commands</li>
+<li><code>fd</code>, super fast find</li>
+<li><code>ripgrep</code>, a better, easier to use, grep</li>
 </ul>
-<p>See the <a class="reference external" href="https://github.com/ibraheemdev/modern-unix">modern unix tools</a> page.</p>
-</section>
-<section id="text-editor">
-<h4>Text editor<a class="headerlink" href="#text-editor" title="Link to this heading">¶</a></h4>
-<p>No matter what OS your laptop is running, I encourage you to install <a class="reference external" href="https://code.visualstudio.com">VS Code</a> . The reasons are simple, it provides an excellent experience for editing files on remote machines along with a fully-featured terminal experience. Be sure and research useful extensions. On my system, I have:</p>
-<ul class="simple">
-<li><p><a class="reference external" href="https://marketplace.visualstudio.com/items?itemName=njpwerner.autodocstring">autodocstring</a></p></li>
-<li><p><a class="reference external" href="https://marketplace.visualstudio.com/items?itemName=ms-python.python">Python extensions</a></p></li>
-<li><p><a class="reference external" href="https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter">Jupyter extension</a></p></li>
-<li><p><a class="reference external" href="https://marketplace.visualstudio.com/items?itemName=hbenl.vscode-test-explorer">Python Test Explorer UI</a></p></li>
-<li><p><a class="reference external" href="https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh">Remote SSH</a> <a class="footnote-reference brackets" href="#id15" id="id4" role="doc-noteref"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></a></p></li>
+<p>See the <a href="https://github.com/ibraheemdev/modern-unix">modern unix tools</a> page.</p>
+<h4 id="text-editor">Text editor<a class="headerlink" href="#text-editor" title="Permanent link">&para;</a></h4>
+<p>No matter what OS your laptop is running, I encourage you to install <a href="https://code.visualstudio.com">VS Code</a>. The reasons are simple, it provides an excellent experience for editing files on remote machines along with a fully-featured terminal experience. Be sure and research useful extensions. On my system, I have:</p>
+<ul>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=njpwerner.autodocstring">autodocstring</a></li>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=ms-python.python">Python extensions</a></li>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter">Jupyter extension</a></li>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=hbenl.vscode-test-explorer">Python Test Explorer UI</a></li>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh">Remote SSH</a> <sup id="fnref:remote"><a class="footnote-ref" href="#fn:remote">4</a></sup></li>
 </ul>
-<p>Install the <code class="docutils literal notranslate"><span class="pre">code</span></code> command-line tool for invoking VS Code from the terminal. Open the command palette (macOS command+shift+p) and type “install code” at the prompt. This will show a single listing with “Shell Command: Install ‘code’ in PATH”. Click on that and follow any prompts.</p>
-</section>
-<section id="configure-ssh">
-<h4>Configure ssh<a class="headerlink" href="#configure-ssh" title="Link to this heading">¶</a></h4>
-<p><code class="docutils literal notranslate"><span class="pre">ssh</span></code> stands for secure shell which provides a mechanism for accessing remote computers either for interactive terminal sessions or for copying files to / from. On your laptop, you should create a private / public key pair.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ssh-keygen -t rsa -b 4096 -C &quot;your_email@example.com&quot;
-</pre></div>
-</div>
-<p>Follow the prompts, and set a good password. The public copy of this key (which you can find under <code class="docutils literal notranslate"><span class="pre">~/.ssh/id_rsa.pub</span></code>) will be copied to your other computer accounts, enabling simplified steps to authorise your access.</p>
-<p>But wait, you’re not done with ssh yet! Using your newly configured VS Code, enter the following command in the terminal</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ code ~/.ssh/config
-</pre></div>
-</div>
-<p>This will open an empty file. You can include a shortcut in this file for every remote machine you need to access. Here’s an example</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Host</span> <span class="n">qik</span>
-<span class="n">UseKeychain</span> <span class="n">yes</span>
-<span class="n">HostName</span> <span class="nb">super</span><span class="o">.</span><span class="n">annoying</span><span class="o">.</span><span class="n">domain</span><span class="o">.</span><span class="n">com</span>
-<span class="n">User</span> <span class="n">ini777</span>
-</pre></div>
-</div>
+<p>Install the <code>code</code> command-line tool for invoking VS Code from the terminal. Open the command palette (macOS command+shift+p) and type "install code" at the prompt. This will show a single listing with "Shell Command: Install 'code' in PATH". Click on that and follow any prompts.</p>
+<h4 id="configure-ssh">Configure ssh<a class="headerlink" href="#configure-ssh" title="Permanent link">&para;</a></h4>
+<p><code>ssh</code> stands for secure shell which provides a mechanism for accessing remote computers either for interactive terminal sessions or for copying files to / from. On your laptop, you should create a private / public key pair.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>$ ssh-keygen -t rsa -b 4096 -C &quot;your_email@example.com&quot;
+</span></code></pre></div>
+<p>Follow the prompts, and set a good password. The public copy of this key (which you can find under <code>~/.ssh/id_rsa.pub</code>) will be copied to your other computer accounts, enabling simplified steps to authorise your access.</p>
+<p>But wait, you're not done with ssh yet! Using your newly configured VS Code, enter the following command in the terminal</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>$ code ~/.ssh/config
+</span></code></pre></div>
+<p>This will open an empty file. You can include a shortcut in this file for every remote machine you need to access. Here's an example</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>Host qik
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>UseKeychain yes
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>HostName super.annoying.domain.com
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>User ini777
+</span></code></pre></div>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p><code class="docutils literal notranslate"><span class="pre">qik</span></code> is an “alias” I defined. Pro-tip, make your aliases easy to type!</p>
+<p><code>qik</code> is an "alias" I defined. Pro-tip, make your aliases easy to type!</p>
 </div>
-<p>Save the file. Instead of logging into <code class="docutils literal notranslate"><span class="pre">super.annoying.domain.com</span></code> as</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ssh ini777@super.annoying.domain.com
-</pre></div>
-</div>
+<p>Save the file. Instead of logging into <code>super.annoying.domain.com</code> as</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>$ ssh ini777@super.annoying.domain.com
+</span></code></pre></div>
 <p>You can do</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ssh qik
-</pre></div>
-</div>
-<p>🎉</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>$ ssh qik
+</span></code></pre></div>
+<p><img alt="🎉" class="twemoji" src="../../assets/external/cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f389.svg" title=":tada:"></p>
 <p>Login into each computer and repeat the ssh keygen step there (this will facilitate code sharing, see below). Copy your <strong>public</strong> ssh key into your clip board on each computer.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ cat ~/.ssh/id_rsa.pub | pbcopy
-</pre></div>
-</div>
-<p>Add the result to your <code class="docutils literal notranslate"><span class="pre">authorized_keys</span></code> on each of your remote computers by logging into each remote machine and doing the following</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ssh qik
-$ nano ~/.ssh/authorized_keys # or your favourite editor
-</pre></div>
-</div>
-<p>paste the key on a new line <a class="footnote-reference brackets" href="#id16" id="id5" role="doc-noteref"><span class="fn-bracket">[</span>5<span class="fn-bracket">]</span></a> and exit <code class="docutils literal notranslate"><span class="pre">nano</span></code> <a class="footnote-reference brackets" href="#id17" id="id6" role="doc-noteref"><span class="fn-bracket">[</span>6<span class="fn-bracket">]</span></a>.</p>
-</section>
-<section id="using-git-and-github-for-version-control">
-<h4>Using <code class="docutils literal notranslate"><span class="pre">git</span></code> and GitHub for version control<a class="headerlink" href="#using-git-and-github-for-version-control" title="Link to this heading">¶</a></h4>
-<p>The version control tool <code class="docutils literal notranslate"><span class="pre">git</span></code> should already be installed on your computer. To use <code class="docutils literal notranslate"><span class="pre">git</span></code> you need to configure it.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ git config --global user.name &quot;Firstname Lastname&quot;
-$ git config --global user.email &quot;username@myEmail.com&quot;
-</pre></div>
-</div>
-<p>These will be used by <code class="docutils literal notranslate"><span class="pre">git</span></code> to sign any commits you make. I recommend you do this on all the computers you will be using.</p>
-<p>If you don’t already have an account on GitHub, create one. At this point, you should copy the public ssh keys you created on each machine and add them to your GitHub account. Follow the <a class="reference external" href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account">instructions at GitHub</a>.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>$ cat ~/.ssh/id_rsa.pub | pbcopy
+</span></code></pre></div>
+<p>Add the result to your <code>authorized_keys</code> on each of your remote computers by logging into each remote machine and doing the following</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>$ ssh qik
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>$ nano ~/.ssh/authorized_keys # or your favourite editor
+</span></code></pre></div>
+<p>paste the key on a new line <sup id="fnref:one-line"><a class="footnote-ref" href="#fn:one-line">5</a></sup> and exit <code>nano</code> <sup id="fnref:nano"><a class="footnote-ref" href="#fn:nano">6</a></sup>.</p>
+<h4 id="using-git-and-github-for-version-control">Using <code>git</code> and GitHub for version control<a class="headerlink" href="#using-git-and-github-for-version-control" title="Permanent link">&para;</a></h4>
+<p>The version control tool <code>git</code> should already be installed on your computer. To use <code>git</code> you need to configure it.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>$ git config --global user.name &quot;Firstname Lastname&quot;
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>$ git config --global user.email &quot;username@myEmail.com&quot;
+</span></code></pre></div>
+<p>These will be used by <code>git</code> to sign any commits you make. I recommend you do this on all the computers you will be using.</p>
+<p>If you don't already have an account on GitHub, create one. At this point, you should copy the public ssh keys you created on each machine and add them to your GitHub account. Follow the <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account">instructions at GitHub</a>.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>When you add a key, give it the computer’s name. Doing this means it’s easy to delete a key if you lose access to that computer (e.g. you buy a new laptop).</p>
+<p>When you add a key, give it the computer's name. Doing this means it's easy to delete a key if you lose access to that computer (e.g. you buy a new laptop).</p>
 </div>
-</section>
-<section id="reproducible-computational-environments">
-<h4>Reproducible computational environments<a class="headerlink" href="#reproducible-computational-environments" title="Link to this heading">¶</a></h4>
-<p>There is no single answer to this challenge that applies to all cases. Some will argue that <a class="reference external" href="https://docs.conda.io/en/latest/miniconda.html">conda</a> provides the most general solution to this problem. My own experience is that if your computations include a supercomputer, you may find conda troublesome. Supercomputers are often administered via a granting system whereby some quantity of resources is allocated. Those resources include CPU hours and storage. If you exceed your allocation, you can no longer use the computer.</p>
-<p><code class="docutils literal notranslate"><span class="pre">conda</span></code> does not work well in the supercomputer context. Shared facilities may penalise user accounts with many files <a class="footnote-reference brackets" href="#id18" id="id7" role="doc-noteref"><span class="fn-bracket">[</span>7<span class="fn-bracket">]</span></a> due to the significant overhead they can impose on performance of the file system. I have witnessed this effect with naive <code class="docutils literal notranslate"><span class="pre">conda</span></code> installs. In addition, supercomputer facilities often provide custom builds of core tools. For instance, higher performance builds of Python than what you will obtain from <code class="docutils literal notranslate"><span class="pre">conda-forge</span></code>.</p>
-<p>If <code class="docutils literal notranslate"><span class="pre">conda</span></code> seems to be the only way to solve your case, make sure you only install the minimal dependency set. You can specify that set using a <a class="reference external" href="https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#create-env-file-manually">conda environment yaml file</a>, remembering to “pin” <a class="footnote-reference brackets" href="#id19" id="id8" role="doc-noteref"><span class="fn-bracket">[</span>8<span class="fn-bracket">]</span></a> your versions.</p>
-<p>If you are lucky enough to have a Python-only project <a class="footnote-reference brackets" href="#id20" id="id9" role="doc-noteref"><span class="fn-bracket">[</span>9<span class="fn-bracket">]</span></a>, then use the <a class="reference external" href="https://realpython.com/python-virtual-environments-a-primer/">built-in capability</a> to create virtual environments. These can be made portable by creating a <code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code> file, which you share between your different accounts. If this is the approach you take, be sure and <a class="reference external" href="https://pip.pypa.io/en/latest/reference/requirements-file-format/">pin your dependency versions</a>.</p>
+<h4 id="reproducible-computational-environments">Reproducible computational environments<a class="headerlink" href="#reproducible-computational-environments" title="Permanent link">&para;</a></h4>
+<p>There is no single answer to this challenge that applies to all cases. Some will argue that <a href="https://docs.conda.io/en/latest/miniconda.html">conda</a> provides the most general solution to this problem. My own experience is that if your computations include a supercomputer, you may find conda troublesome. Supercomputers are often administered via a granting system whereby some quantity of resources is allocated. Those resources include CPU hours and storage. If you exceed your allocation, you can no longer use the computer.</p>
+<p><code>conda</code> does not work well in the supercomputer context. Shared facilities may penalise user accounts with many files <sup id="fnref:inodes"><a class="footnote-ref" href="#fn:inodes">7</a></sup> due to the significant overhead they can impose on performance of the file system. I have witnessed this effect with naive <code>conda</code> installs. In addition, supercomputer facilities often provide custom builds of core tools. For instance, higher performance builds of Python than what you will obtain from <code>conda-forge</code>.</p>
+<p>If <code>conda</code> seems to be the only way to solve your case, make sure you only install the minimal dependency set. You can specify that set using a <a href="https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#create-env-file-manually">conda environment yaml file</a>, remembering to "pin" <sup id="fnref:pin"><a class="footnote-ref" href="#fn:pin">8</a></sup> your versions.</p>
+<p>If you are lucky enough to have a Python-only project <sup id="fnref:lucky"><a class="footnote-ref" href="#fn:lucky">9</a></sup>, then use the <a href="https://realpython.com/python-virtual-environments-a-primer/">built-in capability</a> to create virtual environments. These can be made portable by creating a <code>requirements.txt</code> file, which you share between your different accounts. If this is the approach you take, be sure and <a href="https://pip.pypa.io/en/latest/reference/requirements-file-format/">pin your dependency versions</a>.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>You can reconstruct your computing environment by just the yaml or requirements file. As plaint text file formats, they should be version controlled too.</p>
 </div>
-</section>
-</section>
-</section>
-<section id="structuring-your-projects">
-<h2>Structuring your projects<a class="headerlink" href="#structuring-your-projects" title="Link to this heading">¶</a></h2>
+<h2 id="structuring-your-projects">Structuring your projects<a class="headerlink" href="#structuring-your-projects" title="Permanent link">&para;</a></h2>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>Put them all into a single directory, call it <code class="docutils literal notranslate"><span class="pre">repos</span></code> <a class="footnote-reference brackets" href="#id21" id="id10" role="doc-noteref"><span class="fn-bracket">[</span>10<span class="fn-bracket">]</span></a>.</p>
+<p>Put them all into a single directory, call it <code>repos</code> <sup id="fnref:repos"><a class="footnote-ref" href="#fn:repos">10</a></sup>.</p>
 </div>
 <p>Having a single directory makes moving your research projects between computers easier. I advise you also to include repositories for any dependency that is being actively developed in this directory. This way, you preserve the entire compute state.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>Since you will be versioning everything, the first action you take to start a new project is create a repository on <a class="reference external" href="https://github.com">GitHub</a>. Then clone it into your <code class="docutils literal notranslate"><span class="pre">~/repos</span></code> directory.</p>
+<p>Since you will be versioning everything, the first action you take to start a new project is create a repository on <a href="https://github.com">GitHub</a>. Then clone it into your <code>~/repos</code> directory.</p>
 </div>
-<p>Typically, I have two repositories if I’m engaged in research to develop a software tool. The first is for the tool to be distributed to the target audience. The second is for the analyses to be undertaken to establish the tool is worth using. Below I give sample structures for a “software project” and a “research project”.</p>
-<section id="directory-structure-for-a-software-methods-project">
-<h3>Directory structure for a software methods project <a class="footnote-reference brackets" href="#id22" id="id11" role="doc-noteref"><span class="fn-bracket">[</span>11<span class="fn-bracket">]</span></a><a class="headerlink" href="#directory-structure-for-a-software-methods-project" title="Link to this heading">¶</a></h3>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>.
-└── software_project/
-    ├── README stating project purpose and basic instructions
-    ├── LICENSE pick one that facilitates user adoption
-    ├── project config files
-    ├── docs/
-    │   ├── data/
-    │   │   └── small sample data files
-    │   └── documentation covering API and examples
-    ├── src/
-    │   └── lib_name/
-    │     └── source code files
-    └── tests/
-        ├── data/
-        │   └── small sample data files
-        └── test files
-</pre></div>
-</div>
+<p>Typically, I have two repositories if I'm engaged in research to develop a software tool. The first is for the tool to be distributed to the target audience. The second is for the analyses to be undertaken to establish the tool is worth using. Below I give sample structures for a "software project" and a "research project".</p>
+<h3 id="directory-structure-for-a-software-methods-project">Directory structure for a software methods project <sup id="fnref:python-project"><a class="footnote-ref" href="#fn:python-project">11</a></sup><a class="headerlink" href="#directory-structure-for-a-software-methods-project" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>.
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>└── software_project/
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>    ├── README stating project purpose and basic instructions
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>    ├── LICENSE pick one that facilitates user adoption
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>    ├── project config files
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>    ├── docs/
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>    │   ├── data/
+</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>    │   │   └── small sample data files
+</span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>    │   └── documentation covering API and examples
+</span><span id="__span-8-10"><a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>    ├── src/
+</span><span id="__span-8-11"><a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>    │   └── lib_name/
+</span><span id="__span-8-12"><a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>    │     └── source code files
+</span><span id="__span-8-13"><a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a>    └── tests/
+</span><span id="__span-8-14"><a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a>        ├── data/
+</span><span id="__span-8-15"><a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a>        │   └── small sample data files
+</span><span id="__span-8-16"><a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a>        └── test files
+</span></code></pre></div>
 <p>Software development projects have input data necessary for your test suite and documentation, which should be tracked in version control. They should be minimal, sufficient for testing and / or demonstration purposes.</p>
-</section>
-<section id="directory-structure-for-a-research-project">
-<h3>Directory structure for a research project<a class="headerlink" href="#directory-structure-for-a-research-project" title="Link to this heading">¶</a></h3>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>.
-└── research_project/
-    ├── README describing usage
-    ├── data/
-    │   ├── processed/
-    │   └── raw/
-    ├── results/
-    │   ├── figures/
-    │   └── tables/
-    ├── src
-    │   ├── analysis scripts
-    │   ├── data sampling scripts
-    │   └── notebook files
-    └── tests/
-        ├── data/
-        └── test files
-</pre></div>
-</div>
-<p>Research projects have input data that may be local to your institute or external, e.g. resources such as <a class="reference external" href="https://ensembl.org">Ensembl</a>, <a class="reference external" href="https://www.ncbi.nlm.nih.gov/genbank/">GenBank</a>, or <a class="reference external" href="https://zenodo.org">Zenodo</a>. Wherever your data comes from, store it under the <code class="docutils literal notranslate"><span class="pre">data/</span></code> directory with a name that reflects its origin.</p>
-<p>For a research project, these data files can be massive! As such, <strong>do not</strong> to add the data files to your research project’s <code class="docutils literal notranslate"><span class="pre">git</span></code> repository. An alternate way to version those files is by uploading them to <a class="reference external" href="https://zenodo.org">Zenodo</a> (for instance) and adding a script that does the download. Users seeking to replicate your work then run that script to reconstitute the state of your project directory.</p>
+<h3 id="directory-structure-for-a-research-project">Directory structure for a research project<a class="headerlink" href="#directory-structure-for-a-research-project" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>.
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>└── research_project/
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>    ├── README describing usage
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>    ├── data/
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>    │   ├── processed/
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>    │   └── raw/
+</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>    ├── results/
+</span><span id="__span-9-8"><a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>    │   ├── figures/
+</span><span id="__span-9-9"><a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a>    │   └── tables/
+</span><span id="__span-9-10"><a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a>    ├── src
+</span><span id="__span-9-11"><a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a>    │   ├── analysis scripts
+</span><span id="__span-9-12"><a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a>    │   ├── data sampling scripts
+</span><span id="__span-9-13"><a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a>    │   └── notebook files
+</span><span id="__span-9-14"><a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a>    └── tests/
+</span><span id="__span-9-15"><a id="__codelineno-9-15" name="__codelineno-9-15" href="#__codelineno-9-15"></a>        ├── data/
+</span><span id="__span-9-16"><a id="__codelineno-9-16" name="__codelineno-9-16" href="#__codelineno-9-16"></a>        └── test files
+</span></code></pre></div>
+<p>Research projects have input data that may be local to your institute or external, e.g. resources such as <a href="https://ensembl.org">Ensembl</a>, <a href="https://www.ncbi.nlm.nih.gov/genbank/">GenBank</a>, or <a href="https://zenodo.org">Zenodo</a>. Wherever your data comes from, store it under the <code>data/</code> directory with a name that reflects its origin.</p>
+<p>For a research project, these data files can be massive! As such, <strong>do not</strong> to add the data files to your research project's <code>git</code> repository. An alternate way to version those files is by uploading them to <a href="https://zenodo.org">Zenodo</a> (for instance) and adding a script that does the download. Users seeking to replicate your work then run that script to reconstitute the state of your project directory.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>“notebook files” refers to <a class="reference external" href="https://jupyter.org/">Jupyter</a> notebook files. Putting these in version control can be problematic. There are multiple reasons for this, e.g. embedded images can make these files very large. This has led to tools like <a class="reference external" href="https://github.com/kynan/nbstripout">nbstripout</a>. My advice is only to include notebooks if they’re small.</p>
+<p>"notebook files" refers to <a href="https://jupyter.org/">Jupyter</a> notebook files. Putting these in version control can be problematic. There are multiple reasons for this, e.g. embedded images can make these files very large. This has led to tools like <a href="https://github.com/kynan/nbstripout">nbstripout</a>. My advice is only to include notebooks if they're small.</p>
 </div>
-<p class="rubric">Footnotes</p>
-<aside class="footnote-list brackets">
-<aside class="footnote brackets" id="id12" role="doc-footnote">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
-<p><code class="docutils literal notranslate"><span class="pre">git</span></code> is the major tool used for “version control” of text files.</p>
-</aside>
-<aside class="footnote brackets" id="id13" role="doc-footnote">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">2</a><span class="fn-bracket">]</span></span>
-<p>Yo do not actually have to use <a class="reference external" href="https://github.com">GitHub</a> for this. But if <a class="reference external" href="https://github.com">GitHub</a> is how you will share your work with other 🧑‍🔬, you may as well.</p>
-</aside>
-<aside class="footnote brackets" id="id14" role="doc-footnote">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">3</a><span class="fn-bracket">]</span></span>
-<p>This is necessary for prototyping your code runs in parallel using MPI library (Message Passing Interface). MPI is the most likely protocol for parallel computation supported on the supercomputer.</p>
-</aside>
-<aside class="footnote brackets" id="id15" role="doc-footnote">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id4">4</a><span class="fn-bracket">]</span></span>
-<p>On windows, install the <a class="reference external" href="https://code.visualstudio.com/docs/remote/wsl-tutorial">Remote WSL</a> extension.</p>
-</aside>
-<aside class="footnote brackets" id="id16" role="doc-footnote">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id5">5</a><span class="fn-bracket">]</span></span>
-<p>The public key must be on a single line.</p>
-</aside>
-<aside class="footnote brackets" id="id17" role="doc-footnote">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id6">6</a><span class="fn-bracket">]</span></span>
-<p>It is up to you be sure you know how to use the <code class="docutils literal notranslate"><span class="pre">nano</span></code> editor. When in doubt, google.</p>
-</aside>
-<aside class="footnote brackets" id="id18" role="doc-footnote">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id7">7</a><span class="fn-bracket">]</span></span>
-<p>measured via <a class="reference external" href="https://en.wikipedia.org/wiki/Inode">inodes</a></p>
-</aside>
-<aside class="footnote brackets" id="id19" role="doc-footnote">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id8">8</a><span class="fn-bracket">]</span></span>
-<p>Pinning here means to state a specific version number of the tool.</p>
-</aside>
-<aside class="footnote brackets" id="id20" role="doc-footnote">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id9">9</a><span class="fn-bracket">]</span></span>
-<p>“Lucky” in the sense that there is less complexity in the project, simplifying your development process and reducing the storage footprint of your project.</p>
-</aside>
-<aside class="footnote brackets" id="id21" role="doc-footnote">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id10">10</a><span class="fn-bracket">]</span></span>
-<p><code class="docutils literal notranslate"><span class="pre">repos</span></code> because it is short for repositories, and <strong>every</strong> project will be version controlled … right?</p>
-</aside>
-<aside class="footnote brackets" id="id22" role="doc-footnote">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id11">11</a><span class="fn-bracket">]</span></span>
-<p>This is for a Python language based project. Adopt a structure that is considered best pratice for the language you’re working in.</p>
-</aside>
-</aside>
-</section>
-</section>
-</section>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:git">
+<p><code>git</code> is the major tool used for "version control" of text files.&#160;<a class="footnote-backref" href="#fnref:git" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:github">
+<p>You do not actually have to use <a href="https://github.com">GitHub</a> for this. But if <a href="https://github.com">GitHub</a> is how you will share your work with other <img alt="🧑‍🔬" class="twemoji" src="../../assets/external/cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f9d1-200d-1f52c.svg" title=":scientist:">, you may as well.&#160;<a class="footnote-backref" href="#fnref:github" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:mpi">
+<p>This is necessary for prototyping your code runs in parallel using MPI library (Message Passing Interface). MPI is the most likely protocol for parallel computation supported on the supercomputer.&#160;<a class="footnote-backref" href="#fnref:mpi" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+<li id="fn:remote">
+<p>On windows, install the <a href="https://code.visualstudio.com/docs/remote/wsl-tutorial">Remote WSL</a> extension.&#160;<a class="footnote-backref" href="#fnref:remote" title="Jump back to footnote 4 in the text">&#8617;</a></p>
+</li>
+<li id="fn:one-line">
+<p>The public key must be on a single line.&#160;<a class="footnote-backref" href="#fnref:one-line" title="Jump back to footnote 5 in the text">&#8617;</a></p>
+</li>
+<li id="fn:nano">
+<p>It is up to you be sure you know how to use the <code>nano</code> editor. When in doubt, google.&#160;<a class="footnote-backref" href="#fnref:nano" title="Jump back to footnote 6 in the text">&#8617;</a></p>
+</li>
+<li id="fn:inodes">
+<p>measured via <a href="https://en.wikipedia.org/wiki/Inode">inodes</a>&#160;<a class="footnote-backref" href="#fnref:inodes" title="Jump back to footnote 7 in the text">&#8617;</a></p>
+</li>
+<li id="fn:pin">
+<p>Pinning here means to state a specific version number of the tool.&#160;<a class="footnote-backref" href="#fnref:pin" title="Jump back to footnote 8 in the text">&#8617;</a></p>
+</li>
+<li id="fn:lucky">
+<p>"Lucky" in the sense that there is less complexity in the project, simplifying your development process and reducing the storage footprint of your project.&#160;<a class="footnote-backref" href="#fnref:lucky" title="Jump back to footnote 9 in the text">&#8617;</a></p>
+</li>
+<li id="fn:repos">
+<p><code>repos</code> because it is short for repositories, and <strong>every</strong> project will be version controlled ... right?&#160;<a class="footnote-backref" href="#fnref:repos" title="Jump back to footnote 10 in the text">&#8617;</a></p>
+</li>
+<li id="fn:python-project">
+<p>This is for a Python language based project. Adopt a structure that is considered best pratice for the language you're working in.&#160;<a class="footnote-backref" href="#fnref:python-project" title="Jump back to footnote 11 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
 
-<div class="section ablog__blog_comments">
-     
-<div class="section ablog__prev-next">
-  <span class="ablog__prev">
-     
-    <a href="../starting_research/">
+
+
+
+
+
+
+  
+  
+
+
+
+
+  
+
+
+
+  <h2 id="__comments">Comments</h2>
+  <script src="../../assets/external/giscus.app/client.js" data-repo="GavinHuttley/gav_blog" data-repo-id="R_kgDOG1s0Ow" data-category="Q&amp;A" data-category-id="DIC_kwDOG1s0O84C8fle" data-mapping="pathname" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="preferred_color_scheme" data-lang="en" data-loading="lazy" crossorigin="anonymous" async>
+  </script>
+
+  <script>
+    var giscus = document.querySelector("script[src='https://giscus.app/client.js']")
+    if (giscus) {
+      var palette = __md_get("__palette")
+      if (palette && typeof palette.color === "object") {
+        var theme = palette.color.scheme === "slate" ? "dark" : "light"
+        giscus.setAttribute("data-theme", theme)
+      }
+      document.addEventListener("DOMContentLoaded", function() {
+        var ref = document.querySelector("[data-md-component=palette]")
+        if (!ref) return
+        ref.addEventListener("change", function() {
+          var palette = __md_get("__palette")
+          if (palette && typeof palette.color === "object") {
+            var theme = palette.color.scheme === "slate" ? "dark" : "light"
+            var frame = document.querySelector(".giscus-frame")
+            if (frame) {
+              frame.contentWindow.postMessage(
+                { giscus: { setConfig: { theme: theme } } },
+                "https://giscus.app"
+              )
+            }
+          }
+        })
+      })
+    }
+  </script>
+
       
-      <i class="fa fa-arrow-circle-left"></i>
+    </article>
+  </div>
+
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
       
-      <span>So you’re starting a research project, where do you begin?</span>
-    </a>
+        <footer class="md-footer">
+  
     
-  </span>
-  <span class="ablog__spacer">&nbsp;</span>
-  <span class="ablog__next">
+      
+        
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../starting_research/" class="md-footer__link md-footer__link--prev" aria-label="Previous: So you&#39;re starting a research project, where do you begin?">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                So you're starting a research project, where do you begin?
+              </div>
+            </div>
+          </a>
+        
+        
+      </nav>
     
-  </span>
-</div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2022– Gavin Huttley
+    </div>
+  
   
 </div>
-
-          </div>
-          
-        </div>
-      </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="Main">
-        <div class="sphinxsidebarwrapper">
-<h1 class="logo"><a href="../../">Gav's Blog</a></h1>
-
-
-
-
-
-
-
-
-
-<div class="ablog-sidebar-item ablog__postcard">
-   
-  <h2>
-     
-    <i class="fa fa-calendar"></i>
-    
-    <span>01 Mar 2022</span>
-    
-  </h2>
-  <ul>
-    <div class="ablog-sidebar-item ablog__postcard2">
       
-  <li id="ablog-sidebar-item category ablog__category">
-    <span>
-      
-      <i class="fa-fw fa fa-folder-open"></i>
-      
-    </span>
-     
-    <a href="../../blag/category/computational-science/">computational science</a>
-      
-  </li>
-   
-  <li id="ablog-sidebar-item tags ablog__tags">
-    <span>
-       
-      <i class="fa-fw fa fa-tags"></i>
-       
-    </span>
-     
-    <a href="../../blag/tag/education/">education</a>
         
-    <a href="../../blag/tag/development/">development</a>
-        
-    <a href="../../blag/tag/research/">research</a>
-        
-    <a href="../../blag/tag/tips/">tips</a>
-      
-  </li>
-   
-</div>
-  </ul>
-</div>
-<h3>Navigation</h3>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../../about/">About Gavin Huttley</a></li>
-</ul>
-
-
-<div class="ablog-sidebar-item ablog__recentposts">
-  <h3>
-    <a href="../../blag/">Recent Posts</a>
-  </h3>
-  <ul>
-     
-    <li>
-      <a href="../starting_research/">
-        25 February - So you’re starting a research project, where do you begin?
-      </a>
-    </li>
+<div class="md-social">
+  
     
-  </ul>
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/GavinHuttley" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
 </div>
-
-<div class="ablog-sidebar-item ablog__tagcloud">
-  <link
-    rel="stylesheet"
-    href="../../_static/ablog/tagcloud.css"
-    type="text/css"
-  />
-  <h3><a href="../../blag/tag/">Tags</a></h3>
-  <ul class="ablog-cloud">
-     
-    <li class="ablog-cloud ablog-cloud-1">
-      <a href="../../blag/tag/development/">development</a>
-    </li>
-      
-    <li class="ablog-cloud ablog-cloud-5">
-      <a href="../../blag/tag/education/">education</a>
-    </li>
-      
-    <li class="ablog-cloud ablog-cloud-1">
-      <a href="../../blag/tag/newbs/">newbs</a>
-    </li>
-      
-    <li class="ablog-cloud ablog-cloud-5">
-      <a href="../../blag/tag/research/">research</a>
-    </li>
-      
-    <li class="ablog-cloud ablog-cloud-5">
-      <a href="../../blag/tag/tips/">tips</a>
-    </li>
-     
-  </ul>
-</div>
-
-<div class="ablog-sidebar-item ablog__categories">
-  <h3>
-    <a href="../../blag/category/">Categories</a>
-  </h3>
-  <ul>
-     
-    <li>
-      <a href="../../blag/category/computational-science/">computational science (2)</a>
-    </li>
-     
-  </ul>
-</div>
-
-<div class="ablog-sidebar-item ablog__archives">
-  <h3>
-    <a href="../../blag/archive/">Archives</a>
-  </h3>
-  <ul>
-     
-    <li>
-      <a href="../../blag/2022/">2022 (2)</a>
-    </li>
-     
-  </ul>
-</div>
-
-<search id="searchbox" style="display: none" role="search">
-    <div class="searchformwrapper">
-    <form class="search" action="../../search/" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Search"/>
-      <input type="submit" value="Go" />
-    </form>
-    </div>
-</search>
-<script>document.getElementById('searchbox').style.display = "block"</script>
-        </div>
-      </div>
-      <div class="clearer"></div>
-    </div>
-    <div class="footer">
-      &#169;2022-, Gavin Huttley.
-      
-      |
-      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 8.1.3</a>
-      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 1.0.0</a>
       
     </div>
-
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
     
-
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.sections", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "content.code.copy", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="../../assets/external/cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
     
   </body>
 </html>

@@ -1,517 +1,1369 @@
-<!DOCTYPE html>
 
-<html lang="en" data-content_root="../../">
+<!doctype html>
+<html lang="en" class="no-js">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Doing Science with Computers — notes from Gavin Huttley.">
+      
+      
+        <meta name="author" content="Gavin Huttley">
+      
+      
+        <link rel="canonical" href="https://gavinhuttley.dev/posts/starting_research/">
+      
+      
+      
+        <link rel="next" href="../setting_up_your_computer/">
+      
+      
+        
+      
+      
+        <link rel="alternate" type="application/rss+xml" title="RSS feed" href="../../feed_rss_created.xml">
+        <link rel="alternate" type="application/rss+xml" title="RSS feed of updated content" href="../../feed_rss_updated.xml">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>So you're starting a research project, where do you begin? - Gav's Blog</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
 
-    <title>So you’re starting a research project, where do you begin? &#8212; Gav&#39;s Blog 04 documentation</title>
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
-    <link rel="stylesheet" type="text/css" href="../../_static/basic.css?v=686e5160" />
-    <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css?v=e70394ae" />
-    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=4ae1632d" />
-    <link rel="stylesheet" type="text/css" href="../../_static/jupyter-sphinx.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/thebelab.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/twemoji.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
-    <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=c55bfeac" />
-    <script src="../../_static/documentation_options.js?v=af8b2a3d"></script>
-    <script src="../../_static/doctools.js?v=9bcbadda"></script>
-    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="../../_static/thebelab-helper.js"></script>
-    <script src="https://unpkg.com/twemoji@latest/dist/twemoji.min.js"></script>
-    <script src="../../_static/twemoji.js"></script>
-    <script src="../../_static/plotly-latest.min.js?v=309d0351"></script>
-    <script kind="utterances">
 
-    var commentsRunWhenDOMLoaded = cb => {
-    if (document.readyState != 'loading') {
-        cb()
-    } else if (document.addEventListener) {
-        document.addEventListener('DOMContentLoaded', cb)
-    } else {
-        document.attachEvent('onreadystatechange', function() {
-        if (document.readyState == 'complete') cb()
-        })
-    }
-}
+    
+    
+      
+    
+    
+      
+        
+        
+        
+        <link rel="stylesheet" href="../../assets/external/fonts.googleapis.com/css.cefe9b4b.css">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
 
-var addUtterances = () => {
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    script.src = "https://utteranc.es/client.js";
-    script.async = "async";
-
-    script.setAttribute("repo", "GavinHuttley/gav_blog");
-    script.setAttribute("issue-term", "pathname");
-    script.setAttribute("theme", "github-light");
-    script.setAttribute("label", "💬 comment");
-    script.setAttribute("crossorigin", "anonymous");
-
-    sections = document.querySelectorAll("div.section");
-    if (sections !== null) {
-        section = sections[sections.length-1];
-        section.appendChild(script);
-    }
-}
-commentsRunWhenDOMLoaded(addUtterances);
-</script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
-    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
-    <link rel="author" title="About these documents" href="../../about/" />
-    <link rel="index" title="Index" href="../../genindex/" />
-    <link rel="search" title="Search" href="../../search/" /> 
-   
-  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+    
+    
+  </head>
   
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#so-youre-starting-a-research-project-where-do-you-begin" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
 
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Gav&#39;s Blog" class="md-header__button md-logo" aria-label="Gav's Blog" data-md-component="logo">
+      
   
-  
- 
-<link
-  rel="alternate"
-  type="application/atom+xml"
-  href="../../blag/atom.xml"
-  title="Thinking Science with Computers"
-/>
- 
-<link href="True" rel="stylesheet" />
- 
-  </head><body>
-  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
 
-    <div class="document">
-      <div class="documentwrapper">
-        <div class="bodywrapper">
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Gav's Blog
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              So you're starting a research project, where do you begin?
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
           
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/GavinHuttley/gav_blog" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GavinHuttley/gav_blog
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Blag
 
-          <div class="body" role="main">
-             <section id="so-you-re-starting-a-research-project-where-do-you-begin">
-<h1>So you’re starting a research project, where do you begin?<a class="headerlink" href="#so-you-re-starting-a-research-project-where-do-you-begin" title="Link to this heading">¶</a></h1>
-<section id="overview">
-<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading">¶</a></h2>
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../about/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  About
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../archive/2022/" class="md-tabs__link">
+          
+  
+  
+  Archive
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../category/computational-science/" class="md-tabs__link">
+          
+  
+  
+  Categories
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Gav&#39;s Blog" class="md-nav__button md-logo" aria-label="Gav's Blog" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Gav's Blog
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/GavinHuttley/gav_blog" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GavinHuttley/gav_blog
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Blag
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Archive
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Archive
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archive/2022/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2022
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Categories
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Categories
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../category/computational-science/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    computational science
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#structure-is-key" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Structure is key
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-why" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Why
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Why">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-are-the-existing-solutions-and-why-are-those-inadequate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What are the existing solutions, and why are those inadequate?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-what" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The What
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The What">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#your-proposition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Your proposition
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#its-value" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Its value
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-how" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The How
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The How">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#your-solution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Your solution
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#correctness" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Making it believable
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#measure-performance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Measure performance
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#identify-milestones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Identify milestones
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#principles-of-pragmatic-project-execution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Principles of Pragmatic Project Execution
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Principles of Pragmatic Project Execution">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#plan-do-repeat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Plan, do, repeat
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optimise-for-the-minimal-project-duration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Optimise for the minimal project duration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fast-prototyping" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fast prototyping
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iterate-the-flow-baby" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Iterate the flow, baby!
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-if-your-approach-is-impossible" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What if your approach is impossible?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-will-you-decide-when-youre-done" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How will you decide when you're done?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dont-isolate-yourself" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Don't isolate yourself
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tackling-the-inevitable-problems" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tackling the inevitable problems
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dont-forget-to-enjoy-yourself" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Don't forget to enjoy yourself
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+  <div class="md-content md-content--post" data-md-component="content">
+    <div class="md-sidebar md-sidebar--post" data-md-component="sidebar" data-md-type="navigation">
+      <div class="md-sidebar__scrollwrap">
+        <div class="md-sidebar__inner md-post">
+          <nav class="md-nav md-nav--primary">
+            <div class="md-post__back">
+              <div class="md-nav__title md-nav__container">
+                <a href="../.." class="md-nav__link">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+                  <span class="md-ellipsis">
+                    Back to index
+                  </span>
+                </a>
+              </div>
+            </div>
+            
+              <div class="md-post__authors md-typeset">
+                
+                  <div class="md-profile md-post__profile">
+                    <span class="md-author md-author--long">
+                      <img src="../../assets/external/github.com/GavinHuttley.png.jpg" alt="Gavin Huttley">
+                    </span>
+                    <span class="md-profile__description">
+                      <strong>
+                        
+                          <a href="https://github.com/GavinHuttley">Gavin Huttley</a>
+                        
+                      </strong>
+                      <br>
+                      Honorary Professor, Australian National University
+                    </span>
+                  </div>
+                
+              </div>
+            
+            <ul class="md-post__meta md-nav__list">
+              <li class="md-nav__item md-nav__item--section">
+                <div class="md-post__title">
+                  <span class="md-ellipsis">
+                    Metadata
+                  </span>
+                </div>
+                <nav class="md-nav">
+                  <ul class="md-nav__list">
+                    <li class="md-nav__item">
+                      <div class="md-nav__link">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5z"/></svg>
+                        <time datetime="2022-02-25 00:00:00+00:00" class="md-ellipsis">Feb 25, 2022</time>
+                      </div>
+                    </li>
+                    
+                    
+                      <li class="md-nav__item">
+                        <div class="md-nav__link">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 3v15h3V3zm3 2 4 13 3-1-4-13zM5 5v13h3V5zM3 19v2h18v-2z"/></svg>
+                          <span class="md-ellipsis">
+                            in
+                            
+                              <a href="../../category/computational-science/">computational science</a></span>
+                        </div>
+                      </li>
+                    
+                    
+                      
+                      <li class="md-nav__item">
+                        <div class="md-nav__link">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7z"/></svg>
+                          <span class="md-ellipsis">
+                            
+                              9 min read
+                            
+                          </span>
+                        </div>
+                      </li>
+                    
+                  </ul>
+                </nav>
+              </li>
+            </ul>
+            
+          </nav>
+          
+        </div>
+      </div>
+    </div>
+    <article class="md-content__inner md-typeset">
+      
+        
+  
+
+
+  <nav class="md-tags" >
+    
+      
+      
+      
+      
+        <span class="md-tag">education</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">newbs</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">research</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">tips</span>
+      
+    
+  </nav>
+
+
+  
+  
+
+
+<h1 id="so-youre-starting-a-research-project-where-do-you-begin">So you're starting a research project, where do you begin?<a class="headerlink" href="#so-youre-starting-a-research-project-where-do-you-begin" title="Permanent link">&para;</a></h1>
 <p>This post is intended for anyone starting out in research and development with a computational bent, whether in a science (e.g. computational biology) or engineering context. In particular, it is focussed on the research process that leads to new tools and analysis methods.</p>
-<p>So far, your exposure to knowledge discovery has likely been limited to textbook descriptions of how “thing x” was discovered. While being a consumer of such knowledge discovery is often challenging, the account you read is a highly distilled version of what happened. Being the original discoverer is more complicated.</p>
+<!-- more -->
+
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
+<p>So far, your exposure to knowledge discovery has likely been limited to textbook descriptions of how "thing x" was discovered. While being a consumer of such knowledge discovery is often challenging, the account you read is a highly distilled version of what happened. Being the original discoverer is more complicated.</p>
 <p>Take heart! Discoveries are not arrived at in completed form. By employing a systematic approach, we incrementally assemble the pieces to draw that new insight and develop something new and valuable. What follows is a sketch of my process.</p>
-</section>
-<section id="structure-is-key">
-<h2>Structure is key<a class="headerlink" href="#structure-is-key" title="Link to this heading">¶</a></h2>
+<h2 id="structure-is-key">Structure is key<a class="headerlink" href="#structure-is-key" title="Permanent link">&para;</a></h2>
 <p>I break the process into three questions you must answer: <em>Why</em>, <em>What</em> and <em>How</em>. These correspond to:</p>
-<ul class="simple">
-<li><p><em>Why</em> is there a problem?</p></li>
-<li><p><em>What</em> is the problem?</p></li>
-<li><p><em>How</em>  will you solve it?</p></li>
+<ul>
+<li><em>Why</em> is there a problem?</li>
+<li><em>What</em> is the problem?</li>
+<li><em>How</em> will you solve it?</li>
 </ul>
-<p>But before we delve into those, you need to answer two other questions. What form does your final output need to be? When is that due??? If you perform research and make a brilliant discovery but don’t write a systematic description of how you made that discovery, it is the same as not doing anything.</p>
+<p>But before we delve into those, you need to answer two other questions. What form does your final output need to be? When is that due??? If you perform research and make a brilliant discovery but don't write a systematic description of how you made that discovery, it is the same as not doing anything.</p>
 <p>Establish what form your <strong>final</strong> output should be in (talk to your supervisor). Your project plan should be something that directly references that and makes delivering it easy.</p>
-</section>
-<section id="the-why">
-<span id="id1"></span><h2>The Why<a class="headerlink" href="#the-why" title="Link to this heading">¶</a></h2>
-<blockquote class="epigraph">
-<div><p>Why does the problem even exist? Why is it a problem worthy of your attention? Why hasn’t it already been solved? Answering all these is your justification for doing the work and, at the very least, should make you comfortable you may be doing something worthwhile.</p>
-</div></blockquote>
-<p>This is the big picture part of the project and should proceed everything else. Identifying the existence of a problem requires you have a solid understanding of the domain. At this stage in your career, it’s quite likely that you have been “given” the problem. But once you take it, it becomes <strong>your</strong> problem <a class="footnote-reference brackets" href="#id11" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>. In other words, the onus is on you to understand the background material that led to defining the problem. Ultimately, this requires reading about what others have done.</p>
-<section id="what-are-the-existing-solutions-and-why-are-those-inadequate">
-<h3>What are the existing solutions, and why are those inadequate?<a class="headerlink" href="#what-are-the-existing-solutions-and-why-are-those-inadequate" title="Link to this heading">¶</a></h3>
-<blockquote class="epigraph">
-<div><p>When you examine existing solutions, take a big picture view. What are the core algorithms they implement? How do the algorithms relate to each other? What are their inputs and outputs? Do they have a killer flaw or are they blocking a key opportunity?</p>
-</div></blockquote>
-<p>Establishing <a class="reference internal" href="#the-why"><span class="std std-ref">The Why</span></a> almost always requires in-depth of consideration of what others have already done. So what are the existing solutions, and why are they not good enough? Study them carefully to look for a new investigation avenue and frame your response to <a class="reference internal" href="#the-what"><span class="std std-ref">The What</span></a>. Pay particular attention to how prior work was done, as that defines a minimum standard you must meet to have your work taken seriously.</p>
+<h2 id="the-why">The Why<a class="headerlink" href="#the-why" title="Permanent link">&para;</a></h2>
+<div class="admonition question">
+<p class="admonition-title">Why does the problem even exist?</p>
+<p>Why is it a problem worthy of your attention? Why hasn't it already been solved? Answering all these is your justification for doing the work and, at the very least, should make you comfortable you may be doing something worthwhile.</p>
+</div>
+<p>This is the big picture part of the project and should proceed everything else. Identifying the existence of a problem requires you have a solid understanding of the domain. At this stage in your career, it's quite likely that you have been "given" the problem. But once you take it, it becomes <strong>your</strong> problem <sup id="fnref:own-problem"><a class="footnote-ref" href="#fn:own-problem">1</a></sup>. In other words, the onus is on you to understand the background material that led to defining the problem. Ultimately, this requires reading about what others have done.</p>
+<h3 id="what-are-the-existing-solutions-and-why-are-those-inadequate">What are the existing solutions, and why are those inadequate?<a class="headerlink" href="#what-are-the-existing-solutions-and-why-are-those-inadequate" title="Permanent link">&para;</a></h3>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>When you examine existing solutions, take a big picture view. What are the core algorithms they implement? How do the algorithms relate to each other? What are their inputs and outputs? Do they have a killer flaw or are they blocking a key opportunity?</p>
+</div>
+<p>Establishing <a href="#the-why">the Why</a> almost always requires in-depth of consideration of what others have already done. So what are the existing solutions, and why are they not good enough? Study them carefully to look for a new investigation avenue and frame your response to <a href="#the-what">the What</a>. Pay particular attention to how prior work was done, as that defines a minimum standard you must meet to have your work taken seriously.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Criticising the work of others is a “core business” in science and engineering. That said, consider these three crucial qualifiers when you frame that criticism.</p>
-<ol class="arabic simple">
-<li><p>What is the <strong>evidence</strong> the solutions are inadequate? (That evidence can be measurement, or a theoretical property.)</p></li>
-<li><p>The prior work was likely developed against different technological inputs <a class="footnote-reference brackets" href="#id12" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a>.</p></li>
-<li><p>Much of the information available to us now may not have been known to the authors of the original work.</p></li>
+<p>Criticising the work of others is a "core business" in science and engineering. That said, consider these three crucial qualifiers when you frame that criticism.</p>
+<ol>
+<li>What is the <strong>evidence</strong> the solutions are inadequate? (That evidence can be measurement, or a theoretical property.)</li>
+<li>The prior work was likely developed against different technological inputs <sup id="fnref:tech-inputs"><a class="footnote-ref" href="#fn:tech-inputs">2</a></sup>.</li>
+<li>Much of the information available to us now may not have been known to the authors of the original work.</li>
 </ol>
 <p>A critique of the work of others is based on what we know now. So be respectful. I guarantee you that someone will be casting their critical eye over what you do in the future.</p>
 </div>
-</section>
-</section>
-<section id="the-what">
-<span id="id4"></span><h2>The What<a class="headerlink" href="#the-what" title="Link to this heading">¶</a></h2>
-<section id="your-proposition">
-<h3>Your proposition<a class="headerlink" href="#your-proposition" title="Link to this heading">¶</a></h3>
-<blockquote class="epigraph">
-<div><p>What is the problem you will solve? Try and express this as succinctly as possible. This statement may need to be updated as your knowledge of the domain increases <a class="footnote-reference brackets" href="#id13" id="id5" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a>. Critically, the statement must be something you can actually solve.</p>
-</div></blockquote>
-<p>This is the nitty-gritty and why you’re reading this. It is your statement of what YOU will achieve and stems from the careful consideration described above. The framing of “what” problem you will solve can benefit from identifying both its inputs and outputs. Meaning, what is the input data (including where the data will, or can, come from)? What is the output you will produce?</p>
+<h2 id="the-what">The What<a class="headerlink" href="#the-what" title="Permanent link">&para;</a></h2>
+<h3 id="your-proposition">Your proposition<a class="headerlink" href="#your-proposition" title="Permanent link">&para;</a></h3>
+<div class="admonition question">
+<p class="admonition-title">What is the problem you will solve?</p>
+<p>Try and express this as succinctly as possible. This statement may need to be updated as your knowledge of the domain increases <sup id="fnref:posteori"><a class="footnote-ref" href="#fn:posteori">3</a></sup>. Critically, the statement must be something you can actually solve.</p>
+</div>
+<p>This is the nitty-gritty and why you're reading this. It is your statement of what YOU will achieve and stems from the careful consideration described above. The framing of "what" problem you will solve can benefit from identifying both its inputs and outputs. Meaning, what is the input data (including where the data will, or can, come from)? What is the output you will produce?</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Together, the inputs and outputs define your target audience.</p>
 </div>
-<p>What you propose should explicitly address at least part of the shortcomings of existing solutions you identified in <a class="reference internal" href="#the-why"><span class="std std-ref">The Why</span></a>.</p>
-</section>
-<section id="its-value">
-<h3>Its value<a class="headerlink" href="#its-value" title="Link to this heading">¶</a></h3>
-<blockquote class="epigraph">
-<div><p>What is the value <a class="footnote-reference brackets" href="#id14" id="id6" role="doc-noteref"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></a> of your proposed solution? To establish this value, be clear on the output of your work and why it will be more valuable than what exists. Will it improve prediction accuracy? Will it require magnitudes less computing resources? Will it be more maintainable?</p>
-</div></blockquote>
+<p>What you propose should explicitly address at least part of the shortcomings of existing solutions you identified in <a href="#the-why">the Why</a>.</p>
+<h3 id="its-value">Its value<a class="headerlink" href="#its-value" title="Permanent link">&para;</a></h3>
+<div class="admonition question">
+<p class="admonition-title">What is the value<sup id="fnref:significance"><a class="footnote-ref" href="#fn:significance">4</a></sup> of your proposed solution?</p>
+<p>To establish this value, be clear on the output of your work and why it will be more valuable than what exists. Will it improve prediction accuracy? Will it require magnitudes less computing resources? Will it be more maintainable?</p>
+</div>
 <p>Your answer should reflect the significance you have attributed to the shortcomings of existing approaches and your argument of the benefit to the target audience.</p>
 <p>But that thinking is contingent upon the successful completion of the project. The value of a project also comes from what can be learned <em>if it fails</em>. Prepare yourself for the possibility that your proposal will not deliver on this promised value.</p>
-<p>Here’s a crucial reality-check – is a negative answer still interesting <a class="footnote-reference brackets" href="#id15" id="id7" role="doc-noteref"><span class="fn-bracket">[</span>5<span class="fn-bracket">]</span></a>?</p>
-<p>At the very least, you do not want the project to fail because you did not ensure the <a class="reference internal" href="#correctness"><span class="std std-ref">correctness</span></a> of your implementation or execution.</p>
-</section>
-</section>
-<section id="the-how">
-<span id="id8"></span><h2>The How<a class="headerlink" href="#the-how" title="Link to this heading">¶</a></h2>
-<section id="your-solution">
-<h3>Your solution<a class="headerlink" href="#your-solution" title="Link to this heading">¶</a></h3>
-<blockquote class="epigraph">
-<div><p>How will you tackle the inadequacy of existing solution(s)?</p>
-</div></blockquote>
-<ul class="simple">
-<li><p>Big-picture view of the core algorithms to be implemented</p></li>
-<li><p>What input data does each algorithmic component need, and how will you get it?</p></li>
-<li><p>What data properties must you account for?</p></li>
-<li><p>What other resources does the project need?</p></li>
+<p>Here's a crucial reality-check -- is a negative answer still interesting <sup id="fnref:negative"><a class="footnote-ref" href="#fn:negative">5</a></sup>?</p>
+<p>At the very least, you do not want the project to fail because you did not ensure the <a href="#correctness">correctness</a> of your implementation or execution.</p>
+<h2 id="the-how">The How<a class="headerlink" href="#the-how" title="Permanent link">&para;</a></h2>
+<h3 id="your-solution">Your solution<a class="headerlink" href="#your-solution" title="Permanent link">&para;</a></h3>
+<div class="admonition question">
+<p class="admonition-title">How will you tackle the inadequacy of existing solution(s)?</p>
+</div>
+<ul>
+<li>Big-picture view of the core algorithms to be implemented</li>
+<li>What input data does each algorithmic component need, and how will you get it?</li>
+<li>What data properties must you account for?</li>
+<li>What other resources does the project need?</li>
 </ul>
-</section>
-<section id="making-it-believable">
-<span id="correctness"></span><h3>Making it believable<a class="headerlink" href="#making-it-believable" title="Link to this heading">¶</a></h3>
-<blockquote class="epigraph">
-<div><p>How will you check correctness?</p>
-</div></blockquote>
-<ul class="simple">
-<li><p>What properties should be guaranteed?</p></li>
-<li><p>What data property corner cases can you identify and how should the algorithm behave in those situations?</p></li>
-<li><p>Are there ground truths you can rely on (e.g. from theory)?</p></li>
+<h3 id="correctness">Making it believable<a class="headerlink" href="#correctness" title="Permanent link">&para;</a></h3>
+<div class="admonition question">
+<p class="admonition-title">How will you check correctness?</p>
+</div>
+<ul>
+<li>What properties should be guaranteed?</li>
+<li>What data property corner cases can you identify and how should the algorithm behave in those situations?</li>
+<li>Are there ground truths you can rely on (e.g. from theory)?</li>
 </ul>
-</section>
-<section id="measure-performance">
-<span id="id9"></span><h3>Measure performance<a class="headerlink" href="#measure-performance" title="Link to this heading">¶</a></h3>
-<blockquote class="epigraph">
-<div><p>What measurable quantities best capture performance?</p>
-</div></blockquote>
-<ul class="simple">
-<li><p>What competitors will you also benchmark?</p></li>
-<li><p>What “experimental design” will you use that allows concluding your algorithm is a good choice over competitors?</p></li>
-<li><p>Identify appropriate metrics to highlight the different attributes, adopting standards of the domain wherever possible</p></li>
+<h3 id="measure-performance">Measure performance<a class="headerlink" href="#measure-performance" title="Permanent link">&para;</a></h3>
+<div class="admonition question">
+<p class="admonition-title">What measurable quantities best capture performance?</p>
+</div>
+<ul>
+<li>What competitors will you also benchmark?</li>
+<li>What "experimental design" will you use that allows concluding your algorithm is a good choice over competitors?</li>
+<li>Identify appropriate metrics to highlight the different attributes, adopting standards of the domain wherever possible</li>
 </ul>
-</section>
-<section id="identify-milestones">
-<h3>Identify milestones<a class="headerlink" href="#identify-milestones" title="Link to this heading">¶</a></h3>
-<ul class="simple">
-<li><p>Stages towards project completion</p></li>
-<li><p>Define termination project condition(s)</p></li>
+<h3 id="identify-milestones">Identify milestones<a class="headerlink" href="#identify-milestones" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Stages towards project completion</li>
+<li>Define termination project condition(s)</li>
 </ul>
-</section>
-</section>
-<section id="principles-of-pragmatic-project-execution">
-<h2>Principles of Pragmatic Project Execution<a class="headerlink" href="#principles-of-pragmatic-project-execution" title="Link to this heading">¶</a></h2>
-<section id="plan-do-repeat">
-<h3>Plan, do, repeat<a class="headerlink" href="#plan-do-repeat" title="Link to this heading">¶</a></h3>
+<h2 id="principles-of-pragmatic-project-execution">Principles of Pragmatic Project Execution<a class="headerlink" href="#principles-of-pragmatic-project-execution" title="Permanent link">&para;</a></h2>
+<h3 id="plan-do-repeat">Plan, do, repeat<a class="headerlink" href="#plan-do-repeat" title="Permanent link">&para;</a></h3>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Your time is your most valuable currency. Spend it wisely.</p>
 </div>
-<p>Newbies are very tempted to jump straight into the “doing” part of a new project. Working furiously gives immediate reward and a sense of achievement. But without direction, you are probably wasting your time.</p>
+<p>Newbies are very tempted to jump straight into the "doing" part of a new project. Working furiously gives immediate reward and a sense of achievement. But without direction, you are probably wasting your time.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>Plan first, then do.</p>
 </div>
-<p>Your project plan begins by addressing the issues listed above. Convert those responses into a flowchart where the nodes are “processes” in your research project (e.g. data sampling). This flow chart will be a dynamic figure, meaning that you will update and refine it as you go. It is also a figure that you will likely employ when you explain the project to an audience, either in a conference presentation or a research / technical paper.</p>
-</section>
-<section id="optimise-for-the-minimal-project-duration">
-<h3>Optimise for the minimal project duration<a class="headerlink" href="#optimise-for-the-minimal-project-duration" title="Link to this heading">¶</a></h3>
-<blockquote class="epigraph">
-<div><p>Can you build the project order of execution so that the best outcome is achieved with minimal effort (i.e., breaking the problem down so that you incrementally prototype to the final solution)?</p>
-</div></blockquote>
+<p>Your project plan begins by addressing the issues listed above. Convert those responses into a flowchart where the nodes are "processes" in your research project (e.g. data sampling). This flow chart will be a dynamic figure, meaning that you will update and refine it as you go. It is also a figure that you will likely employ when you explain the project to an audience, either in a conference presentation or a research / technical paper.</p>
+<h3 id="optimise-for-the-minimal-project-duration">Optimise for the minimal project duration<a class="headerlink" href="#optimise-for-the-minimal-project-duration" title="Permanent link">&para;</a></h3>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<p>Can you build the project order of execution so that the best outcome is achieved with minimal effort (i.e., breaking the problem down so that you incrementally prototype to the final solution)?</p>
+</div>
 <p>If you can break a project into components, what is the dependency structure among them? Put the most difficult ones as close to the beginning of a project execution plan as possible.</p>
-<p>It requires some significant mental effort to see how you can break a problem down into parts that can be solved independently – having done that, which is most central to your goal? Tackling that must be a priority.</p>
+<p>It requires some significant mental effort to see how you can break a problem down into parts that can be solved independently -- having done that, which is most central to your goal? Tackling that must be a priority.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>Remember, you want to fail fast!</p>
 </div>
-</section>
-<section id="fast-prototyping">
-<h3>Fast prototyping<a class="headerlink" href="#fast-prototyping" title="Link to this heading">¶</a></h3>
-<blockquote class="epigraph">
-<div><p>“Premature optimisation is the root of all evil.”</p>
-<p class="attribution">—Donald Knuth</p>
-</div></blockquote>
-<blockquote class="epigraph">
-<div><p>“Seriously!”</p>
-<p class="attribution">—Gavin</p>
-</div></blockquote>
-<p>Once you have a project sketch, you should aim to prototype the entire workflow <a class="footnote-reference brackets" href="#id16" id="id10" role="doc-noteref"><span class="fn-bracket">[</span>6<span class="fn-bracket">]</span></a> as fast as possible, including getting to the point of quantifying performance. “Fast” refers to both implementation time (crude code is the goal) AND computation time with the latter often achieved by using a minimal amount of data.</p>
-<p>You will learn a lot from this process, including the types of tests you will need to write to ensure <a class="reference internal" href="#correctness"><span class="std std-ref">correctness</span></a>.</p>
-</section>
-<section id="iterate-the-flow-baby">
-<h3>Iterate the flow, baby!<a class="headerlink" href="#iterate-the-flow-baby" title="Link to this heading">¶</a></h3>
-<blockquote class="epigraph">
-<div><p>Repeat the above steps.</p>
-</div></blockquote>
-<p>In the beginning, there may be many things you don’t understand. Highlight the things you don’t understand and discuss them with your supervisor and/or colleagues.</p>
-</section>
-<section id="what-if-your-approach-is-impossible">
-<h3>What if your approach is impossible?<a class="headerlink" href="#what-if-your-approach-is-impossible" title="Link to this heading">¶</a></h3>
-<blockquote class="epigraph">
-<div><p>How will you decide if the project is infeasible? What is your backup plan?</p>
-</div></blockquote>
+<h3 id="fast-prototyping">Fast prototyping<a class="headerlink" href="#fast-prototyping" title="Permanent link">&para;</a></h3>
+<div class="admonition quote">
+<p class="admonition-title">Quote</p>
+<p>"Premature optimisation is the root of all evil."</p>
+<p>---  Donald Knuth</p>
+<div class="admonition quote">
+<p class="admonition-title">Quote</p>
+<p>"Seriously!"</p>
+<p>--- Gavin</p>
+</div>
+</div>
+<p>Once you have a project sketch, you should aim to prototype the entire workflow <sup id="fnref:substitute"><a class="footnote-ref" href="#fn:substitute">6</a></sup> as fast as possible, including getting to the point of quantifying performance. "Fast" refers to both implementation time (crude code is the goal) AND computation time with the latter often achieved by using a minimal amount of data.</p>
+<p>You will learn a lot from this process, including the types of tests you will need to write to ensure <a href="#correctness">correctness</a>.</p>
+<h3 id="iterate-the-flow-baby">Iterate the flow, baby!<a class="headerlink" href="#iterate-the-flow-baby" title="Permanent link">&para;</a></h3>
+<div class="admonition success">
+<p class="admonition-title">Repeat the above steps</p>
+</div>
+<p>In the beginning, there may be many things you don't understand. Highlight the things you don't understand and discuss them with your supervisor and/or colleagues.</p>
+<h3 id="what-if-your-approach-is-impossible">What if your approach is impossible?<a class="headerlink" href="#what-if-your-approach-is-impossible" title="Permanent link">&para;</a></h3>
+<div class="admonition question">
+<p class="admonition-title">How will you decide if the project is infeasible? What is your backup plan?</p>
+</div>
 <p>Make sure your project can produce something. The form this might take will differ between a science and an engineering project. Discuss with your supervisor for specifics.</p>
-</section>
-<section id="how-will-you-decide-when-you-re-done">
-<h3>How will you decide when you’re done?<a class="headerlink" href="#how-will-you-decide-when-you-re-done" title="Link to this heading">¶</a></h3>
-<blockquote class="epigraph">
-<div><p>Is there a clear end-point? How will you avoid the infinite loop of tweaking?</p>
-</div></blockquote>
-<p>What if your work does not “outperform” competitors? Is knowing this still valuable? There’s a strong urge to try “just one more thing” in this situation. In a well designed and executed project, the futility of such tweaking should be apparent. But it requires strength of character to call it quits. You don’t want to waste time polishing a 💩.</p>
-<p>If it does “outperform” competitors, happy days! You still have to avoid excessive polishing. The relevant saying here is “great is the enemy of good”, i.e. don’t be a perfectionist.</p>
-</section>
-<section id="don-t-isolate-yourself">
-<h3>Don’t isolate yourself<a class="headerlink" href="#don-t-isolate-yourself" title="Link to this heading">¶</a></h3>
-<blockquote class="epigraph">
-<div><p>How often and with who will you discuss your project?</p>
-</div></blockquote>
-<p>Too often, junior researchers / engineers think they need to solve the entirety of a project by themselves … in one massive go. Don’t do that!</p>
+<h3 id="how-will-you-decide-when-youre-done">How will you decide when you're done?<a class="headerlink" href="#how-will-you-decide-when-youre-done" title="Permanent link">&para;</a></h3>
+<div class="admonition question">
+<p class="admonition-title">Is there a clear end-point? How will you avoid the infinite loop of tweaking?</p>
+</div>
+<p>What if your work does not "outperform" competitors? Is knowing this still valuable? There's a strong urge to try "just one more thing" in this situation. In a well designed and executed project, the futility of such tweaking should be apparent. But it requires strength of character to call it quits. You don't want to waste time polishing a <img alt="💩" class="twemoji" src="../../assets/external/cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f4a9.svg" title=":poop:">.</p>
+<p>If it does "outperform" competitors, happy days! You still have to avoid excessive polishing. The relevant saying here is "great is the enemy of good", i.e. don't be a perfectionist.</p>
+<h3 id="dont-isolate-yourself">Don't isolate yourself<a class="headerlink" href="#dont-isolate-yourself" title="Permanent link">&para;</a></h3>
+<div class="admonition question">
+<p class="admonition-title">How often and with who will you discuss your project?</p>
+</div>
+<p>Too often, junior researchers / engineers think they need to solve the entirety of a project by themselves ... in one massive go. Don't do that!</p>
 <p>Science and engineering deliver consistently better results when multiple brains are involved. Discussions with others help you develop your understanding and provide a crucial perspective that can help you decide when you may be wasting your time pursuing an approach that cannot work or when a superior approach is possible. Your supervisor provides a crucial point of contact for such discussions. In my view, however, they should not be the only person you discuss things with.</p>
-</section>
-<section id="tackling-the-inevitable-problems">
-<h3>Tackling the inevitable problems<a class="headerlink" href="#tackling-the-inevitable-problems" title="Link to this heading">¶</a></h3>
-<blockquote class="epigraph">
-<div><p>Troubleshoot! If the process of identifying the minimal example of a problem does not expose the solution, then find someone to discuss it with.</p>
-</div></blockquote>
-<p>An essential skill is knowing what <em>you</em> don’t know and being able to identify someone else with the necessary knowledge. That said, another critical skill is trying to solve a problem yourself before you ask someone else for help. Prior to asking someone else for help, answer the following questions:</p>
-<ol class="arabic simple">
-<li><p>Have you seriously tried?</p></li>
-<li><p>What steps have you taken that you can show to the person you’re about to ask?</p></li>
-<li><p>What’s in it for them? In other words, why should they spend their time helping you solve <strong>your</strong> problem?</p></li>
+<h3 id="tackling-the-inevitable-problems">Tackling the inevitable problems<a class="headerlink" href="#tackling-the-inevitable-problems" title="Permanent link">&para;</a></h3>
+<div class="admonition question">
+<p class="admonition-title">Troubleshoot!</p>
+<p>If the process of identifying the minimal example of a problem does not expose the solution, then find someone to discuss it with.</p>
+</div>
+<p>An essential skill is knowing what <em>you</em> don't know and being able to identify someone else with the necessary knowledge. That said, another critical skill is trying to solve a problem yourself before you ask someone else for help. Prior to asking someone else for help, answer the following questions:</p>
+<ol>
+<li>Have you seriously tried?</li>
+<li>What steps have you taken that you can show to the person you're about to ask?</li>
+<li>What's in it for them? In other words, why should they spend their time helping you solve <strong>your</strong> problem?</li>
 </ol>
 <p>Often, just discussing the problem with someone else is sufficient for you to identify the solution.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>Give yourself a break from working on a hard problem. Do something else for a while so that you stop thinking about it. A fresh mind solves more problems than a tired one.</p>
 </div>
-</section>
-<section id="don-t-forget-to-enjoy-yourself">
-<h3>Don’t forget to enjoy yourself<a class="headerlink" href="#don-t-forget-to-enjoy-yourself" title="Link to this heading">¶</a></h3>
-<blockquote class="epigraph">
-<div><p>Research should enrich your life, not consume it.</p>
-</div></blockquote>
+<h3 id="dont-forget-to-enjoy-yourself">Don't forget to enjoy yourself<a class="headerlink" href="#dont-forget-to-enjoy-yourself" title="Permanent link">&para;</a></h3>
+<div class="admonition tip">
+<p class="admonition-title">Research should enrich your life, not consume it.</p>
+</div>
 <p>The project should be fun. You will enjoy yourself if you balance project work with other activities. This means taking actual time off to do the other things you enjoy outside work.</p>
 <p>Keep aiming for this balance, and <em>you will</em> be more productive, work more effectively and creatively. The personal growth you experience from doing research, the things you will learn, will be massive.</p>
 <p>So give yourself the best chance to enjoy the journey. Over to Carl for a reminder on why we do this.</p>
-<blockquote class="epigraph">
-<div><p>“…understanding is an exquisite form of ecstasy…”</p>
-<p class="attribution">—Carl Sagan</p>
-</div></blockquote>
-<p class="rubric">Footnotes</p>
-<aside class="footnote-list brackets">
-<aside class="footnote brackets" id="id11" role="doc-footnote">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">1</a><span class="fn-bracket">]</span></span>
-<p>If you aren’t prepared to accept that, you should probably do something else.</p>
-</aside>
-<aside class="footnote brackets" id="id12" role="doc-footnote">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">2</a><span class="fn-bracket">]</span></span>
-<p>Properties that are problematic now may not have been evident before; hence “the problem” is new.</p>
-</aside>
-<aside class="footnote brackets" id="id13" role="doc-footnote">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id5">3</a><span class="fn-bracket">]</span></span>
-<p>Bearing in mind you must avoid restating it to a question to which you already know the answer from examining your data – avoid <em>a posteori</em> questions.</p>
-</aside>
-<aside class="footnote brackets" id="id14" role="doc-footnote">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id6">4</a><span class="fn-bracket">]</span></span>
-<p>In science, we frame the value of work as its “significance”.</p>
-</aside>
-<aside class="footnote brackets" id="id15" role="doc-footnote">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id7">5</a><span class="fn-bracket">]</span></span>
-<p>In a well designed and executed project, a “failure” will be useful since it reveals some fundamental property that was previously not appreciated. Getting value from a failure requires you to be able to <a class="reference internal" href="#correctness"><span class="std std-ref">avoid uninteresting answers</span></a>. You need to ensure that failure is not due to an error on your part. If you cannot establish failure as interesting, you likely have a very high-risk project indeed, and you should probably change your project goals.</p>
-</aside>
-<aside class="footnote brackets" id="id16" role="doc-footnote">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id10">6</a><span class="fn-bracket">]</span></span>
-<p>For challenging algorithmic problems, substitute a competitor in place for where <em>your</em> work will fit.</p>
-</aside>
-</aside>
-</section>
-</section>
-</section>
-
-<div class="section ablog__blog_comments">
-     
-<div class="section ablog__prev-next">
-  <span class="ablog__prev">
-    
-  </span>
-  <span class="ablog__spacer">&nbsp;</span>
-  <span class="ablog__next">
-     
-    <a href="../setting_up_your_computer/">
-      <span>Setting up your computer for computational research</span>
-      
-      <i class="fa fa-arrow-circle-right"></i>
-      
-    </a>
-    
-  </span>
+<div class="admonition quote">
+<p class="admonition-title">Quote</p>
+<p>"...understanding is an exquisite form of ecstasy..."</p>
+<p>-- Carl Sagan</p>
 </div>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:own-problem">
+<p>If you aren't prepared to accept that, you should probably do something else.&#160;<a class="footnote-backref" href="#fnref:own-problem" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:tech-inputs">
+<p>Properties that are problematic now may not have been evident before; hence "the problem" is new.&#160;<a class="footnote-backref" href="#fnref:tech-inputs" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:posteori">
+<p>Bearing in mind you must avoid restating it to a question to which you already know the answer from examining your data -- avoid <em>a posteori</em> questions.&#160;<a class="footnote-backref" href="#fnref:posteori" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+<li id="fn:significance">
+<p>In science, we frame the value of work as its "significance".&#160;<a class="footnote-backref" href="#fnref:significance" title="Jump back to footnote 4 in the text">&#8617;</a></p>
+</li>
+<li id="fn:negative">
+<p>In a well designed and executed project, a "failure" will be useful since it reveals some fundamental property that was previously not appreciated. Getting value from a failure requires you to be able to <a href="#correctness">avoid uninteresting answers</a>. You need to ensure that failure is not due to an error on your part. If you cannot establish failure as interesting, you likely have a very high-risk project indeed, and you should probably change your project goals.&#160;<a class="footnote-backref" href="#fnref:negative" title="Jump back to footnote 5 in the text">&#8617;</a></p>
+</li>
+<li id="fn:substitute">
+<p>For challenging algorithmic problems, substitute a competitor in place for where <em>your</em> work will fit.&#160;<a class="footnote-backref" href="#fnref:substitute" title="Jump back to footnote 6 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+  
+
+
+
+  <h2 id="__comments">Comments</h2>
+  <script src="../../assets/external/giscus.app/client.js" data-repo="GavinHuttley/gav_blog" data-repo-id="R_kgDOG1s0Ow" data-category="Q&amp;A" data-category-id="DIC_kwDOG1s0O84C8fle" data-mapping="pathname" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="preferred_color_scheme" data-lang="en" data-loading="lazy" crossorigin="anonymous" async>
+  </script>
+
+  <script>
+    var giscus = document.querySelector("script[src='https://giscus.app/client.js']")
+    if (giscus) {
+      var palette = __md_get("__palette")
+      if (palette && typeof palette.color === "object") {
+        var theme = palette.color.scheme === "slate" ? "dark" : "light"
+        giscus.setAttribute("data-theme", theme)
+      }
+      document.addEventListener("DOMContentLoaded", function() {
+        var ref = document.querySelector("[data-md-component=palette]")
+        if (!ref) return
+        ref.addEventListener("change", function() {
+          var palette = __md_get("__palette")
+          if (palette && typeof palette.color === "object") {
+            var theme = palette.color.scheme === "slate" ? "dark" : "light"
+            var frame = document.querySelector(".giscus-frame")
+            if (frame) {
+              frame.contentWindow.postMessage(
+                { giscus: { setConfig: { theme: theme } } },
+                "https://giscus.app"
+              )
+            }
+          }
+        })
+      })
+    }
+  </script>
+
+      
+    </article>
+  </div>
+
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+        
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+        
+          
+          <a href="../setting_up_your_computer/" class="md-footer__link md-footer__link--next" aria-label="Next: Setting up your computer for computational research">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Setting up your computer for computational research
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2022– Gavin Huttley
+    </div>
+  
   
 </div>
-
-          </div>
-          
-        </div>
-      </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="Main">
-        <div class="sphinxsidebarwrapper">
-<h1 class="logo"><a href="../../">Gav's Blog</a></h1>
-
-
-
-
-
-
-
-
-
-<div class="ablog-sidebar-item ablog__postcard">
-   
-  <h2>
-     
-    <i class="fa fa-calendar"></i>
-    
-    <span>25 Feb 2022</span>
-    
-  </h2>
-  <ul>
-    <div class="ablog-sidebar-item ablog__postcard2">
       
-  <li id="ablog-sidebar-item category ablog__category">
-    <span>
-      
-      <i class="fa-fw fa fa-folder-open"></i>
-      
-    </span>
-     
-    <a href="../../blag/category/computational-science/">computational science</a>
-      
-  </li>
-   
-  <li id="ablog-sidebar-item tags ablog__tags">
-    <span>
-       
-      <i class="fa-fw fa fa-tags"></i>
-       
-    </span>
-     
-    <a href="../../blag/tag/research/">research</a>
         
-    <a href="../../blag/tag/tips/">tips</a>
-        
-    <a href="../../blag/tag/newbs/">newbs</a>
-        
-    <a href="../../blag/tag/education/">education</a>
-      
-  </li>
-   
-</div>
-  </ul>
-</div>
-<h3>Navigation</h3>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../../about/">About Gavin Huttley</a></li>
-</ul>
-
-
-<div class="ablog-sidebar-item ablog__recentposts">
-  <h3>
-    <a href="../../blag/">Recent Posts</a>
-  </h3>
-  <ul>
-     
-    <li>
-      <a href="../setting_up_your_computer/">
-        01 March - Setting up your computer for computational research
-      </a>
-    </li>
+<div class="md-social">
+  
     
-  </ul>
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/GavinHuttley" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
 </div>
-
-<div class="ablog-sidebar-item ablog__tagcloud">
-  <link
-    rel="stylesheet"
-    href="../../_static/ablog/tagcloud.css"
-    type="text/css"
-  />
-  <h3><a href="../../blag/tag/">Tags</a></h3>
-  <ul class="ablog-cloud">
-     
-    <li class="ablog-cloud ablog-cloud-1">
-      <a href="../../blag/tag/development/">development</a>
-    </li>
-      
-    <li class="ablog-cloud ablog-cloud-5">
-      <a href="../../blag/tag/education/">education</a>
-    </li>
-      
-    <li class="ablog-cloud ablog-cloud-1">
-      <a href="../../blag/tag/newbs/">newbs</a>
-    </li>
-      
-    <li class="ablog-cloud ablog-cloud-5">
-      <a href="../../blag/tag/research/">research</a>
-    </li>
-      
-    <li class="ablog-cloud ablog-cloud-5">
-      <a href="../../blag/tag/tips/">tips</a>
-    </li>
-     
-  </ul>
-</div>
-
-<div class="ablog-sidebar-item ablog__categories">
-  <h3>
-    <a href="../../blag/category/">Categories</a>
-  </h3>
-  <ul>
-     
-    <li>
-      <a href="../../blag/category/computational-science/">computational science (2)</a>
-    </li>
-     
-  </ul>
-</div>
-
-<div class="ablog-sidebar-item ablog__archives">
-  <h3>
-    <a href="../../blag/archive/">Archives</a>
-  </h3>
-  <ul>
-     
-    <li>
-      <a href="../../blag/2022/">2022 (2)</a>
-    </li>
-     
-  </ul>
-</div>
-
-<search id="searchbox" style="display: none" role="search">
-    <div class="searchformwrapper">
-    <form class="search" action="../../search/" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Search"/>
-      <input type="submit" value="Go" />
-    </form>
-    </div>
-</search>
-<script>document.getElementById('searchbox').style.display = "block"</script>
-        </div>
-      </div>
-      <div class="clearer"></div>
-    </div>
-    <div class="footer">
-      &#169;2022-, Gavin Huttley.
-      
-      |
-      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 8.1.3</a>
-      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 1.0.0</a>
       
     </div>
-
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
     
-
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.sections", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "content.code.copy", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="../../assets/external/cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
     
   </body>
 </html>
