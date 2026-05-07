@@ -38,3 +38,11 @@
   color: #fff !important;
   fill: #fff !important;
 }
+
+/* Let the giscus iframe fill the article column rather than being capped at
+   typography's reading-line width. */
+.giscus,
+.giscus-frame {
+  width: 100% !important;
+  max-width: none !important;
+}
