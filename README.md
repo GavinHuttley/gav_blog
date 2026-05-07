@@ -1,15 +1,18 @@
 # Gavin's blog
 
-To build using `ablog`
+Built with [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/) and managed with [uv](https://docs.astral.sh/uv/).
+
+## Local development
 
 ```
-$ ablog clean -D
-$ ablog build
-$ ablog serve
+$ uv sync
+$ uv run mkdocs serve
 ```
 
-Using `nox` to serve the docs live.
+## Build
 
 ```
-$ nox -s docs-live
+$ uv run mkdocs build --strict
 ```
+
+The site is published to `gh-pages` automatically by `.github/workflows/build_docs.yml` on every push to `main`.

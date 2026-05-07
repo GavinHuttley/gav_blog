@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400&display=swap');
+
+.md-typeset blockquote.epigraph,
+.md-typeset .epigraph > blockquote {
+  font-size: 1.125rem;
+  font-weight: 300;
+  font-style: oblique;
+  border-left: 0.2rem solid var(--md-default-fg-color--lightest);
+}
+
+.md-typeset blockquote.epigraph p.attribution,
+.md-typeset .epigraph p.attribution {
+  font-size: 0.75rem;
+  font-weight: 400;
+  font-style: normal;
+  text-align: right;
+}
+
+.md-typeset .admonition.tip,
+.md-typeset details.tip {
+  background-color: rgba(255, 193, 7, 0.12);
+}
+
+/* Force white text inside all mermaid flowchart nodes. Material themes
+   mermaid via these CSS variables; classDef color in source is ignored. */
+:root,
+[data-md-color-scheme] {
+  --md-mermaid-label-fg-color: #fff;
+  --md-mermaid-node-fg-color: #fff;
+}
+
+/* Mermaid renders into <svg id="mermaid_N">; the original .mermaid class
+   doesn't make it onto the SVG, so target by id-prefix and the global
+   mermaid-specific class names. */
+[id*="mermaid"] .nodeLabel,
+[id*="mermaid"] .nodeLabel p,
+.nodeLabel,
+.nodeLabel p {
+  color: #fff !important;
+  fill: #fff !important;
+}

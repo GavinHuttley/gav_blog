@@ -38,3 +38,6 @@ working/*
 _website*
 jupyter_execute*
 plot_directive*
+.venv/*
+uv.lock
+site/*

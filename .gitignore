@@ -127,3 +127,7 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+
+#Ignore vscode AI rules
+.github/instructions/codacy.instructions.md

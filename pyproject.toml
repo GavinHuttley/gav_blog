@@ -1,0 +1,17 @@
+[project]
+name = "gav-blog"
+version = "0.0.0"
+description = "Doing Science with Computers — Gavin Huttley's blog"
+requires-python = ">=3.11"
+dependencies = [
+    "mkdocs>=1.6,<2.0",
+    "mkdocs-material>=9.5,<10",
+    "mkdocs-rss-plugin>=1.13,<1.19",
+    "pymdown-extensions>=10.7",
+]
+
+[tool.uv]
+package = false
+override-dependencies = [
+    "properdocs ; python_version < '0'",
+]

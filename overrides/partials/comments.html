@@ -1,0 +1,48 @@
+{% if page.meta.comments != false %}
+  <h2 id="__comments">{{ lang.t("meta.comments") }}</h2>
+  <script
+    src="https://giscus.app/client.js"
+    data-repo="GavinHuttley/gav_blog"
+    data-repo-id="REPLACE_WITH_REPO_ID"
+    data-category="Comments"
+    data-category-id="REPLACE_WITH_CATEGORY_ID"
+    data-mapping="pathname"
+    data-strict="0"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="top"
+    data-theme="preferred_color_scheme"
+    data-lang="en"
+    data-loading="lazy"
+    crossorigin="anonymous"
+    async>
+  </script>
+
+  <script>
+    var giscus = document.querySelector("script[src='https://giscus.app/client.js']")
+    if (giscus) {
+      var palette = __md_get("__palette")
+      if (palette && typeof palette.color === "object") {
+        var theme = palette.color.scheme === "slate" ? "dark" : "light"
+        giscus.setAttribute("data-theme", theme)
+      }
+      document.addEventListener("DOMContentLoaded", function() {
+        var ref = document.querySelector("[data-md-component=palette]")
+        if (!ref) return
+        ref.addEventListener("change", function() {
+          var palette = __md_get("__palette")
+          if (palette && typeof palette.color === "object") {
+            var theme = palette.color.scheme === "slate" ? "dark" : "light"
+            var frame = document.querySelector(".giscus-frame")
+            if (frame) {
+              frame.contentWindow.postMessage(
+                { giscus: { setConfig: { theme: theme } } },
+                "https://giscus.app"
+              )
+            }
+          }
+        })
+      })
+    }
+  </script>
+{% endif %}
