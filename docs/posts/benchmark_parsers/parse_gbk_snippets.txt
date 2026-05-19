@@ -1,0 +1,29 @@
+=== "bp"
+
+    ```python
+    def bp(path):
+        from Bio import SeqIO
+
+        for _ in SeqIO.parse(path, "genbank"):
+            pass
+    ```
+
+=== "c3"
+
+    ```python
+    def c3(path):
+        from cogent3.parse.genbank import iter_genbank_records
+
+        for _ in iter_genbank_records(path, convert_features=False):
+            pass
+    ```
+
+=== "sb"
+
+    ```python
+    def sb(path):
+        from skbio.io import read
+
+        for _ in read(path, format="genbank"):
+            pass
+    ```

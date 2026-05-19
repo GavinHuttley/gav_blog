@@ -1,0 +1,39 @@
+=== "bp"
+
+    ```python
+    def bp(path):
+        from BCBio import GFF
+
+        with open(path) as in_handle:
+            for _ in GFF.parse(in_handle):
+                pass
+    ```
+
+=== "c3"
+
+    ```python
+    def c3(path):
+        from cogent3.parse.gff import gff_parser
+
+        for _ in gff_parser(path):
+            pass
+    ```
+
+=== "c3gffdb"
+
+    ```python
+    def c3gffdb(path):
+        import cogent3
+
+        cogent3.load_annotations(path=path)
+    ```
+
+=== "sb"
+
+    ```python
+    def sb(path):
+        from skbio.io import read
+
+        for _ in read(path, format="gff3"):
+            pass
+    ```

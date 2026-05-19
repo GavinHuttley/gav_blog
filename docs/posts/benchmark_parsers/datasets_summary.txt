@@ -1,0 +1,8 @@
+|   dataset | suffix |     size |                                          description |
+|-----------|--------|----------|------------------------------------------------------|
+|  hsap_gbk |   .dat | 363.7 MB |                 Human chromosome 1 in GenBank format |
+| hsap_gff3 |  .gff3 | 650.7 MB |              Human genome annotations in GFF3 format |
+|  micro_fa |    .fa |   4.5 MB |                   A microbial genome in FASTA format |
+| micro_gbk |    .gb |  11.3 MB |                 A microbial genome in GenBank format |
+|   ptro_fa |    .fa |   3.1 GB |                                    Chimpanzee genome |
+|   sars_fa |    .fa |   2.4 GB | Alignment of ~89k SARS-CoV-2 genomes in FASTA format |
