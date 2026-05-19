@@ -1,7 +1,11 @@
 *
+!*/
+site/*
 !.github/**/*.yml
 !docs/**/*.md
 !docs/**/*.jpg
+!docs/**/*.png
+!docs/**/*.svg
 !docs/**/*.js
 !docs/**/*.css
 !docs/**/*.html
