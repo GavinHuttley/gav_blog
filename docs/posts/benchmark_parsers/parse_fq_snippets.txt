@@ -1,0 +1,31 @@
+=== "bp"
+
+    ```python
+    def bp(path):
+        from Bio import SeqIO
+
+        for seq in SeqIO.parse(path, "fastq"):
+            pass
+    ```
+
+=== "c3"
+
+    ```python
+    def c3(path):
+        from cogent3.core.alphabet import make_qual_converter
+        from cogent3.parse.fastq import iter_fastq_records
+
+        qual_converter = make_qual_converter("phred+33")
+        for label, seq, qual in iter_fastq_records(path, qual_converter=qual_converter):
+            pass
+    ```
+
+=== "sb"
+
+    ```python
+    def sb(path):
+        from skbio.io import read
+
+        for seq in read(path, format="fastq", phred_offset=33):
+            pass
+    ```

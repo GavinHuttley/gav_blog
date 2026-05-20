@@ -5,7 +5,7 @@
         from BCBio import GFF
 
         with open(path) as in_handle:
-            for _ in GFF.parse(in_handle):
+            for feature in GFF.parse(in_handle):
                 pass
     ```
 
@@ -15,7 +15,7 @@
     def c3(path):
         from cogent3.parse.gff import gff_parser
 
-        for _ in gff_parser(path):
+        for feature in gff_parser(path):
             pass
     ```
 
@@ -34,6 +34,6 @@
     def sb(path):
         from skbio.io import read
 
-        for _ in read(path, format="gff3"):
+        for label, features in read(path, format="gff3"):
             pass
     ```
