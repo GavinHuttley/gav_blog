@@ -1,0 +1,38 @@
+=== "bp"
+
+    ```python
+    def bp(path):
+        from Bio import SeqIO
+
+        for record in SeqIO.parse(path, "genbank"):
+            features = list(record.features)
+    ```
+
+=== "c3"
+
+    ```python
+    def c3(path):
+        from cogent3.parse.genbank import iter_genbank_records
+
+        for label, seq, features in iter_genbank_records(path):
+            pass
+    ```
+
+=== "c3gbdb"
+
+    ```python
+    def c3gbdb(path):
+        import cogent3
+
+        cogent3.load_annotations(path=path, format_name="genbank")
+    ```
+
+=== "sb"
+
+    ```python
+    def sb(path):
+        from skbio.io import read
+
+        for seq in read(path, format="genbank"):
+            features = list(seq.interval_metadata.query())
+    ```

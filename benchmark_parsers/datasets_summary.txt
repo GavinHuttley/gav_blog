@@ -1,0 +1,6 @@
+|   dataset | suffix |     size |                              description |
+|-----------|--------|----------|------------------------------------------|
+|  hsap_gbk |   .dat | 363.7 MB |     Human chromosome 1 in GenBank format |
+| hsap_gff3 |  .gff3 | 650.7 MB |  Human genome annotations in GFF3 format |
+| micro_gbk |    .gb |  11.3 MB | The E. coli K12 genome in GenBank format |
+|   ptro_fa |    .fa |   3.1 GB |                        Chimpanzee genome |

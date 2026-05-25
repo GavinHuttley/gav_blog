@@ -1,0 +1,29 @@
+=== "bp"
+
+    ```python
+    def bp(path):
+        from Bio import SeqIO
+
+        for seq in SeqIO.parse(path, "fasta"):
+            pass
+    ```
+
+=== "c3"
+
+    ```python
+    def c3(path):
+        from cogent3.parse.fasta import iter_fasta_records
+
+        for label, seq in iter_fasta_records(path):
+            pass
+    ```
+
+=== "sb"
+
+    ```python
+    def sb(path):
+        from skbio.io import read
+
+        for seq in read(path, format="fasta"):
+            pass
+    ```
