@@ -1,0 +1,92 @@
+=== "bp"
+
+    ```python linenums="1"
+    def bp(fasta_path: pathlib.Path, ann_path: pathlib.Path, name: str) -> object | None:
+        import pickle
+
+        from Bio import SeqIO
+
+        fa_seqs = {r.id: r.seq for r in SeqIO.parse(fasta_path, "fasta")}
+        with open(ann_path, "rb") as handle:
+            records = pickle.load(handle)
+
+        for record in records:
+            matches = []
+            stack = list(record.features)
+            while stack:
+                feature = stack.pop()
+                if feature.id == name or feature.qualifiers.get("ID", [""])[0] == name:
+                    matches.append(feature)
+
+                stack.extend(getattr(feature, "sub_features", None) or [])
+
+            if not matches:
+                continue
+
+            matches.sort(key=lambda f: f.location.start)
+            parent = fa_seqs[record.id]
+            joined = parent[matches[0].location.start : matches[0].location.end]
+
+            for f in matches[1:]:
+                joined = joined + parent[f.location.start : f.location.end]
+
+            if matches[0].location.strand == -1:
+                joined = joined.reverse_complement()
+
+            return joined.translate()
+
+        return None
+    ```
+
+=== "c3"
+
+    ```python linenums="1"
+    def c3(fasta_path: pathlib.Path, ann_path: pathlib.Path, name: str) -> object | None:
+        import cogent3
+
+        seq = cogent3.load_seq(
+            fasta_path,
+            moltype="dna",
+            annotation_path=ann_path,
+            label_to_name=lambda x: x.split()[0],
+        )
+        feature = next(iter(seq.get_features(name=name)))
+        return feature.get_slice().get_translation(include_stop=True, trim_stop=False)
+    ```
+
+=== "sb"
+
+    ```python linenums="1"
+    def sb(fasta_path: pathlib.Path, ann_path: pathlib.Path, name: str) -> object | None:
+        from skbio import DNA
+        from skbio.io import read
+
+        fa_seqs = {
+            s.metadata["id"]: s for s in read(fasta_path, format="fasta", constructor=DNA)
+        }
+        for seqid, im in read(ann_path, format="gff3"):
+            if seqid not in fa_seqs:
+                continue
+
+            matches = [
+                feature
+                for feature in im.query(metadata={"type": "CDS"})
+                if feature.metadata.get("ID") == name
+            ]
+            if not matches:
+                continue
+
+            parent = fa_seqs[seqid]
+            bounds = sorted(
+                ((start, stop) for f in matches for start, stop in f.bounds),
+                key=lambda b: b[0],
+            )
+            pieces = [parent[start:stop] for start, stop in bounds]
+            joined = DNA.concat(pieces)
+            if matches[0].metadata.get("strand") == "-":
+                joined = joined.reverse_complement()
+
+            return joined.translate()
+
+        return None
+    ```

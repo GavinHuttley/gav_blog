@@ -1,0 +1,43 @@
+=== "bp"
+
+    ```python linenums="1"
+    def bp(ann_path: pathlib.Path, limit: int = 100) -> list:
+        import pickle
+
+        with ann_path.open("rb") as f:
+            records = pickle.load(f)
+
+        hits = []
+        for record in records:
+            for feature in record.features:
+                if feature.type == "CDS":
+                    hits.append(feature)
+                    if len(hits) >= limit:
+                        return hits
+        return hits
+    ```
+
+=== "c3gbdb"
+
+    ```python linenums="1"
+    def c3gbdb(ann_path: pathlib.Path, limit: int = 100) -> list:
+        import cogent3
+
+        db = cogent3.load_annotations(path=ann_path)
+        return list(db.get_features_matching(biotype="CDS", limit=limit))
+    ```
+
+=== "sb"
+
+    ```python linenums="1"
+    def sb(ann_path: pathlib.Path, limit: int = 100) -> list:
+        from skbio.io import read
+
+        hits = []
+        for seq in read(ann_path, format="genbank"):
+            for feature in seq.interval_metadata.query(metadata={"type": "CDS"}):
+                hits.append(feature)
+                if len(hits) >= limit:
+                    return hits
+        return hits
+    ```
