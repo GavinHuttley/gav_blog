@@ -230,3 +230,5 @@ CLAUDE.md
 htmlcov/*
 uv.lock
 gav.jpeg
+.DS_Store
+old_vcs.zip
