@@ -1,0 +1,35 @@
+=== "bp"
+
+    ```python linenums="1"
+    def bp(path: pathlib.Path, out: pathlib.Path) -> None:
+        import pickle
+
+        from BCBio import GFF
+
+        with open(path) as in_handle:
+            records = list(GFF.parse(in_handle))
+        with out.open("wb") as f:
+            pickle.dump(records, f)
+    ```
+
+=== "c3gffdb"
+
+    ```python linenums="1"
+    def c3gffdb(path: pathlib.Path, out: pathlib.Path) -> None:
+        import cogent3
+
+        cogent3.load_annotations(path=path, write_path=out)
+    ```
+
+=== "sb"
+
+    ```python linenums="1"
+    def sb(path: pathlib.Path, out: pathlib.Path) -> None:
+        import pickle
+
+        from skbio.io import read
+
+        records = list(read(path, format="gff3"))
+        with out.open("wb") as f:
+            pickle.dump(records, f)
+    ```

@@ -1,0 +1,49 @@
+=== "bp"
+
+    ```python linenums="1"
+    def bp(ann_path: pathlib.Path) -> list:
+        import pickle
+
+        with ann_path.open("rb") as f:
+            records = pickle.load(f)
+
+        hits = []
+        for record in records:
+            if record.id != "16":
+                continue
+            for feature in record.features:
+                if (
+                    feature.type == "gene"
+                    and feature.qualifiers.get("biotype", [""])[0] == "protein_coding"
+                ):
+                    hits.append(feature)
+        return hits
+    ```
+
+=== "c3gffdb"
+
+    ```python linenums="1"
+    def c3gffdb(ann_path: pathlib.Path) -> list:
+        import cogent3
+
+        db = cogent3.load_annotations(path=ann_path)
+        return list(
+            db.get_features_matching(
+                seqid="16", biotype="gene", attributes="protein_coding"
+            )
+        )
+    ```
+
+=== "sb"
+
+    ```python linenums="1"
+    def sb(ann_path: pathlib.Path) -> list:
+        from skbio.io import read
+
+        hits = []
+        for label, im in read(ann_path, format="gff3"):
+            if label != "16":
+                continue
+            hits.extend(im.query(metadata={"type": "gene", "biotype": "protein_coding"}))
+        return hits
+    ```

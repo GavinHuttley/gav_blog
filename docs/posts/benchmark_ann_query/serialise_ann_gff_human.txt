@@ -1,0 +1,5 @@
+| Function | Result Type | mean(time) seconds | std(time) seconds | mean(RAM) |   std(RAM) |
+|----------|-------------|--------------------|-------------------|-----------|------------|
+|       bp |          OK |              93.05 |              1.72 |   18.2 GB | 0.0e+00 GB |
+|  c3gffdb |          OK |              73.33 |              0.40 |    2.0 GB | 0.0e+00 GB |
+|       sb |       Error |              50.94 |              0.17 |    6.7 GB | 0.0e+00 GB |

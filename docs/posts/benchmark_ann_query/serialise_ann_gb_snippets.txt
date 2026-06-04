@@ -1,0 +1,34 @@
+=== "bp"
+
+    ```python linenums="1"
+    def bp(path: pathlib.Path, out: pathlib.Path) -> None:
+        import pickle
+
+        from Bio import SeqIO
+
+        records = list(SeqIO.parse(path, "genbank"))
+        with out.open("wb") as f:
+            pickle.dump(records, f)
+    ```
+
+=== "c3gbdb"
+
+    ```python linenums="1"
+    def c3gbdb(path: pathlib.Path, out: pathlib.Path) -> None:
+        import cogent3
+
+        cogent3.load_annotations(path=path, write_path=out, format_name="genbank")
+    ```
+
+=== "sb"
+
+    ```python linenums="1"
+    def sb(path: pathlib.Path, out: pathlib.Path) -> None:
+        import pickle
+
+        from skbio.io import read
+
+        records = list(read(path, format="genbank"))
+        with out.open("wb") as f:
+            pickle.dump(records, f)
+    ```
