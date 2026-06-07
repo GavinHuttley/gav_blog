@@ -1,6 +1,6 @@
 | Function | Result Type | mean(time) seconds | std(time) seconds | mean(RAM) |   std(RAM) |
 |----------|-------------|--------------------|-------------------|-----------|------------|
-|       bp |          OK |               4.41 |              0.01 |    1.4 GB | 5.0e-04 GB |
-|       c3 |          OK |               4.11 |              0.02 |    2.2 GB | 0.0e+00 GB |
-|   c3gbdb |       Error |               0.37 |              0.01 |   95.2 MB | 0.0e+00 MB |
-|       sb |       Error |               2.64 |              0.02 |  837.3 MB | 1.1e+00 MB |
+|       bp |          OK |               4.53 |              0.01 |    1.4 GB | 0.0e+00 GB |
+|       c3 |          OK |               5.24 |              0.06 |    2.3 GB | 0.0e+00 GB |
+|   c3gbdb |          OK |               7.96 |              0.11 |    2.3 GB | 8.6e-04 GB |
+|       sb |       Error |               2.34 |              0.03 |  831.1 MB | 0.0e+00 MB |

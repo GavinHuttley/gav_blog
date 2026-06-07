@@ -1,6 +1,6 @@
 === "bp"
 
-    ```python
+    ```python linenums="1"
     def bp(path):
         from BCBio import GFF
 
@@ -11,7 +11,7 @@
 
 === "c3"
 
-    ```python
+    ```python linenums="1"
     def c3(path):
         from cogent3.parse.gff import gff_parser
 
@@ -21,7 +21,7 @@
 
 === "c3gffdb"
 
-    ```python
+    ```python linenums="1"
     def c3gffdb(path):
         import cogent3
 
@@ -30,7 +30,7 @@
 
 === "sb"
 
-    ```python
+    ```python linenums="1"
     def sb(path):
         from skbio.io import read
 
