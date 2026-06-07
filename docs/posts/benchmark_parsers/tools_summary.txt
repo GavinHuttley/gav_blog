@@ -1,6 +1,6 @@
-|        abbreviation |    package |     version |                                                          docs |
-|---------------------|------------|-------------|---------------------------------------------------------------|
-|                  bp |  biopython |        1.87 |         [biopython](https://biopython.org/wiki/Documentation) |
-| c3, c3gffdb, c3gbdb |    cogent3 | 2026.5.25a0 |                           [cogent3](https://www.cogent3.org/) |
-|                  sb | scikit-bio |       0.7.2 |                 [scikit-bio](https://scikit.bio/docs/latest/) |
-|                  bp |  bcbio-gff |       0.7.1 | [bcbio-gff](https://github.com/chapmanb/bcbb/tree/master/gff) |
+|        abbreviation |    package |    version |                                                          docs |
+|---------------------|------------|------------|---------------------------------------------------------------|
+|                  bp |  biopython |       1.87 |         [biopython](https://biopython.org/wiki/Documentation) |
+| c3, c3gffdb, c3gbdb |    cogent3 | 2026.6.2a0 |                           [cogent3](https://www.cogent3.org/) |
+|                  sb | scikit-bio |      0.7.2 |                 [scikit-bio](https://scikit.bio/docs/latest/) |
+|                  bp |  bcbio-gff |      0.7.1 | [bcbio-gff](https://github.com/chapmanb/bcbb/tree/master/gff) |
